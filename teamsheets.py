@@ -349,22 +349,22 @@ def main():
             st.dataframe(positions)
             st.write(f"Opponents faced by {player}:")
             st.dataframe(opponents)
-    if players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
-        most_common_players, _, text = get_most_common_players(
-            selected_team, selected_players, players_to_exclude, fbref_lineups
-        )
-        st.write(text)
-        st.dataframe(most_common_players)
+    # if players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
+    #     most_common_players, _, text = get_most_common_players(
+    #         selected_team, selected_players, players_to_exclude, fbref_lineups
+    #     )
+    #     st.write(text)
+    #     st.dataframe(most_common_players)
 
-        # Detailed player analysis for each selected player
-        for player in selected_players:
-            positions, opponents = get_player_positions(
-                fbref_lineups, player, selected_team
-            )
-            st.write(f"Positions played by {player}:")
-            st.dataframe(positions)
-            st.write(f"Opponents faced by {player}:")
-            st.dataframe(opponents)
+    #     # Detailed player analysis for each selected player
+    #     for player in selected_players:
+    #         positions, opponents = get_player_positions(
+    #             fbref_lineups, player, selected_team
+    #         )
+    #         st.write(f"Positions played by {player}:")
+    #         st.dataframe(positions)
+    #         st.write(f"Opponents faced by {player}:")
+    #         st.dataframe(opponents)
     else:
         st.warning("Please select player(s) for analysis.")
         st.markdown(
