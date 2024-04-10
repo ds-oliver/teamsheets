@@ -353,7 +353,7 @@ def main():
             st.dataframe(opponents)
 
         st.divider()
-    if players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
+    elif players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
         most_common_players, _, text = get_most_common_players(
             selected_team, selected_players, players_to_exclude, fbref_lineups
         )
