@@ -9,134 +9,6 @@ warnings.filterwarnings("ignore")
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
 
-# create a function to look for the positions a player passed has played and count
-def get_player_positions(fbref_lineups, player_name, team_name):
-    # get teams from the specified team that is_starter is true
-    team_starters = fbref_lineups[
-        (fbref_lineups["team"] == team_name) & (fbref_lineups["is_starter"] == True)
-    ]
-
-    # filter player names that contain the partial player name
-    filtered_players = team_starters[
-        team_starters["player"].str.contains(player_name, case=False)
-    ]
-
-    player_match = filtered_players["player"].unique().astype(str)
-
-    print(f"Player match: {player_match}\n\n")
-
-    # get the unique positions
-    positions = filtered_players["position"].unique().tolist()
-
-    # get the number of games played
-    num_games = filtered_players.shape[0]
-
-    # create a DataFrame to store the position counts, most recent date, and other players
-    position_counts = pd.DataFrame(
-        columns=[
-            "Position",
-            "Count",
-            "Most Recent Date",
-            "Other Players",
-            "Home Games",
-            "Away Games",
-        ]
-    )
-
-    # iterate over each position and count the occurrences
-    for position in positions:
-        position_data = filtered_players[filtered_players["position"] == position]
-        count = position_data.shape[0]
-        most_recent_date = position_data["date"].max()
-        other_players = (
-            team_starters[team_starters["game"].isin(position_data["game"])]["player"]
-            .unique()
-            .tolist()
-        )
-        other_players.remove(player_match)
-        home_games = position_data[position_data["home_team"] == team_name].shape[0]
-        away_games = position_data[position_data["away_team"] == team_name].shape[0]
-        position_counts = position_counts.append(
-            pd.Series({
-                "Position": position,
-                "Count": count,
-                "Most Recent Date": most_recent_date,
-                "Other Players": other_players,
-                "Home Games": home_games,
-                "Away Games": away_games,
-            }, name='x'),
-            ignore_index=True,
-        )
-
-    # sort the position counts by count in descending order
-    position_counts = position_counts.sort_values(
-        by="Count", ascending=False
-    ).reset_index(drop=True)
-
-    # get the opponents for each game
-    opponents = (
-        filtered_players[filtered_players["game"].isin(filtered_players["game"])]
-        .groupby("opponent")
-        .size()
-        .reset_index(name="Count")
-        .sort_values(by="Count", ascending=False)
-        .reset_index(drop=True)
-    )
-
-    return position_counts, opponents
-
-
-# def get_most_common_players(team_name, selected_players, dataframe):
-#     """
-#     Identifies the most common players who start games alongside the selected player(s) for the given team.
-
-#     Parameters:
-#     - team_name: The name of the team.
-#     - selected_players: A list of player names to analyze.
-#     - dataframe: The filtered DataFrame containing game lineup information.
-
-#     Returns:
-#     - A DataFrame with the most common players who started with the selected player(s), including the number of starts together.
-#     - The total number of starts for the selected player(s).
-#     - An informative text message summarizing the findings.
-#     """
-
-#     # Ensure selected_players is a list for consistent processing
-#     if not isinstance(selected_players, list):
-#         selected_players = [selected_players]
-
-#     # Create a mask for games where each of the selected players started
-#     mask = dataframe["player"].isin(selected_players) & (dataframe["team"] == team_name)
-#     games_with_selected_players = dataframe[mask].groupby("game")["player"].agg(list)
-
-#     # Filter games where all selected players started
-#     games_where_all_started = games_with_selected_players[
-#         games_with_selected_players.apply(
-#             lambda players: all(player in players for player in selected_players)
-#         )
-#     ]
-
-#     # List of all games IDs where all selected players have started
-#     games_ids = games_where_all_started.index.tolist()
-
-#     # Filter original dataframe for these games
-#     filtered_games = dataframe[dataframe["game"].isin(games_ids)]
-
-#     # Find other starters in these games
-#     other_starters = filtered_games[~filtered_games["player"].isin(selected_players)][
-#         "player"
-#     ]
-
-#     # Count the occurrences of each player
-#     most_common_starters = other_starters.value_counts().head(6).reset_index()
-#     most_common_starters.columns = ["Player", "Starts Together"]
-
-#     # Prepare output text
-#     players_joined = ", ".join(selected_players)
-#     num_games = len(games_ids)
-#     text = f"{num_games} games found where {players_joined} started together for {team_name}."
-
-#     return most_common_starters, num_games, text
 
 
 def get_team_profile(team_name, dataframe):
@@ -295,6 +167,82 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
 
     return most_common_starters, num_games, text
 
+# create a function to look for the positions a player passed has played and count
+def get_player_positions(fbref_lineups, player_name, team_name):
+    # get teams from the specified team that is_starter is true
+    team_starters = fbref_lineups[
+        (fbref_lineups["team"] == team_name) & (fbref_lineups["is_starter"] == True)
+    ]
+
+    # filter player names that contain the partial player name
+    filtered_players = team_starters[
+        team_starters["player"].str.contains(player_name, case=False)
+    ]
+
+    player_match = filtered_players["player"].unique().astype(str)
+
+    print(f"Player match: {player_match}\n\n")
+
+    # get the unique positions
+    positions = filtered_players["position"].unique().tolist()
+
+    # get the number of games played
+    num_games = filtered_players.shape[0]
+
+    # create a DataFrame to store the position counts, most recent date, and other players
+    position_counts = pd.DataFrame(
+        columns=[
+            "Position",
+            "Count",
+            "Most Recent Date",
+            "Other Players",
+            "Home Games",
+            "Away Games",
+        ]
+    )
+
+    # iterate over each position and count the occurrences
+    for position in positions:
+        position_data = filtered_players[filtered_players["position"] == position]
+        count = position_data.shape[0]
+        most_recent_date = position_data["date"].max()
+        other_players = (
+            team_starters[team_starters["game"].isin(position_data["game"])]["player"]
+            .unique()
+            .tolist()
+        )
+        other_players.remove(player_match)
+        home_games = position_data[position_data["home_team"] == team_name].shape[0]
+        away_games = position_data[position_data["away_team"] == team_name].shape[0]
+        position_counts = position_counts.append(
+            {
+                "Position": position,
+                "Count": count,
+                "Most Recent Date": most_recent_date,
+                "Other Players": other_players,
+                "Home Games": home_games,
+                "Away Games": away_games,
+            },
+            ignore_index=True,
+        )
+
+    # sort the position counts by count in descending order
+    position_counts = position_counts.sort_values(
+        by="Count", ascending=False
+    ).reset_index(drop=True)
+
+    # get the opponents for each game
+    opponents = (
+        filtered_players[filtered_players["game"].isin(filtered_players["game"])]
+        .groupby("opponent")
+        .size()
+        .reset_index(name="Count")
+        .sort_values(by="Count", ascending=False)
+        .reset_index(drop=True)
+    )
+
+    return position_counts, opponents
+
 
 def main():
 
@@ -375,6 +323,13 @@ def main():
     st.info("For example, you can exclude players who are injured")
     players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players)
 
+    # Create a copy of the original DataFrame
+    fbref_lineups_copy = fbref_lineups.copy()
+
+    # Exclude players from the copied DataFrame
+    for player in players_to_exclude:
+        fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
+
     # Select players for analysis, ensuring we exclude any players selected for exclusion
     st.subheader("Select Players for Analysis")
     selected_players = st.multiselect(
@@ -382,11 +337,12 @@ def main():
         [player for player in players if player not in players_to_exclude],
     )
 
-    # Run analysis if players are selected
+    # Use the copied DataFrame for analysis
     if selected_players:
         most_common_players, _, text = get_most_common_players(
-            selected_team, selected_players, players_to_exclude, filtered_data
+            selected_team, selected_players, players_to_exclude, fbref_lineups_copy
         )
+        # rest of your code...
         st.write(text)
         st.dataframe(most_common_players)
 
@@ -394,6 +350,22 @@ def main():
         for player in selected_players:
             positions, opponents = get_player_positions(
                 filtered_data, player, selected_team
+            )
+            st.write(f"Positions played by {player}:")
+            st.dataframe(positions)
+            st.write(f"Opponents faced by {player}:")
+            st.dataframe(opponents)
+    if players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
+        most_common_players, _, text = get_most_common_players(
+            selected_team, selected_players, players_to_exclude, fbref_lineups
+        )
+        st.write(text)
+        st.dataframe(most_common_players)
+
+        # Detailed player analysis for each selected player
+        for player in selected_players:
+            positions, opponents = get_player_positions(
+                fbref_lineups, player, selected_team
             )
             st.write(f"Positions played by {player}:")
             st.dataframe(positions)
