@@ -9,8 +9,6 @@ warnings.filterwarnings("ignore")
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
 
-
-
 def get_team_profile(team_name, dataframe):
     """
     Get the team profile for the selected team.
@@ -189,7 +187,7 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     # get the number of games played
     num_games = filtered_players.shape[0]
 
-    # create a DataFrame to store the position counts, most recent date, and other players
+    # Initialize an empty DataFrame for position counts
     position_counts = pd.DataFrame(
         columns=[
             "Position",
@@ -201,31 +199,37 @@ def get_player_positions(fbref_lineups, player_name, team_name):
         ]
     )
 
-    # iterate over each position and count the occurrences
+    # Iterate over each position and count the occurrences
     for position in positions:
         position_data = filtered_players[filtered_players["position"] == position]
         count = position_data.shape[0]
         most_recent_date = position_data["date"].max()
+
+        # Assuming team_starters is a DataFrame from which other_players is derived
         other_players = (
             team_starters[team_starters["game"].isin(position_data["game"])]["player"]
             .unique()
             .tolist()
         )
-        other_players.remove(player_match)
+        if player_match in other_players:
+            other_players.remove(
+                player_match
+            )  # Ensure player_match is a string or in a format that exists in other_players
+
         home_games = position_data[position_data["home_team"] == team_name].shape[0]
         away_games = position_data[position_data["away_team"] == team_name].shape[0]
-        position_counts = position_counts.append(
-            {
-                "Position": position,
-                "Count": count,
-                "Most Recent Date": most_recent_date,
-                "Other Players": other_players,
-                "Home Games": home_games,
-                "Away Games": away_games,
-            },
-            ignore_index=True,
-        )
 
+        # Append the new row to position_counts DataFrame
+        new_row = {
+            "Position": position,
+            "Count": count,
+            "Most Recent Date": most_recent_date,
+            "Other Players": other_players,  # This might need conversion if not in a supported format
+            "Home Games": home_games,
+            "Away Games": away_games,
+        }
+        position_counts = position_counts.append(new_row, ignore_index=True)
+        
     # sort the position counts by count in descending order
     position_counts = position_counts.sort_values(
         by="Count", ascending=False
