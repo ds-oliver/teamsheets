@@ -205,31 +205,37 @@ def get_player_positions(fbref_lineups, player_name, team_name):
         count = position_data.shape[0]
         most_recent_date = position_data["date"].max()
 
-        # Assuming team_starters is a DataFrame from which other_players is derived
         other_players = (
             team_starters[team_starters["game"].isin(position_data["game"])]["player"]
             .unique()
             .tolist()
         )
-        if player_match in other_players:
-            other_players.remove(
-                player_match
-            )  # Ensure player_match is a string or in a format that exists in other_players
+        if player_name in other_players:
+            other_players.remove(player_name)
 
         home_games = position_data[position_data["home_team"] == team_name].shape[0]
         away_games = position_data[position_data["away_team"] == team_name].shape[0]
 
-        # Append the new row to position_counts DataFrame
-        new_row = {
-            "Position": position,
-            "Count": count,
-            "Most Recent Date": most_recent_date,
-            "Other Players": other_players,  # This might need conversion if not in a supported format
-            "Home Games": home_games,
-            "Away Games": away_games,
-        }
-        position_counts = position_counts.append(new_row, ignore_index=True)
-        
+        # Using pandas.concat instead of append
+        new_row = pd.DataFrame(
+            [
+                {
+                    "Position": position,
+                    "Count": count,
+                    "Most Recent Date": most_recent_date,
+                    "Other Players": other_players,
+                    "Home Games": home_games,
+                    "Away Games": away_games,
+                }
+            ]
+        )
+        position_counts = pd.concat([position_counts, new_row], ignore_index=True)
+
+    # sort the position counts by count in descending order and reset index
+    position_counts = position_counts.sort_values(
+        by="Count", ascending=False
+    ).reset_index(drop=True)
+
     # sort the position counts by count in descending order
     position_counts = position_counts.sort_values(
         by="Count", ascending=False
