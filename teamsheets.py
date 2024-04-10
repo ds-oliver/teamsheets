@@ -57,14 +57,14 @@ def get_player_positions(fbref_lineups, player_name, team_name):
         home_games = position_data[position_data["home_team"] == team_name].shape[0]
         away_games = position_data[position_data["away_team"] == team_name].shape[0]
         position_counts = position_counts.append(
-            {
+            pd.Series({
                 "Position": position,
                 "Count": count,
                 "Most Recent Date": most_recent_date,
                 "Other Players": other_players,
                 "Home Games": home_games,
                 "Away Games": away_games,
-            },
+            }, name='x'),
             ignore_index=True,
         )
 
