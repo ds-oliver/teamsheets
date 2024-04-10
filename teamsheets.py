@@ -219,6 +219,7 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     # sort the position counts by count in descending order and reset index
     position_counts = position_counts.sort_values(by="Count", ascending=False).reset_index(drop=True)
 
+        
     # sort the position counts by count in descending order
     position_counts = position_counts.sort_values(
         by="Count", ascending=False
@@ -237,48 +238,69 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     return position_counts, opponents
 
 
-import pandas as pd
-import streamlit as st
-
-
 def main():
-    # Explanation of the app
+
+    # add expander here to explain the app
     with st.expander("**About this app**"):
         st.markdown(
             """
-            This app analyzes team lineups and player positions in football matches,
-            allowing for the selection of seasons, teams, and competitions to view detailed player analysis and team profiles.
+            The main function of this app is to analyze the team lineups and player positions in football matches.
+            This app uses the Apriori algorithm to analyze team lineups and player positions in football matches.
+            You can select a season, team, and competition to view detailed player analysis and team profiles.
             """
         )
-
     # Load CSV file
-    fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv").query(
-        "position != 'GK' and league == 'ENG-Premier League' and is_starter == True"
-    )
+    fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
+
+    # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
+    fbref_lineups = fbref_lineups[
+        (fbref_lineups["position"] != "GK")
+        & (fbref_lineups["league"] == "ENG-Premier League")
+        & (fbref_lineups["is_starter"] == True)
+    ]
+
+    # Add a 'game_id' column to uniquely identify each game
     fbref_lineups["game_id"] = (
         fbref_lineups["season"].astype(str) + ":" + fbref_lineups["game"]
     )
 
-    # UI for selection
+    # Simplifying the league names and mapping seasons for display
+    season_dict = {
+        1617: "2016-2017",
+        1718: "2017-2018",
+        1819: "2018-2019",
+        1920: "2019-2020",
+        2021: "2020-2021",
+        2122: "2021-2022",
+        2223: "2022-2023",
+        2324: "2023-2024",
+    }
+    fbref_lineups["season_display"] = fbref_lineups["season"].map(season_dict)
+    fbref_lineups["league_display"] = fbref_lineups["league"].str.split("-").str[1]
+
+    # Streamlit UI for season, team, and competition selection
     seasons = ["All Seasons"] + sorted(
-        fbref_lineups["season_display"].unique(), reverse=True
+        fbref_lineups["season_display"].unique().tolist(), reverse=True
     )
-    teams = sorted(fbref_lineups["team"].unique())
+    teams = sorted(fbref_lineups["team"].unique().tolist())
     selected_season = st.selectbox("Select a season:", seasons)
     selected_team = st.selectbox("Select a team:", teams)
-    comps = ["All Comps"] + sorted(fbref_lineups["league_display"].unique())
-    selected_comp = st.selectbox("Select a competition:", comps)
 
-    # Data filtering
-    query = "team == @selected_team"
+    # Filtering data based on user selection
     if selected_season != "All Seasons":
-        query += " and season_display == @selected_season"
+        filtered_data = fbref_lineups[
+            (fbref_lineups["season_display"] == selected_season)
+            & (fbref_lineups["team"] == selected_team)
+        ]
+    else:
+        filtered_data = fbref_lineups[fbref_lineups["team"] == selected_team]
+
+    comps = ["All Comps"] + sorted(filtered_data["league_display"].unique().tolist())
+    selected_comp = st.selectbox("Select a competition:", comps)
     if selected_comp != "All Comps":
-        query += " and league_display == @selected_comp"
-    filtered_data = fbref_lineups.query(query)
+        filtered_data = filtered_data[filtered_data["league_display"] == selected_comp]
 
     # Sorting logic based on minutes played
-    players = filtered_data["player"].unique()
     sort_by_minutes = st.checkbox("Sort by total minutes played", value=False)
     if sort_by_minutes:
         players = (
@@ -287,36 +309,113 @@ def main():
             .sort_values(ascending=False)
             .index.tolist()
         )
+    else:
+        players = sorted(filtered_data["player"].unique().tolist())
 
-    # Exclude players from analysis
-    players_to_exclude = st.multiselect(
-        "Exclude Players (e.g., injured players):", players
+    # Select players to exclude from analysis
+    st.subheader("Exclude Players")
+    st.info("For example, you can exclude players who are injured")
+    players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players)
+
+    # Create a copy of the original DataFrame
+    fbref_lineups_copy = fbref_lineups.copy()
+
+    # Exclude players from the copied DataFrame
+    for player in players_to_exclude:
+        fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
+
+    # Select players for analysis, ensuring we exclude any players selected for exclusion
+    st.subheader("Select Players for Analysis")
+    selected_players = st.multiselect(
+        "Select player(s) to :green[Group]:",
+        [player for player in players if player not in players_to_exclude],
     )
 
-    # Perform analysis
-    if st.button("Analyze"):
-        if players_to_exclude:
-            analysis_data = filtered_data[
-                ~filtered_data["player"].isin(players_to_exclude)
-            ]
-        else:
-            analysis_data = filtered_data
+    # Use the copied DataFrame for analysis
+    if selected_players:
+        most_common_players, _, text = get_most_common_players(
+            selected_team, selected_players, players_to_exclude, fbref_lineups_copy
+        )
+        # rest of your code...
+        st.write(text)
+        st.dataframe(most_common_players)
 
-        selected_players = st.multiselect(
-            "Select Players for Analysis:", analysis_data["player"].unique()
+        st.divider()
+
+        # Detailed player analysis for each selected player
+        for player in selected_players:
+            positions, opponents = get_player_positions(
+                filtered_data, player, selected_team
+            )
+            st.write(f"Positions played by {player}:")
+            st.dataframe(positions)
+            st.write(f"Opponents faced by {player}:")
+            st.dataframe(opponents)
+
+        st.divider()
+    elif players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
+        most_common_players, _, text = get_most_common_players(
+            selected_team, selected_players, players_to_exclude, fbref_lineups
+        )
+        st.write(text)
+        st.dataframe(most_common_players)
+
+        # Detailed player analysis for each selected player
+        for player in selected_players:
+            positions, opponents = get_player_positions(
+                fbref_lineups, player, selected_team
+            )
+            st.write(f"Positions played by {player}:")
+            st.dataframe(positions)
+            st.write(f"Opponents faced by {player}:")
+            st.dataframe(opponents)
+    else:
+        st.warning("Please select player(s) for analysis.")
+        st.markdown(
+            """
+            <style>
+            .reportview-container .markdown-text-container {
+                font-family: monospace;
+            }
+            .sidebar .sidebar-content {
+                background-image: linear-gradient(#2e7bcf,#2e7bcf);
+                color: white;
+            }
+            .Widget>label {
+                color: white;
+                font-family: monospace;
+            }
+            [data-testid="stButton"] > div > div {
+                background-color: #4CAF50;
+                color: white;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True,
         )
 
-        if selected_players:
-            # Placeholder for analysis functions, e.g., get_most_common_players(), get_player_positions()
-            st.write("Analysis results would be displayed here.")
-        else:
-            st.warning("Please select player(s) for analysis.")
+        if st.button(
+            f":rainbow[Initiate Apriori algorithm to run Team Profile analysis for]: :white[{selected_team}]",
+            use_container_width=True,
+            type="secondary",
+        ):
+            positions_data = get_positions_of_each_game(filtered_data, selected_team)
+            st.title(f"{selected_team}")
 
-    # Add more analysis and UI elements as needed
+            st.write(f"Positional setup by {selected_team}:")
+            st.info(
+                f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
+            )
+            st.dataframe(positions_data, use_container_width=True)
+            # team_profile = get_team_profile(selected_team, filtered_data)
+            # # reset the index for the team profile DataFrame
+            # team_profile.reset_index(drop=True, inplace=True)
 
+            # st.write(f"Team profile for {selected_team}:")
+            # st.dataframe(team_profile)
 
-if __name__ == "__main__":
-    main()
+            st.divider()
+
 
 if __name__ == "__main__":
     main()
