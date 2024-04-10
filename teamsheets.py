@@ -455,7 +455,7 @@ def main():
             use_container_width=True,
             type="secondary",
         ):
-            positions_data = get_positions_of_each_game(filtered_data, selected_team)
+            positions_data = get_player_positions_v2(filtered_data, selected_team)
             st.title(f"{selected_team}")
             st.write(f"Positional setup by {selected_team}:")
             st.info(
