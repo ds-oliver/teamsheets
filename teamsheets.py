@@ -165,6 +165,7 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
 
     return most_common_starters, num_games, text
 
+
 # create a function to look for the positions a player passed has played and count
 def get_player_positions(fbref_lineups, player_name, team_name):
     # get teams from the specified team that is_starter is true
@@ -188,9 +189,16 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     num_games = filtered_players.shape[0]
 
     # Initialize an empty DataFrame for position counts
-    position_counts = pd.DataFrame(columns=[
-        "Position", "Count", "Most Recent Date", "Other Players", "Home Games", "Away Games"
-    ])
+    position_counts = pd.DataFrame(
+        columns=[
+            "Position",
+            "Count",
+            "Most Recent Date",
+            "Other Players",
+            "Home Games",
+            "Away Games",
+        ]
+    )
 
     # Iterate over each position and count the occurrences
     for position in positions:
@@ -198,7 +206,11 @@ def get_player_positions(fbref_lineups, player_name, team_name):
         count = position_data.shape[0]
         most_recent_date = position_data["date"].max()
 
-        other_players = team_starters[team_starters["game"].isin(position_data["game"])]["player"].unique().tolist()
+        other_players = (
+            team_starters[team_starters["game"].isin(position_data["game"])]["player"]
+            .unique()
+            .tolist()
+        )
         if player_name in other_players:
             other_players.remove(player_name)
 
@@ -206,20 +218,25 @@ def get_player_positions(fbref_lineups, player_name, team_name):
         away_games = position_data[position_data["away_team"] == team_name].shape[0]
 
         # Using pandas.concat instead of append
-        new_row = pd.DataFrame([{
-            "Position": position,
-            "Count": count,
-            "Most Recent Date": most_recent_date,
-            "Other Players": other_players,
-            "Home Games": home_games,
-            "Away Games": away_games
-        }])
+        new_row = pd.DataFrame(
+            [
+                {
+                    "Position": position,
+                    "Count": count,
+                    "Most Recent Date": most_recent_date,
+                    "Other Players": other_players,
+                    "Home Games": home_games,
+                    "Away Games": away_games,
+                }
+            ]
+        )
         position_counts = pd.concat([position_counts, new_row], ignore_index=True)
 
     # sort the position counts by count in descending order and reset index
-    position_counts = position_counts.sort_values(by="Count", ascending=False).reset_index(drop=True)
+    position_counts = position_counts.sort_values(
+        by="Count", ascending=False
+    ).reset_index(drop=True)
 
-        
     # sort the position counts by count in descending order
     position_counts = position_counts.sort_values(
         by="Count", ascending=False
@@ -335,8 +352,10 @@ def main():
     if selected_players and players_to_exclude:
         # Exclude players from the copied DataFrame
         for player in players_to_exclude:
-            fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
-            
+            fbref_lineups_copy = fbref_lineups_copy[
+                fbref_lineups_copy["player"] != player
+            ]
+
         most_common_players, _, text = get_most_common_players(
             selected_team, selected_players, players_to_exclude, fbref_lineups_copy
         )
@@ -407,68 +426,6 @@ def main():
             # team_profile.reset_index(drop=True, inplace=True)
             # st.write(f"Team profile for {selected_team}:")
             # st.dataframe(team_profile)
-            st.divider()
-    elif players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
-        most_common_players, _, text = get_most_common_players(
-            selected_team, selected_players, players_to_exclude, fbref_lineups
-        )
-        st.write(text)
-        st.dataframe(most_common_players)
-
-        # Detailed player analysis for each selected player
-        for player in selected_players:
-            positions, opponents = get_player_positions(
-                fbref_lineups, player, selected_team
-            )
-            st.write(f"Positions played by {player}:")
-            st.dataframe(positions)
-            st.write(f"Opponents faced by {player}:")
-            st.dataframe(opponents)
-    else:
-        st.warning("Please select player(s) for analysis.")
-        st.markdown(
-            """
-            <style>
-            .reportview-container .markdown-text-container {
-                font-family: monospace;
-            }
-            .sidebar .sidebar-content {
-                background-image: linear-gradient(#2e7bcf,#2e7bcf);
-                color: white;
-            }
-            .Widget>label {
-                color: white;
-                font-family: monospace;
-            }
-            [data-testid="stButton"] > div > div {
-                background-color: #4CAF50;
-                color: white;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
-
-        if st.button(
-            f":rainbow[Initiate Apriori algorithm to run Team Profile analysis for]: :white[{selected_team}]",
-            use_container_width=True,
-            type="secondary",
-        ):
-            positions_data = get_positions_of_each_game(filtered_data, selected_team)
-            st.title(f"{selected_team}")
-
-            st.write(f"Positional setup by {selected_team}:")
-            st.info(
-                f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
-            )
-            st.dataframe(positions_data, use_container_width=True)
-            # team_profile = get_team_profile(selected_team, filtered_data)
-            # # reset the index for the team profile DataFrame
-            # team_profile.reset_index(drop=True, inplace=True)
-
-            # st.write(f"Team profile for {selected_team}:")
-            # st.dataframe(team_profile)
-
             st.divider()
 
 
