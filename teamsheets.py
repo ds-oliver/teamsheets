@@ -327,8 +327,6 @@ def main():
         fbref_lineups["season"].astype(str) + ":" + fbref_lineups["game"]
     )
 
-    fbref_lineups
-
     # Simplifying the league names and mapping seasons for display
     season_dict = {
         1617: "2016-2017",
