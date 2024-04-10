@@ -351,7 +351,26 @@ def main():
             st.dataframe(positions)
             st.write(f"Opponents faced by {player}:")
             st.dataframe(opponents)
+
+    elif selected_players:
+        most_common_players, _, text = get_most_common_players(
+            selected_team, selected_players, players_to_exclude, fbref_lineups
+        )
+        st.write(text)
+        st.dataframe(most_common_players)
+        # Detailed player analysis for each selected player
+        for player in selected_players:
+            positions, opponents = get_player_positions(
+                fbref_lineups, player, selected_team
+            )
+            st.write(f"Positions played by {player}:")
+            st.dataframe(positions)
+            st.write(f"Opponents faced by {player}:")
+            st.dataframe(opponents)
     elif players_to_exclude:
+        for player in players_to_exclude:
+            fbref_lineups = fbref_lineups[fbref_lineups["player"] != player]
+
         most_common_players, _, text = get_most_common_players(
             selected_team, selected_players, players_to_exclude, fbref_lineups
         )
