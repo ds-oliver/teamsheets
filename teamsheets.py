@@ -349,6 +349,8 @@ def main():
             st.dataframe(positions)
             st.write(f"Opponents faced by {player}:")
             st.dataframe(opponents)
+
+        st.divider()
     # if players_to_exclude: # if no players to exclude all we need to make sure that we use the unfiltered data
     #     most_common_players, _, text = get_most_common_players(
     #         selected_team, selected_players, players_to_exclude, fbref_lineups
@@ -409,6 +411,8 @@ def main():
 
             # st.write(f"Team profile for {selected_team}:")
             # st.dataframe(team_profile)
+
+            st.divider()
 
 
 if __name__ == "__main__":
