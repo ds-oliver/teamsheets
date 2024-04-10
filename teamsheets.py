@@ -302,6 +302,15 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
 
 
 def main():
+    # set config
+    st.set_page_config(
+        page_title="Football Lineup Analysis",
+        page_icon="❗️",
+        layout="wide",
+        initial_sidebar_state="expanded",
+    )
+    # load the CSV file
+    fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
 
     # add expander here to explain the app
     with st.expander("**About this app**"):
