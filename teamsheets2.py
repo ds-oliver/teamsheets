@@ -324,67 +324,36 @@ def main():
     for player in players_to_exclude:
         fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
 
-    # Select players for analysis, ensuring we exclude any players selected for exclusion
-    st.subheader("Select Players for Analysis")
+    # Dynamically adjusting players for analysis based on exclusions
+    players_for_analysis = [
+        player for player in players if player not in players_to_exclude
+    ]
     selected_players = st.multiselect(
-        "Select player(s) to :green[Group]:",
-        [player for player in players if player not in players_to_exclude],
+        "Select player(s) for analysis:", players_for_analysis
     )
 
-    # Use the copied DataFrame for analysis
-    if selected_players and players_to_exclude:
-        # Exclude players from the copied DataFrame
-        for player in players_to_exclude:
-            fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
-
-        most_common_players, _, text = get_most_common_players(
-            selected_team, selected_players, players_to_exclude, fbref_lineups_copy
-        )
-        st.write(text)
-        st.dataframe(most_common_players)
-        # Detailed player analysis for each selected player
-        for player in selected_players:
-            positions, opponents = get_player_positions(
-                fbref_lineups, player, selected_team
+    # Analyze button logic
+    if st.button("Analyze"):
+        # Ensuring there's a selection to analyze
+        if not selected_players:
+            st.warning("Please select player(s) for analysis.")
+        else:
+            # Conduct analysis
+            most_common_players, _, text = get_most_common_players(
+                selected_team, selected_players, players_to_exclude, fbref_lineups
             )
-            st.write(f"Positions played by {player}:")
-            st.dataframe(positions)
-            st.write(f"Opponents faced by {player}:")
-            st.dataframe(opponents)
+            st.write(text)
+            st.dataframe(most_common_players)
 
-    elif selected_players:
-        most_common_players, _, text = get_most_common_players(
-            selected_team, selected_players, players_to_exclude, fbref_lineups
-        )
-        st.write(text)
-        st.dataframe(most_common_players)
-        # Detailed player analysis for each selected player
-        for player in selected_players:
-            positions, opponents = get_player_positions(
-                fbref_lineups, player, selected_team
-            )
-            st.write(f"Positions played by {player}:")
-            st.dataframe(positions)
-            st.write(f"Opponents faced by {player}:")
-            st.dataframe(opponents)
-    elif players_to_exclude:
-        for player in players_to_exclude:
-            fbref_lineups = fbref_lineups[fbref_lineups["player"] != player]
-
-        most_common_players, _, text = get_most_common_players(
-            selected_team, selected_players, players_to_exclude, fbref_lineups
-        )
-        st.write(text)
-        st.dataframe(most_common_players)
-        # Detailed player analysis for each selected player
-        for player in selected_players:
-            positions, opponents = get_player_positions(
-                fbref_lineups, player, selected_team
-            )
-            st.write(f"Positions played by {player}:")
-            st.dataframe(positions)
-            st.write(f"Opponents faced by {player}:")
-            st.dataframe(opponents)
+            # Detailed player analysis for each selected player
+            for player in selected_players:
+                positions, opponents = get_player_positions(
+                    fbref_lineups, player, selected_team
+                )
+                st.write(f"Positions played by {player}:")
+                st.dataframe(positions)
+                st.write(f"Opponents faced by {player}:")
+                st.dataframe(opponents)
     else:
         st.warning("Please select player(s) for analysis.")
         st.markdown(
