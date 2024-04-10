@@ -183,7 +183,7 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     print(f"Player match: {player_match}\n\n")
 
     # get the unique positions
-    positions = filtered_players["most_common_position"].unique().tolist()
+    positions = filtered_players["position"].unique().tolist()
 
     # get the number of games played
     num_games = filtered_players.shape[0]
@@ -202,9 +202,7 @@ def get_player_positions(fbref_lineups, player_name, team_name):
 
     # Iterate over each position and count the occurrences
     for position in positions:
-        position_data = filtered_players[
-            filtered_players["most_common_position"] == position
-        ]
+        position_data = filtered_players[filtered_players["position"] == position]
         count = position_data.shape[0]
         most_recent_date = position_data["date"].max()
 
@@ -282,6 +280,8 @@ def main():
     fbref_lineups["game_id"] = (
         fbref_lineups["season"].astype(str) + ":" + fbref_lineups["game"]
     )
+
+    fbref_lineups
 
     # Simplifying the league names and mapping seasons for display
     season_dict = {
