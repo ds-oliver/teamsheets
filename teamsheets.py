@@ -185,6 +185,7 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     positions = filtered_players["position"].unique().tolist()
 
     # get the number of games played
+    
     num_games = filtered_players.shape[0]
 
     # create a DataFrame to store the position counts, most recent date, and other players
