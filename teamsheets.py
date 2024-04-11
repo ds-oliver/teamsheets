@@ -413,9 +413,7 @@ def main():
         players = sorted(filtered_data["player"].unique().tolist())
 
     # Select players to exclude from analysis
-    st.subheader("Exclude Players")
-    st.info("For example, you can exclude players who are injured")
-    players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players)
+    players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players, help="For example, you can exclude players who are injured...")
 
     # Create a copy of the original DataFrame
     fbref_lineups_copy = fbref_lineups.copy()
