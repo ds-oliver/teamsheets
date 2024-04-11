@@ -347,7 +347,7 @@ def main():
         # add expander here to explain the app
     with st.expander("**About this app**", expanded=True):
         leagues = sorted(fbref_lineups["league_display"].unique().tolist())
-        leagues_list = "\n".join([f"- {league}" for league in leagues])
+        leagues_list = [f"- {league}" for league in leagues]
         st.markdown(
             f"""
             The main function of this app is to analyze the team lineups and player positions in football matches.
