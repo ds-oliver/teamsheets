@@ -326,7 +326,7 @@ def main():
     )
 
     # Load CSV file
-    fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
+    fbref_lineups = pd.read_csv("sets_and_lineups_v1.csv")
 
     # get all teams where the league is ENG-Premier League
     premier_league_teams = fbref_lineups[fbref_lineups["league"] == "ENG-Premier League"]["team"].unique()
