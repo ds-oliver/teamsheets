@@ -433,7 +433,7 @@ def main():
     )
 
     if selected_players or players_to_exclude:
-        scope = "Players"
+        scope = "Player(s)"
     else:
         scope = "Team"
         # Analyze button logic
