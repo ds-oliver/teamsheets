@@ -324,11 +324,14 @@ def main():
     # Load CSV file
     fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
 
+    # get all teams where the league is ENG-Premier League
+    premier_league_teams = fbref_lineups[fbref_lineups["league"] == "ENG-Premier League"]["team"].unique()
+
     # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
     fbref_lineups = fbref_lineups[
         (fbref_lineups["position"] != "GK")
-        & (fbref_lineups["league"] == "ENG-Premier League")
         & (fbref_lineups["is_starter"] == True)
+        & (fbref_lineups["team"].isin(premier_league_teams))
     ]
 
     # Add a 'game_id' column to uniquely identify each game
