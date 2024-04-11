@@ -310,11 +310,11 @@ def main():
         initial_sidebar_state="expanded",
     )
 
-    socials_tag = ":gold[@DraftAlchemy]"
+    socials_tag = "@DraftAlchemy"
     st.markdown(
         """
         <h1 style="font-size: 2.5em; text-align: center; color: #2e7bcf;">
-            Football Lineup Analysis {}
+            Football Lineup Analysis <span style="color: gold;">{}</span>
         </h1>
         """.format(
             socials_tag
