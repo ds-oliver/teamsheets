@@ -345,7 +345,7 @@ def main():
     fbref_lineups["league_display"] = fbref_lineups["league"].str.split("-").str[1]
 
     # add expander here to explain the app
-    with st.expander("**About this app**", expanded=True):
+    with st.expander("**:red[About this app]**", expanded=True):
         leagues = sorted(fbref_lineups["league_display"].unique().tolist())
         leagues_list = "\n".join([f'    - {league} ' for league in leagues])
         st.markdown(
