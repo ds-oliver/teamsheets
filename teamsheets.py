@@ -348,9 +348,16 @@ def main():
     with st.expander("**About this app**", expanded=True):
         leagues = sorted(fbref_lineups["league_display"].unique().tolist())
         leagues_list = "\n".join([f'- {league}' for league in leagues])
-        leagues_list
         st.markdown(
-            f"The main function of this app is to analyze the team lineups and player positions in football matches. This app contains data from the following leagues:{leagues_list}\nThis app uses the Apriori algorithm to analyze team lineups and player positions in football matches. You can select a season, team, and competition to view detailed player analysis and team profiles."
+            """
+            The main function of this app is to analyze the team lineups and player positions in football matches.
+            This app contains data from the following leagues:
+            
+            {}
+            
+            This app uses the Apriori algorithm to analyze team lineups and player positions in football matches.
+            You can select a season, team, and competition to view detailed player analysis and team profiles.
+            """.format(leagues_list)
         )
 
     # Streamlit UI for season, team, and competition selection
