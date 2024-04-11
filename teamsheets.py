@@ -313,7 +313,7 @@ def main():
     socials_tag = "@DraftAlchemy"
     st.markdown(
         """
-        <h1 style="font-size: 2.5em; text-align: center; color: #2e7bcf;">
+        <h1 style="font-size: 2.5em; text-align: left; color: aliceblue;">
             Football Lineup Analysis <span style="color: gold;">{}</span>
         </h1>
         """.format(
