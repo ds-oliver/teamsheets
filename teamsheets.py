@@ -303,6 +303,8 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
 
     return position_counts_df, opponents
 
+# define a function to aggregate set piece takers
+
 
 def main():
     # set config
@@ -327,6 +329,8 @@ def main():
 
     # Load CSV file
     fbref_lineups = pd.read_csv("sets_and_lineups_v1.csv")
+
+    fbref_lineups.columns.tolist()
 
     # get all teams where the league is ENG-Premier League
     premier_league_teams = fbref_lineups[fbref_lineups["league"] == "ENG-Premier League"]["team"].unique()
