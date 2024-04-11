@@ -363,14 +363,16 @@ def main():
             The main function of this app is to analyze the team lineups and player positions in football matches.
             This app contains data from the following leagues:
 
-            <span style="color: wheat;">
-            {}
-            </span>
+            - Premier League
+            - Champions League
+            - Europa League
+            - FA Cup
+            - EFL Cup
+            - Conference League
 
             This app uses the Apriori algorithm to analyze team lineups and player positions in football matches.
             You can select a season, team, and competition to view detailed player analysis and team profiles.
-            """.format(leagues_list),
-            unsafe_allow_html=True
+            """
         )
 
     # Streamlit UI for season, team, and competition selection
