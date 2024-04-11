@@ -309,6 +309,17 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded",
     )
+
+    socials_tag = ":gold[@DraftAlchemy]"
+    st.markdown(
+        f"""
+        <h1 style="font-size: 2.5em; text-align: center; color: #2e7bcf;">
+            Football Lineup Analysis {socials_tag}
+        </h1>
+        """,
+        unsafe_allow_html=True,
+    )
+    
     # load the CSV file
     fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
 
