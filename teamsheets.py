@@ -432,7 +432,7 @@ def main():
         "Select player(s) for analysis:", players_for_analysis
     )
 
-    if selected_players:
+    if selected_players or players_to_exclude:
         scope = "Players"
     else:
         scope = "Team"
@@ -441,6 +441,8 @@ def main():
             # Ensuring there's a selection to analyze
             if not selected_players:
                 st.warning("Please select player(s) for analysis.")
+                # Conduct general team specific analysis
+
             else:
                 # Conduct analysis
                 most_common_players, _, text = get_most_common_players(
