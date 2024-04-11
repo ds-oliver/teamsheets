@@ -130,6 +130,9 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
         f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
     )
 
+    # filter for is_starter is true
+    dataframe = dataframe[dataframe["is_starter"] == True]
+
     # Filter for the selected team
     team_data = dataframe[dataframe["team"] == team_name]
 
@@ -165,6 +168,7 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
 
     return most_common_starters, num_games, text
 
+
 # create a function to look for the positions a player passed has played and count
 def get_player_positions(fbref_lineups, player_name, team_name):
     # get teams from the specified team that is_starter is true
@@ -188,9 +192,16 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     num_games = filtered_players.shape[0]
 
     # Initialize an empty DataFrame for position counts
-    position_counts = pd.DataFrame(columns=[
-        "Position", "Count", "Most Recent Date", "Other Players", "Home Games", "Away Games"
-    ])
+    position_counts = pd.DataFrame(
+        columns=[
+            "Position",
+            "Count",
+            "Most Recent Date",
+            "Other Players",
+            "Home Games",
+            "Away Games",
+        ]
+    )
 
     # Iterate over each position and count the occurrences
     for position in positions:
@@ -198,7 +209,11 @@ def get_player_positions(fbref_lineups, player_name, team_name):
         count = position_data.shape[0]
         most_recent_date = position_data["date"].max()
 
-        other_players = team_starters[team_starters["game"].isin(position_data["game"])]["player"].unique().tolist()
+        other_players = (
+            team_starters[team_starters["game"].isin(position_data["game"])]["player"]
+            .unique()
+            .tolist()
+        )
         if player_name in other_players:
             other_players.remove(player_name)
 
@@ -206,20 +221,25 @@ def get_player_positions(fbref_lineups, player_name, team_name):
         away_games = position_data[position_data["away_team"] == team_name].shape[0]
 
         # Using pandas.concat instead of append
-        new_row = pd.DataFrame([{
-            "Position": position,
-            "Count": count,
-            "Most Recent Date": most_recent_date,
-            "Other Players": other_players,
-            "Home Games": home_games,
-            "Away Games": away_games
-        }])
+        new_row = pd.DataFrame(
+            [
+                {
+                    "Position": position,
+                    "Count": count,
+                    "Most Recent Date": most_recent_date,
+                    "Other Players": other_players,
+                    "Home Games": home_games,
+                    "Away Games": away_games,
+                }
+            ]
+        )
         position_counts = pd.concat([position_counts, new_row], ignore_index=True)
 
     # sort the position counts by count in descending order and reset index
-    position_counts = position_counts.sort_values(by="Count", ascending=False).reset_index(drop=True)
+    position_counts = position_counts.sort_values(
+        by="Count", ascending=False
+    ).reset_index(drop=True)
 
-        
     # sort the position counts by count in descending order
     position_counts = position_counts.sort_values(
         by="Count", ascending=False
@@ -238,25 +258,84 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     return position_counts, opponents
 
 
-def main():
+def get_player_positions_v2(fbref_lineups, player_name, team_name):
+    # Filter for the specific team and players that contain the player_name
+    team_data = fbref_lineups[
+        (fbref_lineups["team"] == team_name)
+        & (fbref_lineups["player"].str.contains(player_name, case=False))
+        & (fbref_lineups["is_starter"] == True)
+    ]
 
-    # add expander here to explain the app
-    with st.expander("**About this app**"):
-        st.markdown(
-            """
-            The main function of this app is to analyze the team lineups and player positions in football matches.
-            This app uses the Apriori algorithm to analyze team lineups and player positions in football matches.
-            You can select a season, team, and competition to view detailed player analysis and team profiles.
-            """
-        )
+    # Initialize an empty dictionary to hold position counts
+    position_counts_dict = {}
+
+    # Position columns to consider
+    position_columns = ["position_1", "position_2", "position_3", "position_4"]
+
+    # Iterate through each row and each position column to count positions
+    for _, row in team_data.iterrows():
+        for col in position_columns:
+            pos = row[col]
+            if pd.notnull(pos):  # Check if the position value is not NaN
+                if pos in position_counts_dict:
+                    position_counts_dict[pos] += 1
+                else:
+                    position_counts_dict[pos] = 1
+
+    # Convert the dictionary to a DataFrame
+    position_counts_df = pd.DataFrame(
+        list(position_counts_dict.items()), columns=["Position", "Count"]
+    )
+
+    # Sort the DataFrame by count in descending order
+    position_counts_df = position_counts_df.sort_values(
+        by="Count", ascending=False
+    ).reset_index(drop=True)
+
+    # Opponents faced analysis
+    opponents = (
+        team_data.groupby("opponent")
+        .size()
+        .reset_index(name="Count")
+        .sort_values(by="Count", ascending=False)
+        .reset_index(drop=True)
+    )
+
+    return position_counts_df, opponents
+
+
+def main():
+    # set config
+    st.set_page_config(
+        page_title="Football Lineup Analysis",
+        page_icon="❗️",
+        layout="wide",
+        initial_sidebar_state="expanded",
+    )
+
+    socials_tag = "@DraftAlchemy"
+    st.markdown(
+        """
+        <h1 style="font-size: 2.5em; text-align: left; color: aliceblue;">
+            Football Lineup Analysis <span style="color: mistyrose;">by</span> <span style="color: wheat;">{}</span>
+        </h1>
+        """.format(
+            socials_tag
+        ),
+        unsafe_allow_html=True,
+    )
+
     # Load CSV file
     fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
+
+    # get all teams where the league is ENG-Premier League
+    premier_league_teams = fbref_lineups[fbref_lineups["league"] == "ENG-Premier League"]["team"].unique()
 
     # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
     fbref_lineups = fbref_lineups[
         (fbref_lineups["position"] != "GK")
-        & (fbref_lineups["league"] == "ENG-Premier League")
-        & (fbref_lineups["is_starter"] == True)
+        # & (fbref_lineups["is_starter"] == True)
+        & (fbref_lineups["team"].isin(premier_league_teams))
     ]
 
     # Add a 'game_id' column to uniquely identify each game
@@ -277,6 +356,27 @@ def main():
     }
     fbref_lineups["season_display"] = fbref_lineups["season"].map(season_dict)
     fbref_lineups["league_display"] = fbref_lineups["league"].str.split("-").str[1]
+
+    # add expander here to explain the app
+    with st.expander("**:red[About this app]**", expanded=True):
+        leagues = sorted(fbref_lineups["league_display"].unique().tolist())
+        leagues_list = "\n".join([f'    - {league} ' for league in leagues])
+        st.markdown(
+            """
+            The main function of this app is to analyze the team lineups and player positions in football matches.
+            This app contains data from the following leagues:
+
+            - Premier League
+            - Champions League
+            - Europa League
+            - FA Cup
+            - EFL Cup
+            - Conference League
+
+            This app uses the Apriori algorithm to analyze team lineups and player positions in football matches.
+            You can select a season, team, and competition to view detailed player analysis and team profiles.
+            """
+        )
 
     # Streamlit UI for season, team, and competition selection
     seasons = ["All Seasons"] + sorted(
@@ -347,7 +447,7 @@ def main():
 
             # Detailed player analysis for each selected player
             for player in selected_players:
-                positions, opponents = get_player_positions(
+                positions, opponents = get_player_positions_v2(
                     fbref_lineups, player, selected_team
                 )
                 st.write(f"Positions played by {player}:")
