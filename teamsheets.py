@@ -314,16 +314,13 @@ def main():
     st.markdown(
         """
         <h1 style="font-size: 2.5em; text-align: left; color: aliceblue;">
-            Football Lineup Analysis <span style="color: gold;">{}</span>
+            Football Lineup Analysis <span style="color: gold;"></span> by <span style="color: mistyrose;">{}</span>
         </h1>
         """.format(
             socials_tag
         ),
         unsafe_allow_html=True,
     )
-
-    # load the CSV file
-    fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
 
     # Load CSV file
     fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
