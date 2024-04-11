@@ -312,15 +312,6 @@ def main():
     # load the CSV file
     fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
 
-    # add expander here to explain the app
-    with st.expander("**About this app**"):
-        st.markdown(
-            """
-            The main function of this app is to analyze the team lineups and player positions in football matches.
-            This app uses the Apriori algorithm to analyze team lineups and player positions in football matches.
-            You can select a season, team, and competition to view detailed player analysis and team profiles.
-            """
-        )
     # Load CSV file
     fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
 
@@ -352,6 +343,18 @@ def main():
     }
     fbref_lineups["season_display"] = fbref_lineups["season"].map(season_dict)
     fbref_lineups["league_display"] = fbref_lineups["league"].str.split("-").str[1]
+
+        # add expander here to explain the app
+    with st.expander("**About this app**", expanded=True):
+        st.markdown(
+            """
+            The main function of this app is to analyze the team lineups and player positions in football matches.
+            This app contains data from the following leagues: {}
+            
+            This app uses the Apriori algorithm to analyze team lineups and player positions in football matches.
+            You can select a season, team, and competition to view detailed player analysis and team profiles.
+            """.format(", ".join(sorted(fbref_lineups["league_display"].unique().tolist())))
+        )
 
     # Streamlit UI for season, team, and competition selection
     seasons = ["All Seasons"] + sorted(
