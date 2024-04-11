@@ -314,7 +314,7 @@ def main():
     st.markdown(
         """
         <h1 style="font-size: 2.5em; text-align: left; color: aliceblue;">
-            Football Lineup Analysis <span style="color: gold;"></span> by <span style="color: mistyrose;">{}</span>
+            Football Lineup Analysis <span style="color: mistyrose;">by</span> <span style="color: wheat;">{}</span>
         </h1>
         """.format(
             socials_tag
