@@ -170,7 +170,7 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
 
 
 # create a function to look for the positions a player passed has played and count
-def get_player_positions(fbref_lineups, player_name, team_name):
+def get_player_positions(fbref_lineups, player_name, team_name, set_piece_takers=False):
     # get teams from the specified team that is_starter is true
     team_starters = fbref_lineups[
         (fbref_lineups["team"] == team_name) & (fbref_lineups["is_starter"] == True)
@@ -382,8 +382,11 @@ def main():
             """
         )
 
+    set_piece_takers = False
+
     # create a toggle "Add Set Piece Data" which if clicked will filter to only include: seasons == [1718 1819 2021 2122 2223 2324] and leagues == ['ENG-Premier League' 'UEFA-Champions League' 'UEFA-Europa Conference League' 'UEFA-Europa League']
     if st.toggle("Add SetPiece Data", help="If this option is selected the data will be truncated as it filters for specific seasons"):
+        set_piece_takers = True
         fbref_lineups = fbref_lineups[
             fbref_lineups["season"].isin([1718, 1819, 2021, 2122, 2223, 2324])
             & fbref_lineups["league"].isin(
@@ -448,7 +451,6 @@ def main():
         "Select player(s) for analysis:", players_for_analysis
     )
 
-
     # Analyze button logic
     if st.button(f"Analyze"):
         # Ensuring there's a selection to analyze
@@ -459,7 +461,11 @@ def main():
         else:
             # Conduct analysis
             most_common_players, _, text = get_most_common_players(
-                selected_team, selected_players, players_to_exclude, fbref_lineups
+                selected_team,
+                selected_players,
+                players_to_exclude,
+                fbref_lineups,
+                set_piece_takers=set_piece_takers,
             )
             st.write(text)
             st.dataframe(most_common_players)
