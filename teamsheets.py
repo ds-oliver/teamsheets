@@ -383,7 +383,7 @@ def main():
         )
 
     # create a toggle "Add Set Piece Data" which if clicked will filter to only include: seasons == [1718 1819 2021 2122 2223 2324] and leagues == ['ENG-Premier League' 'UEFA-Champions League' 'UEFA-Europa Conference League' 'UEFA-Europa League']
-    if st.checkbox("Add SetPiece Data", help="If this option is selected the data will be truncated as it filters for specific seasons"):
+    if st.toggle("Add SetPiece Data", help="If this option is selected the data will be truncated as it filters for specific seasons"):
         filtered_data = filtered_data[
             filtered_data["season"].isin([1718, 1819, 2021, 2122, 2223, 2324])
             & filtered_data["league"].isin(
