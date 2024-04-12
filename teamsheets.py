@@ -151,7 +151,7 @@ def get_most_common_players(
         games_with_selected_players
     ].index.tolist()
 
-    # Filter DataFrame for valid games
+    # Filter DataFrame for valid games where the selected players started
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
 
     if set_piece_takers:
@@ -178,7 +178,7 @@ def get_most_common_players(
             team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
         )
 
-        # Aggregating player set pieces and calculate percentages
+        # Calculate the sum of each type of set piece taken by each player per game
         player_set_pieces = (
             valid_games_data.groupby(["game_id", "player"])[set_piece_columns]
             .sum()
@@ -194,7 +194,7 @@ def get_most_common_players(
                 player_set_pieces[column] / player_set_pieces["TotalSetPieces"]
             ) * 100
 
-        # Get the average percentage for each player across all games
+        # Get the average percentage for each player across all games where the selected players started
         average_percentages = (
             player_set_pieces.groupby("player")[
                 [f"{column}_Percent" for column in set_piece_columns]
@@ -202,7 +202,6 @@ def get_most_common_players(
             .mean()
             .reset_index()
         )
-        average_percentages.rename(columns={"player": "Player"}, inplace=True)
 
         # Merge the average percentages with most common starters
         most_common_starters = (
