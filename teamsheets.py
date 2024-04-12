@@ -123,6 +123,7 @@ def get_positions_of_each_game(fbref_lineups, team_name):
 def get_most_common_players(
     team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
 ):
+    # Ensure selected_players and excluded_players are lists
     if not isinstance(selected_players, list):
         selected_players = [selected_players]
     if not isinstance(excluded_players, list):
@@ -132,19 +133,17 @@ def get_most_common_players(
         f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
     )
 
-    # filter for is_starter is true
+    # Filter for is_starter == True and for the selected team
     dataframe = dataframe[dataframe["is_starter"] == True]
-
-    # Filter for the selected team
     team_data = dataframe[dataframe["team"] == team_name]
 
-    # Create a mask for games where any of the selected players started and none of the excluded players did
+    # Function to filter games based on selected and excluded players
     def game_filter(players):
         return set(selected_players).issubset(set(players)) and set(
             excluded_players
         ).isdisjoint(set(players))
 
-    # Group games by 'game_id' and filter using the mask
+    # Apply the game filter
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
@@ -152,17 +151,18 @@ def get_most_common_players(
         games_with_selected_players
     ].index.tolist()
 
-    # Filter the DataFrame for the valid games
+    # Filter DataFrame for valid games
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
 
-    # Count how many times each player, not in selected or excluded players, started in these games
-    if not set_piece_takers:
-        most_common_starters = (
-            valid_games_data["player"].value_counts().head(6).reset_index()
-        )
-        most_common_starters.columns = ["Player", "Starts Together"]
-    else:  # This else is for when set_piece_takers is True
-        # Assuming 'player' is the correct column name and set piece columns exist in the dataframe.
+    # Count starts for players not in selected or excluded players
+    most_common_starters = (
+        valid_games_data["player"].value_counts().head(6).reset_index()
+    )
+    most_common_starters.columns = ["Player", "Starts Together"]
+
+    # Merge with set piece data if set_piece_takers is True
+    if set_piece_takers:
+        # Assuming 'player' is the correct column name and set piece columns exist in the dataframe
         set_piece_columns = [
             "Deadballs",
             "Freekicks",
@@ -174,10 +174,14 @@ def get_most_common_players(
         aggregated_data = (
             valid_games_data.groupby("player")[set_piece_columns].sum().reset_index()
         )
-        most_common_starters = (
-            valid_games_data["player"].value_counts().head(6).reset_index()
-        )
-        most_common_starters.columns = ["Player", "Starts Together"]
+        aggregated_data.rename(
+            columns={"player": "Player"}, inplace=True
+        )  # Ensure the key column name matches for merge
+
+        # Debug: print to verify the columns before merging
+        print("Most common starters columns:", most_common_starters.columns)
+        print("Aggregated data columns:", aggregated_data.columns)
+
         # Merge the aggregated set piece data
         most_common_starters = most_common_starters.merge(
             aggregated_data, on="Player", how="left"
