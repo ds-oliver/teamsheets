@@ -120,7 +120,7 @@ def get_positions_of_each_game(fbref_lineups, team_name):
     return positions_data
 
 
-def get_most_common_players(team_name, selected_players, excluded_players, dataframe):
+def get_most_common_players(team_name, selected_players, excluded_players, dataframe, set_piece_takers=False):
     if not selected_players:
         if not isinstance(selected_players, list):
             selected_players = [selected_players]
