@@ -154,26 +154,8 @@ def get_most_common_players(
     # Filter DataFrame for valid games
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
 
-    # Calculate team total set pieces for each game
-    team_set_pieces = valid_games_data.groupby("game_id")[
-        "Deadballs", "Freekicks", "Cornerkicks", "Inswinging", "Outswinging", "Straight"
-    ].sum()
-    team_set_pieces["TotalSetPieces"] = team_set_pieces.sum(axis=1)
-
-    # Merge team total back to the original data
-    valid_games_data = valid_games_data.merge(
-        team_set_pieces["TotalSetPieces"], on="game_id"
-    )
-
-    # Count starts for players not in selected or excluded players
-    most_common_starters = (
-        valid_games_data["player"].value_counts().head(6).reset_index()
-    )
-    most_common_starters.columns = ["Player", "Starts Together"]
-
-    # Merge with set piece data if set_piece_takers is True
     if set_piece_takers:
-        # Assuming 'player' is the correct column name and set piece columns exist in the dataframe
+        # Set piece columns to calculate percentages
         set_piece_columns = [
             "Deadballs",
             "Freekicks",
@@ -182,32 +164,57 @@ def get_most_common_players(
             "Outswinging",
             "Straight",
         ]
-        aggregated_data = (
-            valid_games_data.groupby("player")[set_piece_columns].sum().reset_index()
+        team_set_pieces_columns = ["game_id"] + set_piece_columns
+
+        # Calculate team total set pieces for each game
+        team_set_pieces = valid_games_data.groupby("game_id")[set_piece_columns].sum()
+        team_set_pieces["TotalSetPieces"] = team_set_pieces.sum(axis=1)
+
+        # Merge team total back to the individual set piece data
+        valid_games_data = valid_games_data.merge(
+            team_set_pieces["TotalSetPieces"], on="game_id"
         )
-        aggregated_data.rename(
-            columns={"player": "Player"}, inplace=True
-        )  # Ensure the key column name matches for merge
 
-        # Calculate percentage of set pieces for each player
-        for column in set_piece_columns:
-            aggregated_data[f"{column}Percent"] = (
-                aggregated_data[column] / valid_games_data["TotalSetPieces"]
-            ) * 100
-
-        # Average the percentages across all games
-        aggregated_data = (
-            aggregated_data.groupby("Player")[
-                [f"{column}Percent" for column in set_piece_columns]
-            ]
-            .mean()
+        # Aggregating player set pieces and calculate percentages
+        player_set_pieces = (
+            valid_games_data.groupby(["game_id", "player"])[set_piece_columns]
+            .sum()
             .reset_index()
         )
+        for column in set_piece_columns:
+            player_set_pieces[column] = (
+                player_set_pieces[column] / valid_games_data["TotalSetPieces"]
+            ) * 100
 
-        # Merge the percentages
-        most_common_starters = most_common_starters.merge(
-            aggregated_data, on="Player", how="left"
+        # Get average percentage of set pieces taken by each player across all games
+        average_player_set_pieces = (
+            player_set_pieces.groupby("player")[set_piece_columns].mean().reset_index()
         )
+        average_player_set_pieces.rename(columns={"player": "Player"}, inplace=True)
+
+        # Calculate the average percentage of the set pieces for each type
+        average_set_piece_percentages = {}
+        for column in set_piece_columns:
+            average_set_piece_percentages[column + "Percent"] = (
+                average_player_set_pieces[column]
+            )
+        average_set_piece_percentages_df = pd.DataFrame(average_set_piece_percentages)
+        average_set_piece_percentages_df["Player"] = average_player_set_pieces["Player"]
+
+        # Merge the average percentages with most common starters
+        most_common_starters = (
+            valid_games_data["player"].value_counts().head(6).reset_index()
+        )
+        most_common_starters.columns = ["Player", "Starts Together"]
+        most_common_starters = most_common_starters.merge(
+            average_set_piece_percentages_df, on="Player", how="left"
+        )
+    else:
+        # Count how many times each player, not in selected or excluded players, started in these games
+        most_common_starters = (
+            valid_games_data["player"].value_counts().head(6).reset_index()
+        )
+        most_common_starters.columns = ["Player", "Starts Together"]
 
     # Prepare output text
     num_games = len(valid_games)
