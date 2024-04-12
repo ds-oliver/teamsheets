@@ -193,7 +193,7 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
 
 
 # create a function to look for the positions a player passed has played and count
-def get_player_positions(fbref_lineups, player_name, team_name, set_piece_takers=False):
+def get_player_positions(fbref_lineups, player_name, team_name):
     # get teams from the specified team that is_starter is true
     team_starters = fbref_lineups[
         (fbref_lineups["team"] == team_name) & (fbref_lineups["is_starter"] == True)
