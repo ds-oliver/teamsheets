@@ -328,7 +328,7 @@ def main():
     )
 
     # Load CSV file
-    fbref_lineups = pd.read_csv("sets_and_lineups_v1.csv")
+    fbref_lineups = pd.read_csv("sets_and_lineups_v2.csv")
 
     fbref_lineups.columns.tolist()
 
