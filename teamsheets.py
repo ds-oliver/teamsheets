@@ -203,6 +203,8 @@ def get_most_common_players(
             .reset_index()
         )
 
+        average_percentages.columns.tolist()
+
         # Merge the average percentages with most common starters
         most_common_starters = (
             valid_games_data["player"].value_counts().head(6).reset_index()
