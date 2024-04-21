@@ -231,6 +231,11 @@ def get_most_common_players(
         most_common_starters["Starts Together"] / len(valid_games) * 100
     ).map("{:.0f}%".format)
 
+    # put Starts Together then Starts Freq as the first two columns
+    most_common_starters = most_common_starters[
+        ["Player", "Starts Together", "Starts Freq"]
+    ]
+
     # Prepare output text
     num_games = len(valid_games)
     players_joined = ", ".join(selected_players) if selected_players else "No players"
@@ -243,7 +248,7 @@ def get_most_common_players(
         selected_text = f"Included player(s): {selected_players[0]}"
     else:
         selected_text = (
-            f"Included player(s): {len(selected_players)}"
+            f"Included player(s): ({len(selected_players)}) {players_joined}"
         )
 
     # Determine the correct grammar for excluded players
@@ -253,20 +258,22 @@ def get_most_common_players(
         excluded_text = f"Excluded player(s): {excluded_players[0]}"
     else:
         excluded_text = (
-            f"Excluded player(s): {len(excluded_players)}"
+            f"Excluded player(s): ({len(excluded_players)}) {excluded_joined}"
         )
 
     # Modify the text based on the number of selected players and excluded players
     if len(selected_players) > 1 and len(excluded_players) > 0:
-        text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
+        text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}.\n"
     elif len(selected_players) == 1 and len(excluded_players) > 0:
-        text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}."
+        text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}.\n"
     elif len(selected_players) > 1 and len(excluded_players) == 0:
-        text = f"Found {num_games} games where {players_joined} started together for {team_name}."
+        text = f"Found {num_games} games where {players_joined} started together for {team_name}.\n"
     elif len(selected_players) == 1 and len(excluded_players) == 0:
-        text = f"Found {num_games} games where {players_joined} started for {team_name}."
+        text = (
+            f"Found {num_games} games where {players_joined} started for {team_name}.\n"
+        )
     else:  # case where there are no selected players but there are excluded players
-        text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}."
+        text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}.\n"
 
     text += f"\n{selected_text}, {excluded_text}."
 
