@@ -492,14 +492,21 @@ def main():
         players = sorted(filtered_data["player"].unique().tolist())
 
     # Select players to exclude from analysis
-    players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players, help="For example, you can exclude players who are injured...")
+    players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players, help="For example, you can exclude players who are not currently available...")
 
     # Create a copy of the original DataFrame
     fbref_lineups_copy = fbref_lineups.copy()
 
     # Exclude players from the copied DataFrame
-    for player in players_to_exclude:
-        fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
+    if players_to_exclude:
+        for player in players_to_exclude:
+            game_ids_to_exclude_based_on_player = fbref_lineups[
+                fbref_lineups["player"] == player
+            ]["game_id"].unique()
+            fbref_lineups_copy = fbref_lineups_copy[
+                ~fbref_lineups_copy["game_id"].isin(game_ids_to_exclude_based_on_player)
+            ]
+            fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
 
     # Dynamically adjusting players for analysis based on exclusions
     players_for_analysis = [
@@ -522,7 +529,7 @@ def main():
                 selected_team,
                 selected_players,
                 players_to_exclude,
-                fbref_lineups,
+                fbref_lineups_copy,
                 set_piece_takers=set_piece_takers,
             )
             st.write(text)
@@ -531,7 +538,7 @@ def main():
             # Detailed player analysis for each selected player
             for player in selected_players:
                 positions, opponents = get_player_positions_v2(
-                    fbref_lineups, player, selected_team
+                    fbref_lineups_copy, player, selected_team
                 )
                 st.write(f"Positions played by {player}:")
                 st.dataframe(positions)

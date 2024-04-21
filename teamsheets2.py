@@ -120,7 +120,10 @@ def get_positions_of_each_game(fbref_lineups, team_name):
     return positions_data
 
 
-def get_most_common_players(team_name, selected_players, excluded_players, dataframe):
+def get_most_common_players(
+    team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
+):
+    # Ensure selected_players and excluded_players are lists
     if not isinstance(selected_players, list):
         selected_players = [selected_players]
     if not isinstance(excluded_players, list):
@@ -130,19 +133,17 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
         f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
     )
 
-    # filter for is_starter is true
+    # Filter for is_starter == True and for the selected team
     dataframe = dataframe[dataframe["is_starter"] == True]
-
-    # Filter for the selected team
     team_data = dataframe[dataframe["team"] == team_name]
 
-    # Create a mask for games where any of the selected players started and none of the excluded players did
+    # Function to filter games based on selected and excluded players
     def game_filter(players):
         return set(selected_players).issubset(set(players)) and set(
             excluded_players
         ).isdisjoint(set(players))
 
-    # Group games by 'game_id' and filter using the mask
+    # Apply the game filter
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
@@ -150,15 +151,72 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
         games_with_selected_players
     ].index.tolist()
 
-    # Filter the DataFrame for the valid games
+    # Filter DataFrame for valid games where the selected players started
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
 
-    # Count how many times each player, not in selected or excluded players, started in these games
-    other_starters = valid_games_data[
-        ~valid_games_data["player"].isin(selected_players + excluded_players)
-    ]
-    most_common_starters = other_starters["player"].value_counts().head(6).reset_index()
-    most_common_starters.columns = ["Player", "Starts Together"]
+    if set_piece_takers:
+        # Set piece columns to calculate percentages
+        set_piece_columns = [
+            "Deadballs",
+            "Freekicks",
+            "Cornerkicks",
+            "Inswinging",
+            "Outswinging",
+            "Straight",
+        ]
+
+        # Calculate team total set pieces for each game
+        team_set_pieces = (
+            valid_games_data.groupby("game_id")[set_piece_columns].sum().reset_index()
+        )
+        team_set_pieces["TotalSetPieces"] = team_set_pieces[set_piece_columns].sum(
+            axis=1
+        )
+
+        # Merge team total back to the individual player data
+        valid_games_data = valid_games_data.merge(
+            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
+        )
+
+        # Calculate the sum of each type of set piece taken by each player per game
+        player_set_pieces = (
+            valid_games_data.groupby(["game_id", "player"])[set_piece_columns]
+            .sum()
+            .reset_index()
+        )
+        player_set_pieces = player_set_pieces.merge(
+            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
+        )
+
+        # Calculate percentages for each player per game
+        for column in set_piece_columns:
+            player_set_pieces[f"{column}_Percent"] = (
+                player_set_pieces[column] / player_set_pieces["TotalSetPieces"]
+            ) * 100
+
+        # Get the average percentage for each player across all games where the selected players started
+        average_percentages = (
+            player_set_pieces.groupby("player")[
+                [f"{column}_Percent" for column in set_piece_columns]
+            ]
+            .mean()
+            .reset_index()
+        )
+
+        # Merge the average percentages with most common starters
+        most_common_starters = (
+            valid_games_data["player"].value_counts().head(6).reset_index()
+        )
+        most_common_starters.columns = ["Player", "Starts Together"]
+        most_common_starters = most_common_starters.merge(
+            average_percentages, on="Player", how="left"
+        )
+    else:
+        # Count how many times each player, not in selected or excluded players, started in these games
+        most_common_starters = (
+            valid_games_data["player"].value_counts().head(6).reset_index()
+        )
+        most_common_starters.columns = ["Player", "Starts Together"]
 
     # Prepare output text
     num_games = len(valid_games)
@@ -304,6 +362,9 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     return position_counts_df, opponents
 
 
+# define a function to aggregate set piece takers
+
+
 def main():
     # set config
     st.set_page_config(
@@ -326,10 +387,14 @@ def main():
     )
 
     # Load CSV file
-    fbref_lineups = pd.read_csv("fbref_lineups_epl_v5.csv")
+    fbref_lineups = pd.read_csv("sets_and_lineups_v2.csv")
+
+    fbref_lineups.columns.tolist()
 
     # get all teams where the league is ENG-Premier League
-    premier_league_teams = fbref_lineups[fbref_lineups["league"] == "ENG-Premier League"]["team"].unique()
+    premier_league_teams = fbref_lineups[
+        fbref_lineups["league"] == "ENG-Premier League"
+    ]["team"].unique()
 
     # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
     fbref_lineups = fbref_lineups[
@@ -360,7 +425,7 @@ def main():
     # add expander here to explain the app
     with st.expander("**:red[About this app]**", expanded=True):
         leagues = sorted(fbref_lineups["league_display"].unique().tolist())
-        leagues_list = "\n".join([f'    - {league} ' for league in leagues])
+        leagues_list = "\n".join([f"    - {league} " for league in leagues])
         st.markdown(
             """
             The main function of this app is to analyze the team lineups and player positions in football matches.
@@ -377,6 +442,26 @@ def main():
             You can select a season, team, and competition to view detailed player analysis and team profiles.
             """
         )
+
+    set_piece_takers = False
+
+    # create a toggle "Add Set Piece Data" which if clicked will filter to only include: seasons == [1718 1819 2021 2122 2223 2324] and leagues == ['ENG-Premier League' 'UEFA-Champions League' 'UEFA-Europa Conference League' 'UEFA-Europa League']
+    if st.toggle(
+        "Add SetPiece Data",
+        help="If this option is selected the data will be truncated as it filters for specific seasons",
+    ):
+        set_piece_takers = True
+        fbref_lineups = fbref_lineups[
+            fbref_lineups["season"].isin([1718, 1819, 2021, 2122, 2223, 2324])
+            & fbref_lineups["league"].isin(
+                [
+                    "ENG-Premier League",
+                    "UEFA-Champions League",
+                    "UEFA-Europa Conference League",
+                    "UEFA-Europa League",
+                ]
+            )
+        ]
 
     # Streamlit UI for season, team, and competition selection
     seasons = ["All Seasons"] + sorted(
@@ -413,9 +498,11 @@ def main():
         players = sorted(filtered_data["player"].unique().tolist())
 
     # Select players to exclude from analysis
-    st.subheader("Exclude Players")
-    st.info("For example, you can exclude players who are injured")
-    players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players)
+    players_to_exclude = st.multiselect(
+        "Select player(s) to :red[Exclude]:",
+        players,
+        help="For example, you can exclude players who are injured...",
+    )
 
     # Create a copy of the original DataFrame
     fbref_lineups_copy = fbref_lineups.copy()
@@ -433,14 +520,20 @@ def main():
     )
 
     # Analyze button logic
-    if st.button("Analyze"):
+    if st.button(f"Analyze"):
         # Ensuring there's a selection to analyze
         if not selected_players:
             st.warning("Please select player(s) for analysis.")
+            # Conduct general team specific analysis
+
         else:
             # Conduct analysis
             most_common_players, _, text = get_most_common_players(
-                selected_team, selected_players, players_to_exclude, fbref_lineups
+                selected_team,
+                selected_players,
+                players_to_exclude,
+                fbref_lineups,
+                set_piece_takers=set_piece_takers,
             )
             st.write(text)
             st.dataframe(most_common_players)
