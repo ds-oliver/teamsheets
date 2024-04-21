@@ -629,13 +629,13 @@ def main():
     # Exclude players from the copied DataFrame
     if players_to_exclude:
         for player in players_to_exclude:
-            game_ids_to_exclude_based_on_player = fbref_lineups[
-                fbref_lineups["player"] == player
+            game_ids_to_exclude_based_on_player = filtered_data[
+                filtered_data["player"] == player
             ]["game_id"].unique()
-            fbref_lineups_copy = fbref_lineups_copy[
-                ~fbref_lineups_copy["game_id"].isin(game_ids_to_exclude_based_on_player)
+            filtered_data = filtered_data[
+                ~filtered_data["game_id"].isin(game_ids_to_exclude_based_on_player)
             ]
-            fbref_lineups_copy = fbref_lineups_copy[fbref_lineups_copy["player"] != player]
+            filtered_data = filtered_data[filtered_data["player"] != player]
 
     # Dynamically adjusting players for analysis based on exclusions
     players_for_analysis = [
@@ -663,7 +663,7 @@ def main():
                     selected_team,
                     selected_players,
                     players_to_exclude,
-                    fbref_lineups_copy,
+                    filtered_data,
                     set_piece_takers=set_piece_takers,
                 )
                 st.write(text)
@@ -672,7 +672,7 @@ def main():
                 # Detailed player analysis for each selected player
                 for player in selected_players:
                     positions, opponents = get_player_positions_v2(
-                        fbref_lineups_copy, player, selected_team
+                        filtered_data, player, selected_team
                     )
                     st.write(f"Positions played by {player} under the above circumstances:")
                     st.dataframe(positions)
@@ -681,7 +681,9 @@ def main():
 
             with tab2:
                 st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
-                positions_data = get_positions_of_each_game(fbref_lineups_copy, selected_team)
+                positions_data = get_positions_of_each_game(
+                    filtered_data, selected_team
+                )
                 st.write(f"Positional setup by {selected_team}:")
                 st.info(
                     f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
