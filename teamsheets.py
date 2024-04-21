@@ -225,11 +225,29 @@ def get_most_common_players(
     num_games = len(valid_games)
     players_joined = ", ".join(selected_players)
     excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
-    players_plural = "players" if len(selected_players) > 1 else "player"
-    excluded_plural = "players" if len(excluded_players) > 1 else "player"
-    selected_text = f"{len(selected_players)} {players_plural} were selected" if selected_players else "No players were selected"
-    excluded_text = f"{len(excluded_players)} {excluded_plural} were excluded" if excluded_players else "No players were excluded"
-    text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
+
+    # Determine the correct grammar for selected players
+    if len(selected_players) == 0:
+        selected_text = "No players were selected"
+    elif len(selected_players) == 1:
+        selected_text = f"{selected_players[0]} was selected"
+    else:
+        selected_text = f"{len(selected_players)} players were selected"
+
+    # Determine the correct grammar for excluded players
+    if len(excluded_players) == 0:
+        excluded_text = "No players were excluded"
+    elif len(excluded_players) == 1:
+        excluded_text = f"{excluded_players[0]} was excluded"
+    else:
+        excluded_text = f"{len(excluded_players)} players were excluded"
+
+    # Modify the text based on the number of selected players
+    if len(selected_players) > 1:
+        text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
+    else:
+        text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}."
+
     text += f" {selected_text} and {excluded_text}."
 
     return most_common_starters, num_games, text
