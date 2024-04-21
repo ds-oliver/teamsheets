@@ -453,6 +453,8 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
         & (fbref_lineups["is_starter"] == True)
     ]
 
+    team_data
+
     # Initialize an empty dictionary to hold position counts
     position_counts_dict = {}
 
