@@ -681,7 +681,7 @@ def main():
 
             with tab2:
                 st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
-                positions_data = get_positions_of_each_game(filtered_data, selected_team)
+                positions_data = get_positions_of_each_game(fbref_lineups_copy, selected_team)
                 st.write(f"Positional setup by {selected_team}:")
                 st.info(
                     f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
