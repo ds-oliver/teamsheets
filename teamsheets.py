@@ -235,7 +235,7 @@ def get_most_common_players(
 
     # Prepare output text
     num_games = len(valid_games)
-    players_joined = ", ".join(selected_players)
+    players_joined = ", ".join(selected_players) if selected_players else "No players"
     excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
 
     # Determine the correct grammar for selected players
@@ -261,8 +261,10 @@ def get_most_common_players(
         text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}."
     elif len(selected_players) > 1 and len(excluded_players) == 0:
         text = f"Found {num_games} games where {players_joined} started together for {team_name}."
-    else:
+    elif len(selected_players) == 1 and len(excluded_players) == 0:
         text = f"Found {num_games} games where {players_joined} started for {team_name}."
+    else:  # case where there are no selected players but there are excluded players
+        text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}."
 
     text += f" {selected_text} and {excluded_text}."
 
@@ -632,32 +634,72 @@ def main():
 
     # Analyze button logic
     if st.button(f"Analyze"):
+        tab1, tab2 = st.tabs(["📈 Players", "🗃 Team Profile"])
+
         # Ensuring there's a selection to analyze
         if not selected_players and not players_to_exclude:
             st.warning("Please select player(s) for analysis.")
             # Conduct general team specific analysis
 
         else:
-            # Conduct analysis
-            most_common_players, _, text = get_most_common_players(
-                selected_team,
-                selected_players,
-                players_to_exclude,
-                fbref_lineups_copy,
-                set_piece_takers=set_piece_takers,
-            )
-            st.write(text)
-            st.dataframe(most_common_players)
+            with tab1:
+                st.title(f"Player Analysis for {selected_team}")
 
-            # Detailed player analysis for each selected player
-            for player in selected_players:
-                positions, opponents = get_player_positions_v2(
-                    fbref_lineups_copy, player, selected_team
+                # Conduct analysis
+                most_common_players, _, text = get_most_common_players(
+                    selected_team,
+                    selected_players,
+                    players_to_exclude,
+                    fbref_lineups_copy,
+                    set_piece_takers=set_piece_takers,
                 )
-                st.write(f"Positions played by {player} under the above circumstances:")
-                st.dataframe(positions)
-                st.write(f"Opponents faced by {player} under the above circumstances:")
-                st.dataframe(opponents)
+                st.write(text)
+                st.dataframe(most_common_players)
+
+                # Detailed player analysis for each selected player
+                for player in selected_players:
+                    positions, opponents = get_player_positions_v2(
+                        fbref_lineups_copy, player, selected_team
+                    )
+                    st.write(f"Positions played by {player} under the above circumstances:")
+                    st.dataframe(positions)
+                    st.write(f"Opponents faced by {player} under the above circumstances:")
+                    st.dataframe(opponents)
+
+            with tab2:
+                st.title(f"{selected_team}")
+                positions_data = get_positions_of_each_game(filtered_data, selected_team)
+                st.write(f"Positional setup by {selected_team}:")
+                st.info(
+                    f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
+                )
+                st.dataframe(positions_data, use_container_width=True)
+                # team_profile = get_team_profile(selected_team, filtered_data)
+                # # reset the index for the team profile DataFrame
+                # team_profile.reset_index(drop=True, inplace=True)
+                # st.write(f"Team profile for {selected_team}:")
+                # st.dataframe(team_profile)
+                st.divider()
+            # # Conduct analysis
+            # most_common_players, _, text = get_most_common_players(
+            #     selected_team,
+            #     selected_players,
+            #     players_to_exclude,
+            #     fbref_lineups_copy,
+            #     set_piece_takers=set_piece_takers,
+            # )
+            # st.write(text)
+            # st.dataframe(most_common_players)
+
+            # # Detailed player analysis for each selected player
+            # for player in selected_players:
+            #     positions, opponents = get_player_positions_v2(
+            #         fbref_lineups_copy, player, selected_team
+            #     )
+            #     st.write(f"Positions played by {player} under the above circumstances:")
+            #     st.dataframe(positions)
+            #     st.write(f"Opponents faced by {player} under the above circumstances:")
+            #     st.dataframe(opponents)
     else:
         st.warning("Please select player(s) for analysis.")
         st.markdown(
