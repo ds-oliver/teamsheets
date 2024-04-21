@@ -268,7 +268,7 @@ def get_most_common_players(
     else:  # case where there are no selected players but there are excluded players
         text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}."
 
-    text += f" {selected_text} and {excluded_text}."
+    text += f"\n{selected_text}, {excluded_text}."
 
     return most_common_starters, num_games, text
 
