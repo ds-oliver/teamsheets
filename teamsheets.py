@@ -203,6 +203,7 @@ def get_most_common_players(
             .reset_index()
         )
 
+
         # rename player to Player
         average_percentages = average_percentages.rename(columns={"player": "Player"})
 
@@ -253,11 +254,15 @@ def get_most_common_players(
     else:
         excluded_text = f"{len(excluded_players)} players were excluded"
 
-    # Modify the text based on the number of selected players
-    if len(selected_players) > 1:
+    # Modify the text based on the number of selected players and excluded players
+    if len(selected_players) > 1 and len(excluded_players) > 0:
         text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
-    else:
+    elif len(selected_players) == 1 and len(excluded_players) > 0:
         text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}."
+    elif len(selected_players) > 1 and len(excluded_players) == 0:
+        text = f"Found {num_games} games where {players_joined} started together for {team_name}."
+    else:
+        text = f"Found {num_games} games where {players_joined} started for {team_name}."
 
     text += f" {selected_text} and {excluded_text}."
 
