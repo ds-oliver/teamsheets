@@ -225,7 +225,7 @@ def get_most_common_players(
     most_common_starters["Starts Together"] = most_common_starters["Starts Together"] / len(valid_games) * 100
 
     # make sure it is formatted as a percentage
-    most_common_starters["Starts Together"] = most_common_starters["Starts Together"].map("{:.2f}%".format)
+    most_common_starters["Starts Together"] = most_common_starters["Starts Together"].map("{:.0f}%".format)
 
     # Prepare output text
     num_games = len(valid_games)
