@@ -243,14 +243,14 @@ def get_most_common_players(
 
     # Determine the correct grammar for selected players
     if len(selected_players) == 0:
-        selected_text = "Included player(s): :red[None]"
+        selected_text = "Included player(s): :red[None]\n"
     elif len(selected_players) == 1:
         selected_text = (
-            f"Included player(s): ({len(selected_players)}) {selected_players[0]}"
+            f"Included player(s): ({len(selected_players)}) {selected_players[0]}\n"
         )
     else:
         selected_text = (
-            f"Included player(s): ({len(selected_players)}) {players_joined}"
+            f"Included player(s): ({len(selected_players)}) {players_joined}\n"
         )
 
     # Determine the correct grammar for excluded players
