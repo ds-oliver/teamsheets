@@ -633,7 +633,7 @@ def main():
     # Analyze button logic
     if st.button(f"Analyze"):
         # Ensuring there's a selection to analyze
-        if not selected_players:
+        if not selected_players and not players_to_exclude:
             st.warning("Please select player(s) for analysis.")
             # Conduct general team specific analysis
 
