@@ -243,26 +243,26 @@ def get_most_common_players(
 
     # Determine the correct grammar for selected players
     if len(selected_players) == 0:
-        selected_text = "Included player(s): :red[None]\n"
+        selected_text = "**Included player(s):** :red[None]\n"
     elif len(selected_players) == 1:
         selected_text = (
-            f"Included player(s): ({len(selected_players)}) {selected_players[0]}\n"
+            f"**Included player(s):** ({len(selected_players)}) {selected_players[0]}\n"
         )
     else:
         selected_text = (
-            f"Included player(s): ({len(selected_players)}) {players_joined}\n"
+            f"**Included player(s):** ({len(selected_players)}) {players_joined}\n"
         )
 
     # Determine the correct grammar for excluded players
     if len(excluded_players) == 0:
-        excluded_text = "Excluded player(s): :red[None]"
+        excluded_text = "**Excluded player(s):** :red[None]"
     elif len(excluded_players) == 1:
         excluded_text = (
-            f"Excluded player(s): ({len(excluded_players)}) {excluded_players[0]}"
+            f"**Excluded player(s):** ({len(excluded_players)}) {excluded_players[0]}"
         )
     else:
         excluded_text = (
-            f"Excluded player(s): ({len(excluded_players)}) {excluded_joined}"
+            f"**Excluded player(s):** ({len(excluded_players)}) {excluded_joined}"
         )
 
     # Modify the text based on the number of selected players and excluded players
@@ -279,7 +279,7 @@ def get_most_common_players(
     else:  # case where there are no selected players but there are excluded players
         text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}.\n"
 
-    text += f"\n**{selected_text}**\n**{excluded_text}**"
+    text += f"\n{selected_text}\n{excluded_text}"
 
     return most_common_starters, num_games, text
 
