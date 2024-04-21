@@ -203,7 +203,6 @@ def get_most_common_players(
             .reset_index()
         )
 
-
         # rename player to Player
         average_percentages = average_percentages.rename(columns={"player": "Player"})
 
@@ -223,15 +222,14 @@ def get_most_common_players(
             valid_games_data["player"].value_counts().head(6).reset_index()
         )
         most_common_starters.columns = ["Player", "Starts Together"]
-    
+
     # the players selected for analysis should not be included in the final most_common_starters DataFrame
     most_common_starters = most_common_starters[~most_common_starters["Player"].isin(selected_players)]
 
     # put the starts together as a percentage of the total games
-    most_common_starters["Starts Together"] = most_common_starters["Starts Together"] / len(valid_games) * 100
-
-    # make sure it is formatted as a percentage
-    most_common_starters["Starts Together"] = most_common_starters["Starts Together"].map("{:.0f}%".format)
+    most_common_starters["Starts Freq"] = (
+        most_common_starters["Starts Together"] / len(valid_games) * 100
+    ).map("{:.0f}%".format)
 
     # Prepare output text
     num_games = len(valid_games)
@@ -240,19 +238,23 @@ def get_most_common_players(
 
     # Determine the correct grammar for selected players
     if len(selected_players) == 0:
-        selected_text = "No players were selected"
+        selected_text = "Included player(s): :red[None]"
     elif len(selected_players) == 1:
-        selected_text = f"{selected_players[0]} was selected"
+        selected_text = f"Included player(s): {selected_players[0]}"
     else:
-        selected_text = f"{len(selected_players)} players were selected"
+        selected_text = (
+            f"Included player(s): {len(selected_players)}"
+        )
 
     # Determine the correct grammar for excluded players
     if len(excluded_players) == 0:
-        excluded_text = "No players were excluded"
+        excluded_text = "Excluded player(s): :red[None]"
     elif len(excluded_players) == 1:
-        excluded_text = f"{excluded_players[0]} was excluded"
+        excluded_text = f"Excluded player(s): {excluded_players[0]}"
     else:
-        excluded_text = f"{len(excluded_players)} players were excluded"
+        excluded_text = (
+            f"Excluded player(s): {len(excluded_players)}"
+        )
 
     # Modify the text based on the number of selected players and excluded players
     if len(selected_players) > 1 and len(excluded_players) > 0:
@@ -667,7 +669,7 @@ def main():
                     st.dataframe(opponents)
 
             with tab2:
-                st.title(f"{selected_team}")
+                st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
                 positions_data = get_positions_of_each_game(filtered_data, selected_team)
                 st.write(f"Positional setup by {selected_team}:")
                 st.info(
@@ -700,48 +702,48 @@ def main():
             #     st.dataframe(positions)
             #     st.write(f"Opponents faced by {player} under the above circumstances:")
             #     st.dataframe(opponents)
-    else:
-        st.warning("Please select player(s) for analysis.")
-        st.markdown(
-            """
-            <style>
-            .reportview-container .markdown-text-container {
-                font-family: monospace;
-            }
-            .sidebar .sidebar-content {
-                background-image: linear-gradient(#2e7bcf,#2e7bcf);
-                color: white;
-            }
-            .Widget>label {
-                color: white;
-                font-family: monospace;
-            }
-            [data-testid="stButton"] > div > div {
-                background-color: #4CAF50;
-                color: white;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
-        if st.button(
-            f":rainbow[Initiate Apriori algorithm to run Team Profile analysis for]: :white[{selected_team}]",
-            use_container_width=True,
-            type="secondary",
-        ):
-            positions_data = get_positions_of_each_game(filtered_data, selected_team)
-            st.title(f"{selected_team}")
-            st.write(f"Positional setup by {selected_team}:")
-            st.info(
-                f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
-            )
-            st.dataframe(positions_data, use_container_width=True)
-            # team_profile = get_team_profile(selected_team, filtered_data)
-            # # reset the index for the team profile DataFrame
-            # team_profile.reset_index(drop=True, inplace=True)
-            # st.write(f"Team profile for {selected_team}:")
-            # st.dataframe(team_profile)
-            st.divider()
+    # else:
+    #     st.warning("Please select player(s) for analysis.")
+    #     st.markdown(
+    #         """
+    #         <style>
+    #         .reportview-container .markdown-text-container {
+    #             font-family: monospace;
+    #         }
+    #         .sidebar .sidebar-content {
+    #             background-image: linear-gradient(#2e7bcf,#2e7bcf);
+    #             color: white;
+    #         }
+    #         .Widget>label {
+    #             color: white;
+    #             font-family: monospace;
+    #         }
+    #         [data-testid="stButton"] > div > div {
+    #             background-color: #4CAF50;
+    #             color: white;
+    #         }
+    #         </style>
+    #         """,
+    #         unsafe_allow_html=True,
+    #     )
+    #     if st.button(
+    #         f":rainbow[Initiate Apriori algorithm to run Team Profile analysis for]: :white[{selected_team}]",
+    #         use_container_width=True,
+    #         type="secondary",
+    #     ):
+    #         positions_data = get_positions_of_each_game(filtered_data, selected_team)
+    #         st.title(f"{selected_team}")
+    #         st.write(f"Positional setup by {selected_team}:")
+    #         st.info(
+    #             f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
+    #         )
+    #         st.dataframe(positions_data, use_container_width=True)
+    #         # team_profile = get_team_profile(selected_team, filtered_data)
+    #         # # reset the index for the team profile DataFrame
+    #         # team_profile.reset_index(drop=True, inplace=True)
+    #         # st.write(f"Team profile for {selected_team}:")
+    #         # st.dataframe(team_profile)
+    #         st.divider()
 
 
 if __name__ == "__main__":
