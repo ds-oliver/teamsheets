@@ -279,7 +279,7 @@ def get_most_common_players(
     else:  # case where there are no selected players but there are excluded players
         text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}.\n"
 
-    text += f"\n{selected_text}\n{excluded_text}."
+    text += f"\n**{selected_text}**\n**{excluded_text}**"
 
     return most_common_starters, num_games, text
 
@@ -621,7 +621,7 @@ def main():
         players = sorted(filtered_data["player"].unique().tolist())
 
     # Select players to exclude from analysis
-    players_to_exclude = st.multiselect("Select player(s) to :red[Exclude]:", players, help="For example, you can exclude players who are not currently available...")
+    players_to_exclude = st.multiselect(":red[Exclude] player(s) from analysis", players, help="For example, you can exclude players who are not currently available...")
 
     # Create a copy of the original DataFrame
     fbref_lineups_copy = fbref_lineups.copy()
@@ -642,12 +642,12 @@ def main():
         player for player in players if player not in players_to_exclude
     ]
     selected_players = st.multiselect(
-        "Select player(s) for analysis:", players_for_analysis
+        ":blue[Include] player(s) for analysis:", players_for_analysis
     )
 
     # Analyze button logic
     if st.button(f"Analyze"):
-        tab1, tab2 = st.tabs(["📈 Players", "🗃 Team Profile"])
+        tab1, tab2 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile"])
 
         # Ensuring there's a selection to analyze
         if not selected_players and not players_to_exclude:
