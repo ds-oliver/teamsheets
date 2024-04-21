@@ -217,12 +217,20 @@ def get_most_common_players(
             valid_games_data["player"].value_counts().head(6).reset_index()
         )
         most_common_starters.columns = ["Player", "Starts Together"]
+    
+    # the players selected for analysis should not be included in the final most_common_starters DataFrame
+    most_common_starters = most_common_starters[~most_common_starters["Player"].isin(selected_players)]
 
     # Prepare output text
     num_games = len(valid_games)
     players_joined = ", ".join(selected_players)
     excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
+    players_plural = "players" if len(selected_players) > 1 else "player"
+    excluded_plural = "players" if len(excluded_players) > 1 else "player"
+    selected_text = f"{len(selected_players)} {players_plural} were selected" if selected_players else "No players were selected"
+    excluded_text = f"{len(excluded_players)} {excluded_plural} were excluded" if excluded_players else "No players were excluded"
     text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
+    text += f" {selected_text} and {excluded_text}."
 
     return most_common_starters, num_games, text
 
