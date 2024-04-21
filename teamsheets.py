@@ -203,6 +203,9 @@ def get_most_common_players(
             .reset_index()
         )
 
+        # rename player to Player
+        average_percentages = average_percentages.rename(columns={"player": "Player"})
+
         print(average_percentages.columns.tolist())
 
         # Merge the average percentages with most common starters
