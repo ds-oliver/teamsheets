@@ -339,15 +339,17 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
 
     return position_counts_df, opponents
 
-def get_most_common_players(team_name, selected_players, excluded_players, dataframe, set_piece_takers=False):
+import logging
+
+def get_anticorrelation_players(team_name, selected_players, excluded_players, dataframe):
     # Ensure selected_players and excluded_players are lists
     if not isinstance(selected_players, list):
         selected_players = [selected_players]
     if not isinstance(excluded_players, list):
         excluded_players = [excluded_players]
 
-    print(f"Selected Players: {selected_players}")
-    print(f"Excluded Players: {excluded_players}")
+    logging.info(f"Selected Players: {selected_players}")
+    logging.info(f"Excluded Players: {excluded_players}")
 
     # Filter for is_starter == True and for the selected team
     dataframe = dataframe[dataframe["is_starter"] == True]
@@ -359,15 +361,17 @@ def get_most_common_players(team_name, selected_players, excluded_players, dataf
 
     # Apply the game filter
     games_with_selected_players = team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
-    print(f"Games with selected players (before filter): {games_with_selected_players}")
+    logging.info(f"Games with selected players (before filter): {games_with_selected_players}")
 
     valid_games = games_with_selected_players[games_with_selected_players].index.tolist()
-    print(f"Valid games after applying filters: {valid_games}")
+    logging.info(f"Valid games after applying filters: {valid_games}")
 
     # Filter DataFrame for valid games where the selected players started
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
-    print(f"Data for valid games ({len(valid_games_data)} records):")
-    print(valid_games_data.head())
+    logging.info(f"Data for valid games ({len(valid_games_data)} records):")
+    logging.info(valid_games_data.head())
+
+    # Rest of the function...
 
     if set_piece_takers:
         # Set piece columns to calculate percentages
