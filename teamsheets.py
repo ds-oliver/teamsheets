@@ -351,9 +351,7 @@ def get_most_common_players(
     if not isinstance(excluded_players, list):
         excluded_players = [excluded_players]
 
-    logging.info(
-        f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
-    )
+    logging.info(f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
 
     # Filter for is_starter == True and for the selected team
     dataframe = dataframe[dataframe["is_starter"] == True]
@@ -369,22 +367,16 @@ def get_most_common_players(
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
-    logging.INFO(
-        "Games with selected players (before filter): %s", games_with_selected_players
-    )
+    logging.INFO(f"Games with selected players: {games_with_selected_players}")
 
     valid_games = games_with_selected_players[
         games_with_selected_players
     ].index.tolist()
-    logging.INFO("Valid games after applying filters: %s", valid_games)
+    logging.INFO(f"Valid games: {valid_games}")
 
     # Filter DataFrame for valid games where the selected players started
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
-    logging.INFO(
-        "Data for valid games (%d records): %s",
-        len(valid_games_data),
-        valid_games_data.head(),
-    )
+    logging.INFO(f"Valid games data: {valid_games_data.head()}")
 
     if set_piece_takers:
         # Set piece columns to calculate percentages
