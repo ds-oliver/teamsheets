@@ -345,6 +345,9 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     # Calculate percentage for each opponent
     opponents["Percentage"] = (opponents["Count"] / total_opponents) * 100
 
+    # log unique opponents values
+    logging.info(f"Unique opponents: {opponents['opponent'].unique()}")
+
     logging.info(f"Opponents DataFrame: \n{opponents}")
 
     return position_counts_df, opponents
