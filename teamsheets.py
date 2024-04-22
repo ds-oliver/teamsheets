@@ -464,6 +464,11 @@ def get_most_common_players(
         ["Player", "Starts Together", "Starts Freq"]
     ]
 
+    # print logging statements that give the most common starters DataFrame and then lists off the players selected for analysis and the count of games they started together
+    logging.info(f"Most common starters: {most_common_starters.head()}")
+    logging.info(f"Players selected for analysis: {selected_players}")
+    logging.info(f"Count of games they started together: {len(valid_games)}")
+
     # Prepare output text
     num_games = len(valid_games)
     players_joined = ", ".join(selected_players) if selected_players else "No players"
