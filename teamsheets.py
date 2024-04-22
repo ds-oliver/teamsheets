@@ -368,16 +368,16 @@ def get_most_common_players(
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
-    logging.INFO(f"Games with selected players: {games_with_selected_players}")
+    logging.info(f"Games with selected players: {games_with_selected_players}")
 
     valid_games = games_with_selected_players[
         games_with_selected_players
     ].index.tolist()
-    logging.INFO(f"Valid games: {valid_games}")
+    logging.info(f"Valid games: {valid_games}")
 
     # Filter DataFrame for valid games where the selected players started
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
-    logging.INFO(f"Valid games data: {valid_games_data.head()}")
+    logging.info(f"Valid games data: {valid_games_data.head()}")
 
     if set_piece_takers:
         # Set piece columns to calculate percentages
@@ -512,7 +512,7 @@ def get_most_common_players(
 # define a function to aggregate set piece takers
 def main():
     
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.INFO format='%(asctime)s - %(levelname)s - %(message)s')
     # set config
     st.set_page_config(
         page_title="Football Lineup Analysis",
