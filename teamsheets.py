@@ -120,169 +120,6 @@ def get_positions_of_each_game(fbref_lineups, team_name):
     return positions_data
 
 
-def get_most_common_players(
-    team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
-):
-    # Ensure selected_players and excluded_players are lists
-    if not isinstance(selected_players, list):
-        selected_players = [selected_players]
-    if not isinstance(excluded_players, list):
-        excluded_players = [excluded_players]
-
-    print(
-        f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
-    )
-
-    # Filter for is_starter == True and for the selected team
-    dataframe = dataframe[dataframe["is_starter"] == True]
-    team_data = dataframe[dataframe["team"] == team_name]
-
-    # Function to filter games based on selected and excluded players
-    def game_filter(players):
-        return set(selected_players).issubset(set(players)) and set(
-            excluded_players
-        ).isdisjoint(set(players))
-
-    # Apply the game filter
-    games_with_selected_players = (
-        team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
-    )
-    valid_games = games_with_selected_players[
-        games_with_selected_players
-    ].index.tolist()
-
-    # Filter DataFrame for valid games where the selected players started
-    valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
-
-    if set_piece_takers:
-        # Set piece columns to calculate percentages
-        set_piece_columns = [
-            "Deadballs",
-            "Freekicks",
-            "Cornerkicks",
-            "Inswinging",
-            "Outswinging",
-            "Straight",
-        ]
-
-        # Calculate team total set pieces for each game
-        team_set_pieces = (
-            valid_games_data.groupby("game_id")[set_piece_columns].sum().reset_index()
-        )
-        team_set_pieces["TotalSetPieces"] = team_set_pieces[set_piece_columns].sum(
-            axis=1
-        )
-
-        # Merge team total back to the individual player data
-        valid_games_data = valid_games_data.merge(
-            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
-        )
-
-        # Calculate the sum of each type of set piece taken by each player per game
-        player_set_pieces = (
-            valid_games_data.groupby(["game_id", "player"])[set_piece_columns]
-            .sum()
-            .reset_index()
-        )
-        player_set_pieces = player_set_pieces.merge(
-            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
-        )
-
-        # Calculate percentages for each player per game
-        for column in set_piece_columns:
-            player_set_pieces[f"{column}_Percent"] = (
-                player_set_pieces[column] / player_set_pieces["TotalSetPieces"]
-            ) * 100
-
-        # Get the average percentage for each player across all games where the selected players started
-        average_percentages = (
-            player_set_pieces.groupby("player")[
-                [f"{column}_Percent" for column in set_piece_columns]
-            ]
-            .mean()
-            .reset_index()
-        )
-
-        # rename player to Player
-        average_percentages = average_percentages.rename(columns={"player": "Player"})
-
-        print(average_percentages.columns.tolist())
-
-        # Merge the average percentages with most common starters
-        most_common_starters = (
-            valid_games_data["player"].value_counts().head(6).reset_index()
-        )
-        most_common_starters.columns = ["Player", "Starts Together"]
-        most_common_starters = most_common_starters.merge(
-            average_percentages, on="Player", how="left"
-        )
-    else:
-        # Count how many times each player, not in selected or excluded players, started in these games
-        most_common_starters = (
-            valid_games_data["player"].value_counts().head(6).reset_index()
-        )
-        most_common_starters.columns = ["Player", "Starts Together"]
-
-    # the players selected for analysis should not be included in the final most_common_starters DataFrame
-    most_common_starters = most_common_starters[~most_common_starters["Player"].isin(selected_players)]
-
-    # put the starts together as a percentage of the total games
-    most_common_starters["Starts Freq"] = (
-        most_common_starters["Starts Together"] / len(valid_games) * 100
-    ).map("{:.0f}%".format)
-
-    # put Starts Together then Starts Freq as the first two columns
-    most_common_starters = most_common_starters[
-        ["Player", "Starts Together", "Starts Freq"]
-    ]
-
-    # Prepare output text
-    num_games = len(valid_games)
-    players_joined = ", ".join(selected_players) if selected_players else "No players"
-    excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
-
-    # Determine the correct grammar for selected players
-    if len(selected_players) == 0:
-        selected_text = "**Included player(s):** :red[None]\n"
-    elif len(selected_players) == 1:
-        selected_text = (
-            f"**Included player(s):** ({len(selected_players)}) {selected_players[0]}\n"
-        )
-    else:
-        selected_text = (
-            f"**Included player(s):** ({len(selected_players)}) {players_joined}\n"
-        )
-
-    # Determine the correct grammar for excluded players
-    if len(excluded_players) == 0:
-        excluded_text = "**Excluded player(s):** :red[None]"
-    elif len(excluded_players) == 1:
-        excluded_text = (
-            f"**Excluded player(s):** ({len(excluded_players)}) {excluded_players[0]}"
-        )
-    else:
-        excluded_text = (
-            f"**Excluded player(s):** ({len(excluded_players)}) {excluded_joined}"
-        )
-
-    # Modify the text based on the number of selected players and excluded players
-    if len(selected_players) > 1 and len(excluded_players) > 0:
-        text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}.\n"
-    elif len(selected_players) == 1 and len(excluded_players) > 0:
-        text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}.\n"
-    elif len(selected_players) > 1 and len(excluded_players) == 0:
-        text = f"Found {num_games} games where {players_joined} started together for {team_name}.\n"
-    elif len(selected_players) == 1 and len(excluded_players) == 0:
-        text = (
-            f"Found {num_games} games where {players_joined} started for {team_name}.\n"
-        )
-    else:  # case where there are no selected players but there are excluded players
-        text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}.\n"
-
-    text += f"\n{selected_text}\n{excluded_text}"
-
-    return most_common_starters, num_games, text
-
 # create function to get anticorrelation between players, which should output a similar DataFrame to the one above
 def get_anticorrelation_players(team_name, selected_players, excluded_players, dataframe):
     # Ensure selected_players and excluded_players are lists
@@ -501,6 +338,166 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     opponents["Percentage"] = (opponents["Count"] / total_opponents) * 100
 
     return position_counts_df, opponents
+
+def get_most_common_players(team_name, selected_players, excluded_players, dataframe, set_piece_takers=False):
+    # Ensure selected_players and excluded_players are lists
+    if not isinstance(selected_players, list):
+        selected_players = [selected_players]
+    if not isinstance(excluded_players, list):
+        excluded_players = [excluded_players]
+
+    print(f"Selected Players: {selected_players}")
+    print(f"Excluded Players: {excluded_players}")
+
+    # Filter for is_starter == True and for the selected team
+    dataframe = dataframe[dataframe["is_starter"] == True]
+    team_data = dataframe[dataframe["team"] == team_name]
+
+    # Function to filter games based on selected and excluded players
+    def game_filter(players):
+        return set(selected_players).issubset(set(players)) and set(excluded_players).isdisjoint(set(players))
+
+    # Apply the game filter
+    games_with_selected_players = team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
+    print(f"Games with selected players (before filter): {games_with_selected_players}")
+
+    valid_games = games_with_selected_players[games_with_selected_players].index.tolist()
+    print(f"Valid games after applying filters: {valid_games}")
+
+    # Filter DataFrame for valid games where the selected players started
+    valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
+    print(f"Data for valid games ({len(valid_games_data)} records):")
+    print(valid_games_data.head())
+
+    if set_piece_takers:
+        # Set piece columns to calculate percentages
+        set_piece_columns = [
+            "Deadballs",
+            "Freekicks",
+            "Cornerkicks",
+            "Inswinging",
+            "Outswinging",
+            "Straight",
+        ]
+
+        # Calculate team total set pieces for each game
+        team_set_pieces = (
+            valid_games_data.groupby("game_id")[set_piece_columns].sum().reset_index()
+        )
+        team_set_pieces["TotalSetPieces"] = team_set_pieces[set_piece_columns].sum(
+            axis=1
+        )
+
+        # Merge team total back to the individual player data
+        valid_games_data = valid_games_data.merge(
+            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
+        )
+
+        # Calculate the sum of each type of set piece taken by each player per game
+        player_set_pieces = (
+            valid_games_data.groupby(["game_id", "player"])[set_piece_columns]
+            .sum()
+            .reset_index()
+        )
+        player_set_pieces = player_set_pieces.merge(
+            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
+        )
+
+        # Calculate percentages for each player per game
+        for column in set_piece_columns:
+            player_set_pieces[f"{column}_Percent"] = (
+                player_set_pieces[column] / player_set_pieces["TotalSetPieces"]
+            ) * 100
+
+        # Get the average percentage for each player across all games where the selected players started
+        average_percentages = (
+            player_set_pieces.groupby("player")[
+                [f"{column}_Percent" for column in set_piece_columns]
+            ]
+            .mean()
+            .reset_index()
+        )
+
+        # rename player to Player
+        average_percentages = average_percentages.rename(columns={"player": "Player"})
+
+        print(average_percentages.columns.tolist())
+
+        # Merge the average percentages with most common starters
+        most_common_starters = (
+            valid_games_data["player"].value_counts().head(6).reset_index()
+        )
+        most_common_starters.columns = ["Player", "Starts Together"]
+        most_common_starters = most_common_starters.merge(
+            average_percentages, on="Player", how="left"
+        )
+    else:
+        # Count how many times each player, not in selected or excluded players, started in these games
+        most_common_starters = (
+            valid_games_data["player"].value_counts().head(6).reset_index()
+        )
+        most_common_starters.columns = ["Player", "Starts Together"]
+
+    # the players selected for analysis should not be included in the final most_common_starters DataFrame
+    most_common_starters = most_common_starters[~most_common_starters["Player"].isin(selected_players)]
+
+    # put the starts together as a percentage of the total games
+    most_common_starters["Starts Freq"] = (
+        most_common_starters["Starts Together"] / len(valid_games) * 100
+    ).map("{:.0f}%".format)
+
+    # put Starts Together then Starts Freq as the first two columns
+    most_common_starters = most_common_starters[
+        ["Player", "Starts Together", "Starts Freq"]
+    ]
+
+    # Prepare output text
+    num_games = len(valid_games)
+    players_joined = ", ".join(selected_players) if selected_players else "No players"
+    excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
+
+    # Determine the correct grammar for selected players
+    if len(selected_players) == 0:
+        selected_text = "**Included player(s):** :red[None]\n"
+    elif len(selected_players) == 1:
+        selected_text = (
+            f"**Included player(s):** ({len(selected_players)}) {selected_players[0]}\n"
+        )
+    else:
+        selected_text = (
+            f"**Included player(s):** ({len(selected_players)}) {players_joined}\n"
+        )
+
+    # Determine the correct grammar for excluded players
+    if len(excluded_players) == 0:
+        excluded_text = "**Excluded player(s):** :red[None]"
+    elif len(excluded_players) == 1:
+        excluded_text = (
+            f"**Excluded player(s):** ({len(excluded_players)}) {excluded_players[0]}"
+        )
+    else:
+        excluded_text = (
+            f"**Excluded player(s):** ({len(excluded_players)}) {excluded_joined}"
+        )
+
+    # Modify the text based on the number of selected players and excluded players
+    if len(selected_players) > 1 and len(excluded_players) > 0:
+        text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}.\n"
+    elif len(selected_players) == 1 and len(excluded_players) > 0:
+        text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}.\n"
+    elif len(selected_players) > 1 and len(excluded_players) == 0:
+        text = f"Found {num_games} games where {players_joined} started together for {team_name}.\n"
+    elif len(selected_players) == 1 and len(excluded_players) == 0:
+        text = (
+            f"Found {num_games} games where {players_joined} started for {team_name}.\n"
+        )
+    else:  # case where there are no selected players but there are excluded players
+        text = f"Found {num_games} games where {excluded_joined} did not start for {team_name}.\n"
+
+    text += f"\n{selected_text}\n{excluded_text}"
+
+    return most_common_starters, num_games, text
+
 
 # define a function to aggregate set piece takers
 def main():
