@@ -2,6 +2,7 @@ from collections import Counter
 import pandas as pd
 import streamlit as st
 import warnings
+import logging
 
 warnings.filterwarnings("ignore")
 
@@ -283,12 +284,15 @@ def get_player_positions(fbref_lineups, player_name, team_name):
 
 
 def get_player_positions_v2(fbref_lineups, player_name, team_name):
+    logging.info(f"Getting player positions for {player_name} from {team_name}")
+
     # Filter for the specific team and players that contain the player_name
     team_data = fbref_lineups[
         (fbref_lineups["team"] == team_name)
         & (fbref_lineups["player"].str.contains(player_name, case=False))
         & (fbref_lineups["is_starter"] == True)
     ]
+    logging.info(f"Filtered team data: {team_data.head()}")
 
     # Initialize an empty dictionary to hold position counts
     position_counts_dict = {}
@@ -306,6 +310,8 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
                 else:
                     position_counts_dict[pos] = 1
 
+    logging.info(f"Position counts: {position_counts_dict}")
+
     # Convert the dictionary to a DataFrame
     position_counts_df = pd.DataFrame(
         list(position_counts_dict.items()), columns=["Position", "Count"]
@@ -322,6 +328,8 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
         by="Count", ascending=False
     ).reset_index(drop=True)
 
+    logging.info(f"Position counts DataFrame: \n{position_counts_df}")
+
     # Opponents faced analysis
     opponents = (
         team_data.groupby("opponent")
@@ -337,10 +345,9 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     # Calculate percentage for each opponent
     opponents["Percentage"] = (opponents["Count"] / total_opponents) * 100
 
-    return position_counts_df, opponents
+    logging.info(f"Opponents DataFrame: \n{opponents}")
 
-import pandas as pd
-import logging
+    return position_counts_df, opponents
 
 def get_most_common_players(
     team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
