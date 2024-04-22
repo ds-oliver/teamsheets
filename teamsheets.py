@@ -121,78 +121,6 @@ def get_positions_of_each_game(fbref_lineups, team_name):
     return positions_data
 
 
-# create function to get anticorrelation between players, which should output a similar DataFrame to the one above
-def get_anticorrelation_players(team_name, selected_players, excluded_players, dataframe):
-    # Ensure selected_players and excluded_players are lists
-    if not isinstance(selected_players, list):
-        selected_players = [selected_players]
-    if not isinstance(excluded_players, list):
-        excluded_players = [excluded_players]
-
-    print(
-        f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
-    )
-
-    # Filter for is_starter == True and for the selected team
-    dataframe = dataframe[dataframe["is_starter"] == True]
-    team_data = dataframe[dataframe["team"] == team_name]
-
-    # Function to filter games based on selected and excluded players
-    def game_filter(players):
-        return set(selected_players).issubset(set(players)) and set(
-            excluded_players
-        ).isdisjoint(set(players))
-
-    # Apply the game filter
-    games_with_selected_players = (
-        team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
-    )
-    valid_games = games_with_selected_players[
-        games_with_selected_players
-    ].index.tolist()
-
-    # Filter DataFrame for valid games where the selected players started
-    valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
-
-    # Count how many times each player, not in selected or excluded players, started in these games
-    most_common_starters = (
-        valid_games_data["player"].value_counts().head(6).reset_index()
-    )
-    most_common_starters.columns = ["Player", "Starts Together"]
-    
-    # the players selected for analysis should not be included in the final most_common_starters DataFrame
-    most_common_starters = most_common_starters[~most_common_starters["Player"].isin(selected_players)]
-
-    # Prepare output text
-    num_games = len(valid_games)
-    players_joined = ", ".join(selected_players)
-    excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
-
-    # Determine the correct grammar for selected players
-    if len(selected_players) == 0:
-        selected_text = "No players were selected"
-    elif len(selected_players) == 1:
-        selected_text = f"{selected_players[0]} was selected"
-    else:
-        selected_text = f"{len(selected_players)} players were selected"
-
-    # Determine the correct grammar for excluded players
-    if len(excluded_players) == 0:
-        excluded_text = "No players were excluded"
-    elif len(excluded_players) == 1:
-        excluded_text = f"{excluded_players[0]} was excluded"
-    else:
-        excluded_text = f"{len(excluded_players)} players were excluded"
-
-    # Modify the text based on the number of selected players
-    if len(selected_players) > 1:
-        text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
-    else:
-        text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}."
-
-    text += f" {selected_text} and {excluded_text}."
-
-    return most_common_starters, num_games, text
 
 # create a function to look for the positions a player passed has played and count
 def get_player_positions(fbref_lineups, player_name, team_name):
@@ -545,6 +473,75 @@ def get_most_common_players(
 
     return most_common_starters, num_games, text
 
+# create function to get anticorrelation between players, which should output a similar DataFrame to the one above
+def get_anticorrelation_players(team_name, selected_players, excluded_players, dataframe):
+    # Ensure selected_players and excluded_players are lists
+    if not isinstance(selected_players, list):
+        selected_players = [selected_players]
+    if not isinstance(excluded_players, list):
+        excluded_players = [excluded_players]
+
+    print(
+        f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
+    )
+
+    # Filter for is_starter == True and for the selected team
+    dataframe = dataframe[dataframe["is_starter"] == True]
+    team_data = dataframe[dataframe["team"] == team_name]
+
+    # Function to filter games based on selected and excluded players
+    def game_filter(players):
+        return set(selected_players).issubset(set(players)) and set(
+            excluded_players
+        ).isdisjoint(set(players))
+
+    # Apply the game filter
+    games_with_selected_players = (
+        team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
+    )
+    valid_games = games_with_selected_players[
+        games_with_selected_players
+    ].index.tolist()
+
+    # Filter DataFrame for valid games where the selected players started
+    valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
+
+    # Count how many times each player, not in selected or excluded players, did not start in these games
+    least_common_starters = (
+        valid_games_data[~valid_games_data["player"].isin(selected_players + excluded_players)]["player"].value_counts().tail(6).reset_index()
+    )
+    least_common_starters.columns = ["Player", "Starts Apart"]
+    
+    # Prepare output text
+    num_games = len(valid_games)
+    players_joined = ", ".join(selected_players)
+    excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
+
+    # Determine the correct grammar for selected players
+    if len(selected_players) == 0:
+        selected_text = "No players were selected"
+    elif len(selected_players) == 1:
+        selected_text = f"{selected_players[0]} was selected"
+    else:
+        selected_text = f"{len(selected_players)} players were selected"
+
+    # Determine the correct grammar for excluded players
+    if len(excluded_players) == 0:
+        excluded_text = "No players were excluded"
+    elif len(excluded_players) == 1:
+        excluded_text = f"{excluded_players[0]} was excluded"
+    else:
+        excluded_text = f"{len(excluded_players)} players were excluded"
+
+    # Modify the text based on the number of selected players
+    if len(selected_players) > 1:
+        text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
+    else:
+        text = f"Found {num_games} games where {players_joined} started and {excluded_joined} did not start for {team_name}."
+
+    text += f" {selected_text} and {excluded_text}."
+
+    return least_common_starters, num_games, text
 
 # define a function to aggregate set piece takers
 def main():
