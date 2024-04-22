@@ -512,9 +512,10 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
         .value_counts()
         .reset_index()
         .rename(columns={"index": "Player", "player": "Starts Apart"})
-        .query("Starts Apart >= 2")
+        .loc[lambda x: x["Starts Apart"] >= 2]
         .tail(10)
     )
+    
     least_common_starters.columns = ["Player", "Starts Apart"]
     
     # Prepare output text
