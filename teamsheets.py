@@ -562,7 +562,7 @@ def main():
     )
 
     # Load CSV file
-    fbref_lineups = pd.read_csv("fbref_lineups_epl_20240421151553.csv")
+    fbref_lineups = pd.read_csv("scraped_teamsheets/teamsheets_and_sets_20240421212817.csv")
 
     fbref_lineups.columns.tolist()
 
