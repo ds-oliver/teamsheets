@@ -511,10 +511,10 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
         valid_games_data[~valid_games_data["player"].isin(selected_players + excluded_players)]["player"].value_counts().tail(10).reset_index()
     )
 
-    # filter for less than 2 starts
-    least_common_starters = least_common_starters[least_common_starters["player"] < 2]
-
     least_common_starters.columns = ["Player", "Starts Apart"]
+
+    # filter for less than 2 starts
+    least_common_starters = least_common_starters[least_common_starters["Starts Apart"] < 2]
     
     # Prepare output text
     num_games = len(valid_games)
