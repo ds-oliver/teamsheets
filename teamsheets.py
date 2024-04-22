@@ -711,8 +711,6 @@ def main():
 
         else:
             with tab1:
-                col1, col2 = st.columns(2)
-
                 st.title(f"Player Analysis for {selected_team}")
 
                 # Conduct analysis
@@ -724,6 +722,8 @@ def main():
                     set_piece_takers=set_piece_takers,
                 )
                 st.write(text)
+                col1, col2 = st.columns(2)
+                
                 with col1:
                     st.write(f"Other players correlated with {selected_players} starts:")
                     st.dataframe(most_common_players)
