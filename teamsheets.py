@@ -350,7 +350,16 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
 
     logging.info(f"Opponents DataFrame: \n{opponents}")
 
-    return position_counts_df, opponents
+    # Get opponents when player is not a starter
+    non_starter_data = fbref_lineups[
+        (fbref_lineups["team"] == team_name)
+        & (fbref_lineups["player"].str.contains(player_name, case=False))
+        & (fbref_lineups["is_starter"] == False)
+    ]
+    non_starter_opponents = non_starter_data["opponent"].unique()
+    logging.info(f"Opponents when {player_name} is not a starter: {non_starter_opponents}")
+
+    return position_counts_df, opponents, non_starter_opponents
 
 def get_most_common_players(
     team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
@@ -475,13 +484,13 @@ def get_most_common_players(
     most_common_starters = most_common_starters[~most_common_starters["Player"].isin(selected_players)]
 
     # put the starts together as a percentage of the total games
-    most_common_starters["Starts Freq"] = (
+    most_common_starters["Combo Freq"] = (
         most_common_starters["Starts Together"] / len(valid_games) * 100
     ).map("{:.0f}%".format)
 
     # put Starts Together then Starts Freq as the first two columns
     most_common_starters = most_common_starters[
-        ["Player", "Starts Together", "Starts Freq"]
+        ["Player", "Starts Together", "Combo Freq"]
     ]
 
     # print logging statements that give the most common starters DataFrame and then lists off the players selected for analysis and the count of games they started together
@@ -705,28 +714,44 @@ def main():
 
         else:
             with tab1:
+                col1, col2 = st.columns(2)
+
                 st.title(f"Player Analysis for {selected_team}")
 
-                # Conduct analysis
-                most_common_players, _, text = get_most_common_players(
-                    selected_team,
-                    selected_players,
-                    players_to_exclude,
-                    filtered_data,
-                    set_piece_takers=set_piece_takers,
-                )
-                st.write(text)
-                st.dataframe(most_common_players)
+                with col1:
+                    # Conduct analysis
+                    most_common_players, _, text = get_most_common_players(
+                        selected_team,
+                        selected_players,
+                        players_to_exclude,
+                        filtered_data,
+                        set_piece_takers=set_piece_takers,
+                    )
+                    st.write(text)
+                    st.dataframe(most_common_players)
+                
+                # get anticorrelation players with col2
+                with col2:
+                    anti_corr_players, _, text = get_anticorrelation_players(
+                        selected_team,
+                        selected_players,
+                        players_to_exclude,
+                        filtered_data,
+                    )
+                    st.write(text)
+                    st.dataframe(anti_corr_players)
 
                 # Detailed player analysis for each selected player
                 for player in selected_players:
-                    positions, opponents = get_player_positions_v2(
+                    positions, opponents, anti_opponents = get_player_positions_v2(
                         filtered_data, player, selected_team
                     )
                     st.write(f"Positions played by {player} under the above circumstances:")
                     st.dataframe(positions)
                     st.write(f"Opponents faced by {player} under the above circumstances:")
                     st.dataframe(opponents)
+                    st.write(f"Opponents faced when {player} is not a starter:")
+                    st.write(anti_opponents)
 
             with tab2:
                 st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
