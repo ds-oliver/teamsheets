@@ -512,7 +512,7 @@ def get_most_common_players(
 # define a function to aggregate set piece takers
 def main():
     
-    logging.basicConfig(level=logging.INFO format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     # set config
     st.set_page_config(
         page_title="Football Lineup Analysis",
