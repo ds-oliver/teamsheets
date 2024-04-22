@@ -508,7 +508,8 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
 
     # Count how many times each player, not in selected or excluded players, did not start in these games
     least_common_starters = (
-        valid_games_data[~valid_games_data["player"].isin(selected_players + excluded_players)]["player"].value_counts().tail(10).reset_index()
+        valid_games_data[~valid_games_data["player"].isin(selected_players + excluded_players)]
+        .groupby("player").size().nsmallest(10).reset_index(name='Starts Apart')
     )
 
     least_common_starters.columns = ["Player", "Starts Apart"]
