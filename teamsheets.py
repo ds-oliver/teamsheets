@@ -333,7 +333,7 @@ def get_most_common_players(
 
     # Count how many times each player, not in selected or excluded players, started in these games
     most_common_starters = (
-        valid_games_data.groupby("player").size().nlargest(6).reset_index(name='Starts Together')
+        valid_games_data.groupby("player").size().nlargest(10).reset_index(name='Starts Together')
     )
     most_common_starters.columns = ["Player", "Starts Together"]
 
@@ -395,7 +395,7 @@ def get_most_common_players(
 
         # Merge the average percentages with most common starters
         most_common_starters = (
-            valid_games_data["player"].value_counts().head(6).reset_index()
+            valid_games_data["player"].value_counts().head(10).reset_index()
         )
         most_common_starters.columns = ["Player", "Starts Together"]
         most_common_starters = most_common_starters.merge(
@@ -404,7 +404,7 @@ def get_most_common_players(
     else:
         # Count how many times each player, not in selected or excluded players, started in these games
         most_common_starters = (
-            valid_games_data["player"].value_counts().head(6).reset_index()
+            valid_games_data["player"].value_counts().head(10).reset_index()
         )
         most_common_starters.columns = ["Player", "Starts Together"]
 
@@ -508,7 +508,12 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
 
     # Count how many times each player, not in selected or excluded players, did not start in these games
     least_common_starters = (
-        valid_games_data[~valid_games_data["player"].isin(selected_players + excluded_players)]["player"].value_counts().tail(6).reset_index()
+        valid_games_data[~valid_games_data["player"].isin(selected_players + excluded_players)]["player"]
+        .value_counts()
+        .reset_index()
+        .rename(columns={"index": "Player", "player": "Starts Apart"})
+        .query("Starts Apart >= 2")
+        .tail(10)
     )
     least_common_starters.columns = ["Player", "Starts Apart"]
     
@@ -723,7 +728,7 @@ def main():
                 )
                 st.write(text)
                 col1, col2 = st.columns(2)
-                
+
                 with col1:
                     st.write(f"Other players correlated with {selected_players} starts:")
                     st.dataframe(most_common_players)
