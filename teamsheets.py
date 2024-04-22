@@ -352,6 +352,7 @@ def get_most_common_players(
         excluded_players = [excluded_players]
 
     logging.info(f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
+    )
 
     # Filter for is_starter == True and for the selected team
     dataframe = dataframe[dataframe["is_starter"] == True]
