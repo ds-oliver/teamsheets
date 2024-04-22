@@ -715,16 +715,17 @@ def main():
 
                 st.title(f"Player Analysis for {selected_team}")
 
+                # Conduct analysis
+                most_common_players, _, text = get_most_common_players(
+                    selected_team,
+                    selected_players,
+                    players_to_exclude,
+                    filtered_data,
+                    set_piece_takers=set_piece_takers,
+                )
+                st.write(text)
                 with col1:
-                    # Conduct analysis
-                    most_common_players, _, text = get_most_common_players(
-                        selected_team,
-                        selected_players,
-                        players_to_exclude,
-                        filtered_data,
-                        set_piece_takers=set_piece_takers,
-                    )
-                    st.write(text)
+                    st.write(f"Other players correlated with {selected_players} starts:")
                     st.dataframe(most_common_players)
                 
                 # get anticorrelation players with col2
@@ -735,7 +736,8 @@ def main():
                         players_to_exclude,
                         filtered_data,
                     )
-                    st.write(text)
+                    # st.write(text)
+                    st.write(f"Other players negatively correlated with {selected_players} starts:")
                     st.dataframe(anti_corr_players)
 
                 # Detailed player analysis for each selected player
