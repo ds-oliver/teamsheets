@@ -341,7 +341,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
 
 import logging
 
-def get_anticorrelation_players(team_name, selected_players, excluded_players, dataframe):
+def get_most_common_players(team_name, selected_players, excluded_players, dataframe, set_piece_takers=False):
     # Ensure selected_players and excluded_players are lists
     if not isinstance(selected_players, list):
         selected_players = [selected_players]
@@ -370,8 +370,6 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
     logging.info(f"Data for valid games ({len(valid_games_data)} records):")
     logging.info(valid_games_data.head())
-
-    # Rest of the function...
 
     if set_piece_takers:
         # Set piece columns to calculate percentages
@@ -505,6 +503,8 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
 
 # define a function to aggregate set piece takers
 def main():
+    
+    logging.basicConfig(level=logging.INFO)
     # set config
     st.set_page_config(
         page_title="Football Lineup Analysis",
