@@ -369,18 +369,18 @@ def get_most_common_players(
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
-    logging.debug(
+    logging.INFO(
         "Games with selected players (before filter): %s", games_with_selected_players
     )
 
     valid_games = games_with_selected_players[
         games_with_selected_players
     ].index.tolist()
-    logging.debug("Valid games after applying filters: %s", valid_games)
+    logging.INFO("Valid games after applying filters: %s", valid_games)
 
     # Filter DataFrame for valid games where the selected players started
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
-    logging.debug(
+    logging.INFO(
         "Data for valid games (%d records): %s",
         len(valid_games_data),
         valid_games_data.head(),
