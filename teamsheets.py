@@ -730,7 +730,7 @@ def main():
                 col1, col2 = st.columns(2)
 
                 with col1:
-                    st.write(f"Other players correlated with {selected_players} starts:")
+                    st.write(f"Players correlated with {selected_players} starts:")
                     st.dataframe(most_common_players)
                 
                 # get anticorrelation players with col2
@@ -742,7 +742,7 @@ def main():
                         filtered_data,
                     )
                     # st.write(text)
-                    st.write(f"Other players negatively correlated with {selected_players} starts:")
+                    st.write(f"Players anticorrelated with {selected_players} starts:")
                     st.dataframe(anti_corr_players)
 
                 # Detailed player analysis for each selected player
