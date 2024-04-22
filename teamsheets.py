@@ -368,7 +368,7 @@ def get_most_common_players(
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
-    logging.info(f"Games with selected players: {games_with_selected_players}")
+    logging.info(f"Games with selected players: {games_with_selected_players.head()}")
 
     valid_games = games_with_selected_players[
         games_with_selected_players
@@ -378,6 +378,9 @@ def get_most_common_players(
     # Filter DataFrame for valid games where the selected players started
     valid_games_data = team_data[team_data["game_id"].isin(valid_games)]
     logging.info(f"Valid games data: {valid_games_data.head()}")
+
+    # logging statement that gives the total number of unique games with the selected players
+    logging.info(f"Total number of unique games with the selected players: {len(valid_games)}")
 
     if set_piece_takers:
         # Set piece columns to calculate percentages
