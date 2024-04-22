@@ -445,7 +445,62 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     return position_counts, opponents
 
 
-def get_player_positions_v2(fbref_lineups, player_name, team_name):
+def get_player_positions_v2(fbref_lineups, player_name, team_name):def get_player_positions_v2(fbref_lineups, player_name, team_name):
+    # Filter for the specific team and players that contain the player_name
+    team_data = fbref_lineups[
+        (fbref_lineups["team"] == team_name)
+        & (fbref_lineups["player"].str.contains(player_name, case=False))
+        & (fbref_lineups["is_starter"] == True)
+    ]
+
+    # Initialize an empty dictionary to hold position counts
+    position_counts_dict = {}
+
+    # Position columns to consider
+    position_columns = ["position_1", "position_2", "position_3", "position_4"]
+
+    # Iterate through each row and each position column to count positions
+    for _, row in team_data.iterrows():
+        for col in position_columns:
+            pos = row[col]
+            if pd.notnull(pos):  # Check if the position value is not NaN
+                if pos in position_counts_dict:
+                    position_counts_dict[pos] += 1
+                else:
+                    position_counts_dict[pos] = 1
+
+    # Convert the dictionary to a DataFrame
+    position_counts_df = pd.DataFrame(
+        list(position_counts_dict.items()), columns=["Position", "Count"]
+    )
+
+    # Calculate total count of positions
+    total_count = position_counts_df["Count"].sum()
+
+    # Calculate percentage for each position
+    position_counts_df["Percentage"] = (position_counts_df["Count"] / total_count) * 100
+
+    # Sort the DataFrame by count in descending order
+    position_counts_df = position_counts_df.sort_values(
+        by="Count", ascending=False
+    ).reset_index(drop=True)
+
+    # Opponents faced analysis
+    opponents = (
+        team_data.groupby("opponent")
+        .size()
+        .reset_index(name="Count")
+        .sort_values(by="Count", ascending=False)
+        .reset_index(drop=True)
+    )
+
+    # Calculate total count of opponents
+    total_opponents = opponents["Count"].sum()
+
+    # Calculate percentage for each opponent
+    opponents["Percentage"] = (opponents["Count"] / total_opponents) * 100
+
+    return position_counts_df, opponents
     # Filter for the specific team and players that contain the player_name
     team_data = fbref_lineups[
         (fbref_lineups["team"] == team_name)
