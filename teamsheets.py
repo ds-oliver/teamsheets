@@ -339,8 +339,8 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
 
     return position_counts_df, opponents
 
+import pandas as pd
 import logging
-
 
 def get_most_common_players(
     team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
@@ -351,8 +351,10 @@ def get_most_common_players(
     if not isinstance(excluded_players, list):
         excluded_players = [excluded_players]
 
-    logging.info(f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n"
-    )
+    logging.info(f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n")
+
+    # Drop duplicates based on 'game_id' and 'player' columns
+    dataframe = dataframe.drop_duplicates(subset=['game_id', 'player'])
 
     # Filter for is_starter == True and for the selected team
     dataframe = dataframe[dataframe["is_starter"] == True]
@@ -381,6 +383,14 @@ def get_most_common_players(
 
     # logging statement that gives the total number of unique games with the selected players
     logging.info(f"Total number of unique games with the selected players: {len(valid_games)}")
+
+    # Count how many times each player, not in selected or excluded players, started in these games
+    most_common_starters = (
+        valid_games_data.groupby("player").size().nlargest(6).reset_index(name='Starts Together')
+    )
+    most_common_starters.columns = ["Player", "Starts Together"]
+
+    # Rest of the code remains the same...
 
     if set_piece_takers:
         # Set piece columns to calculate percentages
