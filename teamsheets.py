@@ -9,7 +9,7 @@ warnings.filterwarnings("ignore")
 # ignore FutureWarning
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
-CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856.csv"
+CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856_v2.csv"
 
 @st.cache_data
 def load_data():
@@ -19,7 +19,7 @@ def load_data():
     Returns:
     - A DataFrame containing the data.
     """
-    return pd.read_csv("scraped_teamsheets/teamsheets_and_sets_20240422190856.csv")
+    return pd.read_csv(CSV_FILEPATH)
 
 def get_team_profile(team_name, dataframe):
     """
