@@ -121,7 +121,6 @@ def get_positions_of_each_game(fbref_lineups, team_name):
     return positions_data
 
 
-
 # create a function to look for the positions a player passed has played and count
 def get_player_positions(fbref_lineups, player_name, team_name):
     # get teams from the specified team that is_starter is true
@@ -550,7 +549,7 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
 
 # define a function to aggregate set piece takers
 def main():
-    
+
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     # set config
     st.set_page_config(
@@ -705,6 +704,8 @@ def main():
         ":blue[Include] player(s) for analysis:", players_for_analysis
     )
 
+    selected_players_str = ", ".join(selected_players) if len(selected_players) > 1 else selected_players[0]
+
     # Analyze button logic
     if st.button(f"Analyze"):
         tab1, tab2 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile"])
@@ -730,9 +731,9 @@ def main():
                 col1, col2 = st.columns(2)
 
                 with col1:
-                    st.write(f"Players correlated with {selected_players} starts:")
+                    st.write(f"Players correlated with {selected_players_str} starts:")
                     st.dataframe(most_common_players)
-                
+
                 # get anticorrelation players with col2
                 with col2:
                     anti_corr_players, _, text = get_anticorrelation_players(
@@ -742,7 +743,8 @@ def main():
                         filtered_data,
                     )
                     # st.write(text)
-                    st.write(f"Players anticorrelated with {selected_players} starts:")
+                    # turn selected players into a string separated by commas if there are more than one
+                    st.write(f"Players anticorrelated with {selected_players_str} starts:")
                     st.dataframe(anti_corr_players)
 
                 # Detailed player analysis for each selected player
