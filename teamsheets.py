@@ -6,7 +6,7 @@ import logging
 
 warnings.filterwarnings("ignore")
 
-# ignore FutureWarning
+# ignore  FutureWarning
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
 CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856_v2.csv"
