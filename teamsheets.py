@@ -9,6 +9,17 @@ warnings.filterwarnings("ignore")
 # ignore FutureWarning
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
+CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856.csv"
+
+@st.cache_data
+def load_data():
+    """
+    Load the data from the CSV file.
+
+    Returns:
+    - A DataFrame containing the data.
+    """
+    return pd.read_csv("scraped_teamsheets/teamsheets_and_sets_20240422190856.csv")
 
 def get_team_profile(team_name, dataframe):
     """
@@ -248,7 +259,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     total_count = position_counts_df["Count"].sum()
 
     # Calculate percentage for each position
-    position_counts_df["Percentage"] = (position_counts_df["Count"] / total_count) * 100
+    position_counts_df["Percentage"] = ((position_counts_df["Count"] / total_count) * 100).map("{:.0f}%".format)
 
     # Sort the DataFrame by count in descending order
     position_counts_df = position_counts_df.sort_values(
@@ -270,7 +281,9 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     total_opponents = opponents["Count"].sum()
 
     # Calculate percentage for each opponent
-    opponents["Percentage"] = (opponents["Count"] / total_opponents) * 100
+    opponents["Percentage"] = ((opponents["Count"] / total_opponents) * 100).map(
+        "{:.0f}%".format
+    )
 
     # log unique opponents values
     logging.info(f"Unique opponents: {opponents['opponent'].unique()}")
@@ -341,25 +354,24 @@ def get_most_common_players(
     if set_piece_takers:
         # Set piece columns to calculate percentages
         set_piece_columns = [
-            "Deadballs",
             "Freekicks",
             "Cornerkicks",
-            "Inswinging",
-            "Outswinging",
-            "Straight",
+            # "Inswinging",
+            # "Outswinging",
+            # "Straight",
         ]
 
         # Calculate team total set pieces for each game
         team_set_pieces = (
             valid_games_data.groupby("game_id")[set_piece_columns].sum().reset_index()
         )
-        team_set_pieces["TotalSetPieces"] = team_set_pieces[set_piece_columns].sum(
+        team_set_pieces["TotalSets"] = team_set_pieces[set_piece_columns].sum(
             axis=1
         )
 
         # Merge team total back to the individual player data
         valid_games_data = valid_games_data.merge(
-            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
+            team_set_pieces[["game_id", "TotalSets"]], on="game_id"
         )
 
         # Calculate the sum of each type of set piece taken by each player per game
@@ -369,14 +381,14 @@ def get_most_common_players(
             .reset_index()
         )
         player_set_pieces = player_set_pieces.merge(
-            team_set_pieces[["game_id", "TotalSetPieces"]], on="game_id"
+            team_set_pieces[["game_id", "TotalSets"]], on="game_id"
         )
 
         # Calculate percentages for each player per game
         for column in set_piece_columns:
-            player_set_pieces[f"{column}_Percent"] = (
-                player_set_pieces[column] / player_set_pieces["TotalSetPieces"]
-            ) * 100
+            player_set_pieces[f"{column}_Percent"] = ((
+                player_set_pieces[column] / player_set_pieces["TotalSets"]
+            ) * 100).map("{:.0f}%".format)
 
         # Get the average percentage for each player across all games where the selected players started
         average_percentages = (
@@ -571,8 +583,8 @@ def main():
         unsafe_allow_html=True,
     )
 
-    # Load CSV file
-    fbref_lineups = pd.read_csv("scraped_teamsheets/teamsheets_and_sets_20240421212817.csv")
+    # Load CSV file from load_data function
+    fbref_lineups = load_data()
 
     fbref_lineups.columns.tolist()
 
