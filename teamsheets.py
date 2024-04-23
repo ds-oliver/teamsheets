@@ -510,7 +510,7 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
-    
+
     valid_games = games_with_selected_players[
         games_with_selected_players
     ].index.tolist()
@@ -717,7 +717,8 @@ def main():
         ":blue[Include] player(s) for analysis:", players_for_analysis
     )
 
-    selected_players_str = ", ".join(selected_players) if len(selected_players) > 1 else selected_players[0]
+    if selected_players:
+        selected_players_str = ", ".join(selected_players) if len(selected_players) > 1 else selected_players[0]
 
     # Analyze button logic
     if st.button(f"Analyze"):
