@@ -720,7 +720,6 @@ def main():
 
     # Analyze button logic
     if st.button(f"Analyze"):
-        tab1, tab2 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile"])
 
         # Ensuring there's a selection to analyze
         if not selected_players and not players_to_exclude:
@@ -728,6 +727,7 @@ def main():
             # Conduct general team specific analysis
 
         else:
+            tab1, tab2 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile"])
             with tab1:
                 st.title(f"Player Analysis for {selected_team}")
 
