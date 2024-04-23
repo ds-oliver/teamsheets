@@ -510,6 +510,7 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
     games_with_selected_players = (
         team_data.groupby("game_id")["player"].apply(list).apply(game_filter)
     )
+    
     valid_games = games_with_selected_players[
         games_with_selected_players
     ].index.tolist()
