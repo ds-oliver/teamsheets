@@ -856,9 +856,6 @@ def main():
                 # st.dataframe(team_profile)
                 st.divider()
 
-            with tab3:
-                st.title(f"Injury Reports for {selected_team}")
-                st.dataframe(injury_report[injury_report["team"] == selected_team])
             # # Conduct analysis
             # most_common_players, _, text = get_most_common_players(
             #     selected_team,
