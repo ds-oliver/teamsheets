@@ -737,6 +737,8 @@ def main():
 
     if selected_players:
         selected_players_str = ", ".join(selected_players) if len(selected_players) > 1 else selected_players[0]
+    else:
+        selected_players_str = ""
 
     try:
         # Ensuring there's a selection to analyze
@@ -805,11 +807,8 @@ def main():
                 col1, col2 = st.columns(2)
 
                 with col1:
-                    if selected_players:
-                        st.write(f"Players correlated with {selected_players_str} starts:")
-                        st.dataframe(most_common_players.reset_index(drop=True))
-                    else:
-                        st.warning("Please select player(s) for analysis.")
+                    st.write(f"Players correlated with {selected_players_str} starts:")
+                    st.dataframe(most_common_players.reset_index(drop=True))
 
                 # get anticorrelation players with col2
                 with col2:
@@ -826,6 +825,7 @@ def main():
                         st.dataframe(anti_corr_players.reset_index(drop=True))
                     else:
                         st.warning("Please select player(s) for analysis.")
+
 
                 # Detailed player analysis for each selected player
                 for player in selected_players:
