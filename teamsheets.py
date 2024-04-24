@@ -317,7 +317,6 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
 def get_most_common_players(
     team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
 ):
-    # Ensure selected_players and excluded_players are lists
     selected_players = (
         [selected_players]
         if not isinstance(selected_players, list)
@@ -333,29 +332,20 @@ def get_most_common_players(
         f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}"
     )
 
-    # Drop duplicates
     dataframe = dataframe.drop_duplicates(subset=["game_id", "player"])
-
-    # Filter by team and starters
     team_data = dataframe[
         (dataframe["team"] == team_name) & (dataframe["is_starter"] == True)
     ]
 
-    # Identify games with all selected players starting and no excluded players starting
     def game_filter(players):
-        selected_in_game = all(player in players for player in selected_players)
-        excluded_not_in_game = all(player not in players for player in excluded_players)
-        return selected_in_game and excluded_not_in_game
+        return all(player in players for player in selected_players) and all(
+            player not in players for player in excluded_players
+        )
 
     valid_games = team_data.groupby("game_id")["player"].agg(list).apply(game_filter)
     valid_game_ids = valid_games[valid_games].index.tolist()
-    logging.info(f"Valid games based on selection/exclusion criteria: {valid_game_ids}")
 
-    # Filter DataFrame for valid games
     valid_games_data = team_data[team_data["game_id"].isin(valid_game_ids)]
-    logging.info(f"Filtered data for valid games: {valid_games_data.head()}")
-
-    # Calculate common starters, excluding the selected and excluded players
     potential_starters = valid_games_data[
         ~valid_games_data["player"].isin(selected_players + excluded_players)
     ]
@@ -366,26 +356,35 @@ def get_most_common_players(
         .reset_index(name="Starts Together")
     )
     most_common_starters.columns = ["Player", "Starts Together"]
-
-    # Calculate frequency of these starters
     most_common_starters["Combo Freq"] = (
         (most_common_starters["Starts Together"] / len(valid_game_ids)) * 100
-    ).map("{:.0f}%".format)
-
-    # Prepare output
+    ).map("{:.0f}%")
     most_common_starters = most_common_starters[
         ["Player", "Starts Together", "Combo Freq"]
     ]
-    logging.info(f"Most common starters: {most_common_starters}")
+
+    num_games = len(valid_game_ids)
+    players_joined = ", ".join(selected_players) if selected_players else "No players"
+    excluded_joined = ", ".join(excluded_players) if excluded_players else "None"
+
+    selected_text = (
+        f"Included player(s): ({len(selected_players)}) {players_joined}"
+        if selected_players
+        else "Included player(s): None"
+    )
+    excluded_text = (
+        f"Excluded player(s): ({len(excluded_players)}) {excluded_joined}"
+        if excluded_players
+        else "Excluded player(s): None"
+    )
+    text = f"Found {num_games} games where {players_joined} started together and {excluded_joined} did not start for {team_name}."
 
     return (
         most_common_starters,
-        len(valid_game_ids),
-        f"Filtered {len(valid_game_ids)} games based on criteria.",
+        num_games,
+        f"{text}\n\n{selected_text}\n{excluded_text}",
     )
 
-
-# This function now handles the logic more explicitly, ensuring it filters games based on correct criteria.
 
 # create function to get anticorrelation between players, which should output a similar DataFrame to the one above
 def get_anticorrelation_players(team_name, selected_players, excluded_players, dataframe):
