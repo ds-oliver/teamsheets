@@ -828,7 +828,6 @@ def main():
                     else:
                         st.warning("Please select player(s) for analysis.")
 
-
                 # Detailed player analysis for each selected player
                 for player in selected_players:
                     positions, opponents, anti_opponents = get_player_positions_v2(
@@ -857,6 +856,42 @@ def main():
                 # st.write(f"Team profile for {selected_team}:")
                 # st.dataframe(team_profile)
                 st.divider()
+
+            with tab3:
+                st.write(f"Team injury report for {selected_team}:")
+                # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
+                # filter for the selected team
+                injury_report = injury_report[injury_report["Team"] == selected_team]
+                # Sort the dataframe by date
+                team_injury_report = injury_report.sort_values(by="date")
+
+                # Get the last row (i.e., the last game)
+                last_game = team_injury_report.iloc[-1]
+
+                # Get the opponent and date of the last game
+                last_opp = last_game["Opponent"]
+                last_game_date = last_game["date"]
+
+                # Create the string for the last game
+                team_game_str = f"{selected_team} vs {last_opp}"
+                st.write(
+                    f"Last game played by {selected_team}: {team_game_str} [{last_game_date}]"
+                )
+
+                # create 'started' and 'reserve' columns, started = True if the TeamPlayerFormation is not 0, reserve = True if the TeamPlayerFormation is 0
+                team_injury_report["started"] = team_injury_report[
+                    "TeamPlayerFormation"
+                ].apply(lambda x: True if x != 0 else False)
+                team_injury_report["reserve"] = team_injury_report[
+                    "TeamPlayerFormation"
+                ].apply(lambda x: True if x == 0 else False)
+                # filter dataframe for players who are injured which will not be nan in reason, status, reset index
+                injured_players = team_injury_report[
+                    (team_injury_report["reason"].notnull())
+                    & (team_injury_report["status"].notnull())
+                ].reset_index(drop=True)
+                st.write(f"Players who were injured for {selected_team}:")
+                st.dataframe(injured_players[["player", "reason", "status"]])
 
             # # Conduct analysis
             # most_common_players, _, text = get_most_common_players(
