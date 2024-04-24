@@ -809,7 +809,7 @@ def main():
                 col1, col2 = st.columns(2)
 
                 with col1:
-                    st.write(f"Players correlated with {selected_players_str} starts:")
+                    st.write(f"Players :green[correlated] with {selected_players_str} starts:")
                     st.dataframe(most_common_players.reset_index(drop=True))
 
                 # get anticorrelation players with col2
@@ -823,7 +823,7 @@ def main():
                     # st.write(text)
                     # turn selected players into a string separated by commas if there are more than one
                     if selected_players:
-                        st.write(f"Players anticorrelated with {selected_players_str} starts:")
+                        st.write(f"Players :red[anticorrelated] with {selected_players_str} starts:")
                         st.dataframe(anti_corr_players.reset_index(drop=True))
                     else:
                         st.warning("Please select player(s) for analysis.")
