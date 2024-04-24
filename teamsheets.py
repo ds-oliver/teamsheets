@@ -772,7 +772,7 @@ def main():
                 ].reset_index(drop=True)
                 st.write(f"Players who were injured for {selected_team}:")
                 st.dataframe(injured_players[["player", "reason", "status"]])
-                
+
             st.warning("Please select player(s) for for player-specific analysis.")
     # if key error print column names and log the error
     except KeyError as e:
@@ -805,8 +805,11 @@ def main():
                 col1, col2 = st.columns(2)
 
                 with col1:
-                    st.write(f"Players correlated with {selected_players_str} starts:")
-                    st.dataframe(most_common_players.reset_index(drop=True))
+                    if selected_players:
+                        st.write(f"Players correlated with {selected_players_str} starts:")
+                        st.dataframe(most_common_players.reset_index(drop=True))
+                    else:
+                        st.warning("Please select player(s) for analysis.")
 
                 # get anticorrelation players with col2
                 with col2:
