@@ -722,13 +722,19 @@ def main():
     if selected_players:
         selected_players_str = ", ".join(selected_players) if len(selected_players) > 1 else selected_players[0]
 
+    try:
         # Ensuring there's a selection to analyze
-    if not selected_players and not players_to_exclude:
-        # create a button to conduct general team specific analysis such as team injury report
-        if st.button(f"Conduct general team specific analysis for {selected_team}"):
-            st.title(f"Team Specific Analysis for {selected_team}")
-            st.write(f"Team injury report for {selected_team}:")
-            st.dataframe(injury_report[injury_report["team"] == selected_team])
+        if not selected_players and not players_to_exclude:
+            # create a button to conduct general team specific analysis such as team injury report
+            if st.button(f"Conduct general team specific analysis for {selected_team}"):
+                st.title(f"Team Specific Analysis for {selected_team}")
+                st.write(f"Team injury report for {selected_team}:")
+                st.dataframe(injury_report[injury_report["team"] == selected_team])
+            st.warning("Please select player(s) for for player-specific analysis.")
+    # if key error print column names and log the error
+    except KeyError as e:
+        logging.error(f"KeyError: {e}")
+        st.write(fbref_lineups.columns.tolist())
         st.warning("Please select player(s) for for player-specific analysis.")
 
     # Analyze button logic
