@@ -838,8 +838,8 @@ def main():
                     if selected_players:
                         st.write(f"Players :red[anticorrelated] with {selected_players_str} starts:")
                         st.dataframe(anti_corr_players.reset_index(drop=True))
-                    else:
-                        st.warning("Please select player(s) for analysis.")
+                    # else:
+                    #     st.warning("Please select player(s) for analysis.")
 
                 # Detailed player analysis for each selected player
                 for player in selected_players:
