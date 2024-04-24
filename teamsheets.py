@@ -9,17 +9,18 @@ warnings.filterwarnings("ignore")
 # ignore  FutureWarning
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
-CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856_v2.csv"
+TEAMSHEETS_CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856_v2.csv"
+INJURY_REPORTS_CSV_FILEPATH = "scraped_missing_players/lineups_with_injuries_20240423_v2.csv"
 
 @st.cache_data
-def load_data():
+def load_data(filepath):
     """
     Load the data from the CSV file.
 
     Returns:
     - A DataFrame containing the data.
     """
-    return pd.read_csv(CSV_FILEPATH)
+    return pd.read_csv(filepath)
 
 def get_team_profile(team_name, dataframe):
     """
@@ -585,7 +586,8 @@ def main():
     )
 
     # Load CSV file from load_data function
-    fbref_lineups = load_data()
+    fbref_lineups = load_data(TEAMSHEETS_CSV_FILEPATH)
+    injury_report = load_data(INJURY_REPORTS_CSV_FILEPATH)
 
     fbref_lineups.columns.tolist()
 
