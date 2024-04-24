@@ -748,6 +748,7 @@ def main():
                 # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
                 team_injury_report = injury_report[injury_report["Team"] == selected_team]
                 last_game_date = team_injury_report["date"]
+                # last_opp is the opponent column value
                 last_opp = team_injury_report["Opponent"]
                 # create last game teams which is {team} vs {opponent}
                 team_game_str = f"{selected_team} vs {last_opp}"
