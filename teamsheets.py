@@ -3,7 +3,10 @@ import pandas as pd
 import streamlit as st
 import warnings
 import logging
-from streamlit_extras.badges import badge, style_metric_cards, markdownlit
+from streamlit_extras.badges import badge
+from streamlit_extras.customize_running import center_running
+from streamlit_extras.markdownlit import markdownlit
+from streamlit_extras.metric_cards import metric_card
 
 warnings.filterwarnings("ignore")
 
