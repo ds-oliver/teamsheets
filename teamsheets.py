@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 import warnings
 import logging
+from streamlit_extras.badges import badge, style_metric_cards, markdownlit
 
 warnings.filterwarnings("ignore")
 
@@ -561,6 +562,12 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
 
     return least_common_starters, num_games, text
 
+def twitter_badge():
+    badge(type="twitter", name="draftalchemy")
+
+def github_badge():
+    badge(type="github", name="ds-oliver")
+
 # define a function to aggregate set piece takers
 def main():
 
@@ -584,6 +591,12 @@ def main():
         ),
         unsafe_allow_html=True,
     )
+
+    # Add a badge for the GitHub repository
+    github_badge()
+
+    # Add a badge for the Twitter account
+    twitter_badge()
 
     # Load CSV file from load_data function
     fbref_lineups = load_data(TEAMSHEETS_CSV_FILEPATH)
@@ -729,7 +742,7 @@ def main():
             if st.button(f"Conduct general team specific analysis for {selected_team}"):
                 st.title(f"Team Specific Analysis for {selected_team}")
                 st.write(f"Team injury report for {selected_team}:")
-                st.dataframe(injury_report[injury_report["team"] == selected_team])
+                st.dataframe(injury_report[injury_report["Team"] == selected_team])
             st.warning("Please select player(s) for for player-specific analysis.")
     # if key error print column names and log the error
     except KeyError as e:
