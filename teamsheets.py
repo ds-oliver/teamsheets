@@ -742,7 +742,23 @@ def main():
             if st.button(f"Conduct general team specific analysis for {selected_team}"):
                 st.title(f"Team Specific Analysis for {selected_team}")
                 st.write(f"Team injury report for {selected_team}:")
-                st.dataframe(injury_report[injury_report["Team"] == selected_team])
+                # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
+                team_injury_report = injury_report[injury_report["Team"] == selected_team]
+                last_game_date = team_injury_report["date"]
+                # create last game teams which is {team} vs {opponent}
+                team_game_str = f"{team_injury_report['Team']} vs {team_injury_report['Opponent']}"
+                st.write(f"Last game played by {selected_team}: {team_game_str} [{last_game_date}]")
+
+                # create 'started' and 'reserve' columns, started = True if the TeamPlayerFormation is not 0, reserve = True if the TeamPlayerFormation is 0
+                team_injury_report["started"] = team_injury_report["TeamPlayerFormation"].apply(lambda x: True if x != 0 else False)
+                team_injury_report["reserve"] = team_injury_report["TeamPlayerFormation"].apply(lambda x: True if x == 0 else False)
+                # filter dataframe for players who are injured which will not be nan in reason, status, reset index
+                injured_players = team_injury_report[
+                    (team_injury_report["reason"].notnull())
+                    & (team_injury_report["status"].notnull())
+                ].reset_index(drop=True)
+                st.write(f"Players who were injured for {selected_team}:")
+                st.dataframe(injured_players)
             st.warning("Please select player(s) for for player-specific analysis.")
     # if key error print column names and log the error
     except KeyError as e:
