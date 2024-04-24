@@ -748,6 +748,19 @@ def main():
             # create a button to conduct general team specific analysis such as team injury report
             if st.button(f"Conduct general team specific analysis for {selected_team}"):
                 st.title(f"Team Specific Analysis for {selected_team}")
+                positions_data = get_positions_of_each_game(filtered_data, selected_team)
+                st.title(f"{selected_team}")
+                st.write(f"Positional setup by {selected_team}:")
+                st.info(
+                    f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
+                )
+                st.dataframe(positions_data, use_container_width=True)
+                # team_profile = get_team_profile(selected_team, filtered_data)
+                # # reset the index for the team profile DataFrame
+                # team_profile.reset_index(drop=True, inplace=True)
+                # st.write(f"Team profile for {selected_team}:")
+                # st.dataframe(team_profile)
+                st.divider()
                 st.write(f"Team injury report for {selected_team}:")
                 # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
                 # filter for the selected team
