@@ -746,11 +746,17 @@ def main():
                 st.title(f"Team Specific Analysis for {selected_team}")
                 st.write(f"Team injury report for {selected_team}:")
                 # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
-                team_injury_report = injury_report[injury_report["Team"] == selected_team]
-                last_game_date = team_injury_report["date"]
-                # last_opp is the opponent column value
-                last_opp = team_injury_report["Opponent"]
-                # create last game teams which is {team} vs {opponent}
+                # Sort the dataframe by date
+                team_injury_report = team_injury_report.sort_values(by='date')
+
+                # Get the last row (i.e., the last game)
+                last_game = team_injury_report.iloc[-1]
+
+                # Get the opponent and date of the last game
+                last_opp = last_game['Opponent']
+                last_game_date = last_game['date']
+
+                # Create the string for the last game
                 team_game_str = f"{selected_team} vs {last_opp}"
                 st.write(f"Last game played by {selected_team}: {team_game_str} [{last_game_date}]")
 
