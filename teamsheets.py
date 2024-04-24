@@ -734,7 +734,7 @@ def main():
     # if key error print column names and log the error
     except KeyError as e:
         logging.error(f"KeyError: {e}")
-        st.write(fbref_lineups.columns.tolist())
+        st.write(injury_report.columns.tolist())
         st.warning("Please select player(s) for for player-specific analysis.")
 
     # Analyze button logic
