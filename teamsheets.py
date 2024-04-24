@@ -746,8 +746,10 @@ def main():
                 st.title(f"Team Specific Analysis for {selected_team}")
                 st.write(f"Team injury report for {selected_team}:")
                 # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
+                # filter for the selected team
+                injury_report = injury_report[injury_report["team"] == selected_team]
                 # Sort the dataframe by date
-                team_injury_report = team_injury_report.sort_values(by='date')
+                team_injury_report = injury_report.sort_values(by='date')
 
                 # Get the last row (i.e., the last game)
                 last_game = team_injury_report.iloc[-1]
