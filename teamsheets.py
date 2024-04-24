@@ -726,12 +726,11 @@ def main():
     if st.button(f"Analyze"):
 
         # Ensuring there's a selection to analyze
-        if not selected_players and not players_to_exclude:
+        if not selected_players and not players_to_exclude and st.button(f"Conduct general team specific analysis for {selected_team}"):
             # create a button to conduct general team specific analysis such as team injury report
-            if st.button(f"Conduct general team specific analysis for {selected_team}"):
-                st.title(f"Team Specific Analysis for {selected_team}")
-                st.write(f"Team injury report for {selected_team}:")
-                st.dataframe(injury_report[injury_report["team"] == selected_team])
+            st.title(f"Team Specific Analysis for {selected_team}")
+            st.write(f"Team injury report for {selected_team}:")
+            st.dataframe(injury_report[injury_report["team"] == selected_team])
             st.warning("Please select player(s) for for player-specific analysis.")
             # Conduct general team specific analysis
 
