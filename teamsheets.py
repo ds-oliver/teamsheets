@@ -771,7 +771,8 @@ def main():
                     & (team_injury_report["status"].notnull())
                 ].reset_index(drop=True)
                 st.write(f"Players who were injured for {selected_team}:")
-                st.dataframe(injured_players)
+                st.dataframe(injured_players[["player", "reason", "status"]])
+                
             st.warning("Please select player(s) for for player-specific analysis.")
     # if key error print column names and log the error
     except KeyError as e:
