@@ -821,8 +821,11 @@ def main():
                     )
                     # st.write(text)
                     # turn selected players into a string separated by commas if there are more than one
-                    st.write(f"Players anticorrelated with {selected_players_str} starts:")
-                    st.dataframe(anti_corr_players.reset_index(drop=True))
+                    if selected_players:
+                        st.write(f"Players anticorrelated with {selected_players_str} starts:")
+                        st.dataframe(anti_corr_players.reset_index(drop=True))
+                    else:
+                        st.warning("Please select player(s) for analysis.")
 
                 # Detailed player analysis for each selected player
                 for player in selected_players:
