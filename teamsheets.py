@@ -845,7 +845,10 @@ def main():
                     # st.write(text)
                     # turn selected players into a string separated by commas if there are more than one
                     if selected_players:
-                        st.write(f"Players :red[anticorrelated] with {selected_players_str} starts:")
+                        st.write(
+                            f"Players :red[anticorrelated] with {selected_players_str} starts:",
+                            help="Any :red[excluded] players will not be included in the analysis.",
+                        )
                         st.dataframe(anti_corr_players.reset_index(drop=True))
                     # else:
                     #     st.warning("Please select player(s) for analysis.")
