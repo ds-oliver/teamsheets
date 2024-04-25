@@ -847,7 +847,7 @@ def main():
                     if selected_players:
                         st.write(
                             f"Players :red[anticorrelated] with {selected_players_str} starts:\n",
-                            "\n🚨 Any :red[excluded] players will not be included in the analysis.",
+                            "🚨 Any :red[excluded] players will not be included in the analysis.",
                         )
                         st.dataframe(anti_corr_players.reset_index(drop=True))
                     # else:
