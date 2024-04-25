@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 # ignore  FutureWarning
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
-TEAMSHEETS_CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856_v2.csv"
+TEAMSHEETS_CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240425164027.csv"
 INJURY_REPORTS_CSV_FILEPATH = "scraped_missing_players/ws_missing_players_20240424_v2.csv"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
