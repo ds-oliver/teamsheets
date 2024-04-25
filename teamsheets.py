@@ -585,6 +585,28 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
 
     return least_common_starters, num_games, text
 
+# def get_most_recent_team() function
+def get_most_recent_game_starters(fbref_lineups, team_name):
+    # Filter for the specific team
+    team_data = fbref_lineups[fbref_lineups["team"] == team_name]
+
+    # Get the most recent game for the team, sorting by date and we will return all of the players
+    most_recent_game = team_data.sort_values(by="date", ascending=False).head(1)
+
+    # Get the most recent game ID
+    most_recent_game_id = most_recent_game["game_id"].values[0]
+
+    # Filter for the most recent game and return dataframes for starters and substitutes
+    most_recent_game_starters = team_data[
+        (team_data["game_id"] == most_recent_game_id) & (team_data["is_starter"] == True)
+    ]
+    most_recent_game_substitutes = team_data[
+        (team_data["game_id"] == most_recent_game_id) & (team_data["is_starter"] == False)
+    ]
+
+    return most_recent_game_starters, most_recent_game_substitutes
+
+
 
 # define a function to aggregate set piece takers
 def main():
