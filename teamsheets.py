@@ -17,6 +17,15 @@ warnings.simplefilter(action="ignore", category=FutureWarning)
 TEAMSHEETS_CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856_v2.csv"
 INJURY_REPORTS_CSV_FILEPATH = "scraped_missing_players/ws_missing_players_20240424_v2.csv"
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# set config
+st.set_page_config(
+    page_title="Football Lineup Analysis",
+    page_icon="❗️",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
 def twitter_badge():
     badge(type="twitter", name="draftalchemy")
 
@@ -579,15 +588,6 @@ def get_anticorrelation_players(team_name, selected_players, excluded_players, d
 
 # define a function to aggregate set piece takers
 def main():
-
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    # set config
-    st.set_page_config(
-        page_title="Football Lineup Analysis",
-        page_icon="❗️",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
 
     socials_tag = "@DraftAlchemy"
     st.markdown(
