@@ -106,6 +106,9 @@ def get_positions_of_each_game(fbref_lineups, team_name):
         {"starters_positions": list, "is_oop": "sum"}
     )
 
+    # round to 0 decimal places
+    positions_data["is_oop"] = positions_data["is_oop"].round(0)
+
     # reset index
     positions_data = positions_data.reset_index()
 
