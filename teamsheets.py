@@ -1,5 +1,6 @@
 from collections import Counter
 import pandas as pd
+import numpy as np
 import streamlit as st
 import warnings
 import logging
@@ -781,8 +782,12 @@ def main():
                 st.write(f"Last game played by {selected_team}: {team_game_str} [{last_game_date}]")
 
                 # create 'started' and 'reserve' columns, started = True if the TeamPlayerFormation is not 0, reserve = True if the TeamPlayerFormation is 0
-                team_injury_report["started"] = team_injury_report["TeamPlayerFormation"].apply(lambda x: True if x != 0 else False)
-                team_injury_report["reserve"] = team_injury_report["TeamPlayerFormation"].apply(lambda x: True if x == 0 else False)
+                team_injury_report["started"] = team_injury_report["formation_position_value"].apply(lambda x: True if x != 0 else False)
+                team_injury_report["reserve"] = team_injury_report["formation_position_value"].apply(lambda x: True if x == 0 else False)
+                team_injury_report["out"] = team_injury_report["status"].apply(lambda x: True if x == -1 else False)
+
+                # gtd_status will be out, started, or reserve
+                team_injury_report["gtd_status"] = np.where(team_injury_report["out"], "Out", np.where(team_injury_report["started"], "Started", "Reserve"))
                 # filter dataframe for players who are injured which will not be nan in reason, status, reset index
                 injured_players = team_injury_report[
                     (team_injury_report["reason"].notnull())
