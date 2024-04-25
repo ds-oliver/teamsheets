@@ -1,561 +1,561 @@
-PlayerID,Team,Opponent,GameID,TeamPlayerFormation,player,player_id,date,home_team,away_team,game_id
-406564,Chelsea,Man City,1810666,1,Djordje Petrovic,406564.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-403850,Chelsea,Man City,1810666, 2,Malo Gusto,403850.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-363496,Chelsea,Man City,1810666, 3,Marc Cucurella,363496.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-369430,Chelsea,Man City,1810666, 4,Enzo Fernandez,369430.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-353292,Chelsea,Man City,1810666, 5,Trevoh Chalobah,353292.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-28550,Chelsea,Man City,1810666, 6,Thiago Silva,28550.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-389935,Chelsea,Man City,1810666, 7,Noni Madueke,389935.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-410175,Chelsea,Man City,1810666, 8,Moises Caicedo,410175.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-426050,Chelsea,Man City,1810666, 9,Nicolas Jackson,426050.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-395692,Chelsea,Man City,1810666, 10,Cole Palmer,395692.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-375621,Chelsea,Man City,1810666, 11,Conor Gallagher,375621.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-300426,Chelsea,Man City,1810666, 0,Axel Disasi,300426.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-365406,Chelsea,Man City,1810666, 0,Benoit Badiashile,365406.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-97692,Chelsea,Man City,1810666, 0,Raheem Sterling,97692.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-409376,Chelsea,Man City,1810666, 0,Mykhailo Mudryk,409376.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-135768,Chelsea,Man City,1810666, 0,,,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-410639,Chelsea,Man City,1810666, 0,Carney Chukwuemeka,410639.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-299272,Chelsea,Man City,1810666, 0,Ben Chilwell,299272.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-478451,Chelsea,Man City,1810666, 0,Deivid Washington,478451.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-467969,Chelsea,Man City,1810666, 0,Alfie Gilchrist,467969.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-133569,Man City,Chelsea,1810666,1,Stefan Ortega,133569.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-303139,Man City,Chelsea,1810666, 2,Rodri,303139.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-297390,Man City,Chelsea,1810666, 3,Manuel Akanji,297390.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-122945,Man City,Chelsea,1810666, 4,Nathan Ake,122945.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-101374,Man City,Chelsea,1810666, 5,John Stones,101374.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-69778,Man City,Chelsea,1810666, 6,Kyle Walker,69778.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-331254,Man City,Chelsea,1810666, 7,Phil Foden,331254.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-73084,Man City,Chelsea,1810666, 8,Kevin De Bruyne,73084.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-365409,Man City,Chelsea,1810666, 9,Julian Alvarez,365409.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-136741,Man City,Chelsea,1810666, 10,Bernardo Silva,136741.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-113069,Man City,Chelsea,1810666, 11,Jack Grealish,113069.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-313171,Man City,Chelsea,1810666, 0,Ruben Dias,313171.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-93894,Man City,Chelsea,1810666, 0,Mateo Kovacic,93894.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-388098,Man City,Chelsea,1810666, 0,Jeremy Doku,388098.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-355110,Man City,Chelsea,1810666, 0,Sergio Gomez,355110.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-402664,Man City,Chelsea,1810666, 0,Josko Gvardiol,402664.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-394933,Man City,Chelsea,1810666, 0,Matheus Nunes,394933.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-121774,Man City,Chelsea,1810666, 0,Ederson,121774.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-430709,Man City,Chelsea,1810666, 0,Oscar Bobb,430709.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-444791,Man City,Chelsea,1810666, 0,Rico Lewis,444791.0,2024-04-20 17:15:00,Manchester City,Chelsea,1810666
-362426,Burnley,Brighton,1729397,1,Arijanet Muric,362426.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-402874,Burnley,Brighton,1729397, 2,Lorenz Assignon,402874.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-349504,Burnley,Brighton,1729397, 3,Vitinho,349504.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-273292,Burnley,Brighton,1729397, 4,Josh Cullen,273292.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-399619,Burnley,Brighton,1729397, 5,Hjalmar Ekdal,399619.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-414233,Burnley,Brighton,1729397, 6,Maxime Esteve,414233.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-371447,Burnley,Brighton,1729397, 7,Lyle Foster,371447.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-321020,Burnley,Brighton,1729397, 8,Sander Berge,321020.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-410522,Burnley,Brighton,1729397, 9,David Datro Fofana,410522.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-444751,Burnley,Brighton,1729397, 10,Wilson Odobert,444751.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-307202,Burnley,Brighton,1729397, 11,Jacob Bruun Larsen,307202.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-404852,Burnley,Brighton,1729397, 0,James Trafford,404852.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-107462,Burnley,Brighton,1729397, 0,Charlie Taylor,107462.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-41868,Burnley,Brighton,1729397, 0,Johann Gudmundsson,41868.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-138929,Burnley,Brighton,1729397, 0,Josh Brownhill,138929.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-33891,Burnley,Brighton,1729397, 0,Jay Rodriguez,33891.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-400244,Burnley,Brighton,1729397, 0,Benson Manuel,400244.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-424624,Burnley,Brighton,1729397, 0,Zeki Amdouni,424624.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-383581,Burnley,Brighton,1729397, 0,Mike Tresor,383581.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-365831,Burnley,Brighton,1729397, 0,Han-Noah Massengo,365831.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-400138,Brighton,Burnley,1729397,1,Bart Verbruggen,400138.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-110290,Brighton,Burnley,1729397, 2,Joel Veltman,110290.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-298694,Brighton,Burnley,1729397, 3,Pervis Estupinan,298694.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-436048,Brighton,Burnley,1729397, 4,Carlos Baleba,436048.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-365402,Brighton,Burnley,1729397, 5,Jan Paul van Hecke,365402.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-86441,Brighton,Burnley,1729397, 6,Lewis Dunk,86441.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-443004,Brighton,Burnley,1729397, 7,Simon Adingra,443004.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-71824,Brighton,Burnley,1729397, 8,Pascal Gross,71824.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-39308,Brighton,Burnley,1729397, 9,Danny Welbeck,39308.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-399378,Brighton,Burnley,1729397, 10,Jakub Moder,399378.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-373525,Brighton,Burnley,1729397, 11,Joao Pedro,373525.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-382241,Brighton,Burnley,1729397, 0,Igor Julio,382241.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-21683,Brighton,Burnley,1729397, 0,Adam Lallana,21683.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-419341,Brighton,Burnley,1729397, 0,Valentin Barco,419341.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-33532,Brighton,Burnley,1729397, 0,Jason Steele,33532.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-382234,Brighton,Burnley,1729397, 0,Ansu Fati,382234.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-432384,Brighton,Burnley,1729397, 0,Facundo Buonanotte,432384.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-423721,Brighton,Burnley,1729397, 0,,,2024-04-13 15:00:00,Burnley,Brighton,1729397
-454792,Brighton,Burnley,1729397, 0,,,2024-04-13 15:00:00,Burnley,Brighton,1729397
-509424,Brighton,Burnley,1729397, 0,Mark O'Mahony,509424.0,2024-04-13 15:00:00,Burnley,Brighton,1729397
-46092,Newcastle,Tottenham,1729410,1,Martin Dubravka,46092.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-141486,Newcastle,Tottenham,1729410, 2,Jacob Murphy,141486.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-82277,Newcastle,Tottenham,1729410, 3,Dan Burn,82277.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-338780,Newcastle,Tottenham,1729410, 4,Bruno Guimaraes,338780.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-100599,Newcastle,Tottenham,1729410, 5,Emil Krafth,100599.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-82726,Newcastle,Tottenham,1729410, 6,Fabian Schar,82726.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-342811,Newcastle,Tottenham,1729410, 7,Sean Longstaff,342811.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-402596,Newcastle,Tottenham,1729410, 8,Elliot Anderson,402596.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-299254,Newcastle,Tottenham,1729410, 9,Alexander Isak,299254.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-349669,Newcastle,Tottenham,1729410, 10,Anthony Gordon,349669.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-331382,Newcastle,Tottenham,1729410, 11,Harvey Barnes,331382.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-112009,Newcastle,Tottenham,1729410, 0,Paul Dummett,112009.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-68648,Newcastle,Tottenham,1729410, 0,Matt Ritchie,68648.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-107176,Newcastle,Tottenham,1729410, 0,Loris Karius,107176.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-430294,Newcastle,Tottenham,1729410, 0,Lewis Hall,430294.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-415174,Newcastle,Tottenham,1729410, 0,Tino Livramento,415174.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-134640,Newcastle,Tottenham,1729410, 0,,,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-425059,Newcastle,Tottenham,1729410, 0,Joe White,425059.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-492690,Newcastle,Tottenham,1729410, 0,Alex Murphy,492690.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-492692,Newcastle,Tottenham,1729410, 0,Ben Parkinson,492692.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-147863,Tottenham,Newcastle,1729410,1,Guglielmo Vicario,147863.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-362352,Tottenham,Newcastle,1729410, 2,Pedro Porro,362352.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-401044,Tottenham,Newcastle,1729410, 3,Destiny Udogie,401044.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-303657,Tottenham,Newcastle,1729410, 4,Rodrigo Bentancur,303657.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-323663,Tottenham,Newcastle,1729410, 5,Cristian Romero,323663.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-425229,Tottenham,Newcastle,1729410, 6,Micky van de Ven,425229.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-379688,Tottenham,Newcastle,1729410, 7,Brennan Johnson,379688.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-303096,Tottenham,Newcastle,1729410, 8,Yves Bissouma,303096.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-91909,Tottenham,Newcastle,1729410, 9,Son Heung-Min,91909.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-137015,Tottenham,Newcastle,1729410, 10,James Maddison,137015.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-130903,Tottenham,Newcastle,1729410, 11,Timo Werner,130903.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-101859,Tottenham,Newcastle,1729410, 0,Pierre-Emile Hojbjerg,101859.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-400097,Tottenham,Newcastle,1729410, 0,Radu Dragusin,400097.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-368519,Tottenham,Newcastle,1729410, 0,Bryan Gil,368519.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-328512,Tottenham,Newcastle,1729410, 0,Emerson Royal,328512.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-303908,Tottenham,Newcastle,1729410, 0,Giovani Lo Celso,303908.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-355855,Tottenham,Newcastle,1729410, 0,Dejan Kulusevski,355855.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-403859,Tottenham,Newcastle,1729410, 0,Pape Sarr,403859.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-103837,Tottenham,Newcastle,1729410, 0,Ben Davies,103837.0,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-386134,Tottenham,Newcastle,1729410, 0,,,2024-04-13 12:30:00,Newcastle,Tottenham,1729410
-115131,Brentford,Luton,1729433,1,Mark Flekken,115131.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-321085,Brentford,Luton,1729433, 2,Kristoffer Ajer,321085.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-362275,Brentford,Luton,1729433, 3,Sergio Reguilon,362275.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-298689,Brentford,Luton,1729433, 4,Vitaly Janelt,298689.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-372724,Brentford,Luton,1729433, 5,Nathan Collins,372724.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-342499,Brentford,Luton,1729433, 6,Ethan Pinnock,342499.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-401168,Brentford,Luton,1729433, 7,Mikkel Damsgaard,401168.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-339674,Brentford,Luton,1729433, 8,Mathias Jensen,339674.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-296240,Brentford,Luton,1729433, 9,Yoane Wissa,296240.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-353377,Brentford,Luton,1729433, 10,Bryan Mbeumo,353377.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-368512,Brentford,Luton,1729433, 11,Keane Lewis-Potter,368512.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-101856,Brentford,Luton,1729433, 0,Christian Norgaard,101856.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-119822,Brentford,Luton,1729433, 0,Neal Maupay,119822.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-407260,Brentford,Luton,1729433, 0,Kevin Schade,407260.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-29026,Brentford,Luton,1729433, 0,Zanka,29026.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-320575,Brentford,Luton,1729433, 0,Saman Ghoddos,320575.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-404109,Brentford,Luton,1729433, 0,Frank Onyeka,404109.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-121480,Brentford,Luton,1729433, 0,Thomas Strakosha,121480.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-329554,Brentford,Luton,1729433, 0,Mads Roerslev,329554.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-444304,Brentford,Luton,1729433, 0,Yehor Yarmoliuk,444304.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-64342,Luton,Brentford,1729433,1,Thomas Kaminski,64342.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-399955,Luton,Brentford,1729433, 2,Issa Kabore,399955.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-362246,Luton,Brentford,1729433, 3,Alfie Doughty,362246.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-366080,Luton,Brentford,1729433, 4,Gabriel Osho,366080.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-388671,Luton,Brentford,1729433, 5,Teden Mengi,388671.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-141510,Luton,Brentford,1729433, 6,Reece Burke,141510.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-349102,Luton,Brentford,1729433, 7,Albert Sambi Lokonga,349102.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-92547,Luton,Brentford,1729433, 8,Ross Barkley,92547.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-263188,Luton,Brentford,1729433, 9,Carlton Morris,263188.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-100594,Luton,Brentford,1729433, 10,Jordan Clark,100594.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-365244,Luton,Brentford,1729433, 11,Tahith Chong,365244.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-94017,Luton,Brentford,1729433, 0,,,2024-04-20 15:00:00,Luton,Brentford,1729433
-139864,Luton,Brentford,1729433, 0,Luke Berry,139864.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-138641,Luton,Brentford,1729433, 0,Cauley Woodrow,138641.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-135717,Luton,Brentford,1729433, 0,Pelly Ruddock Mpanzu,135717.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-22319,Luton,Brentford,1729433, 0,,,2024-04-20 15:00:00,Luton,Brentford,1729433
-411101,Luton,Brentford,1729433, 0,Daiki Hashioka,411101.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-71522,Luton,Brentford,1729433, 0,Andros Townsend,71522.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-141431,Luton,Brentford,1729433, 0,Fred Onyedinma,141431.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-473957,Luton,Brentford,1729433, 0,Joe Johnson,473957.0,2024-04-20 15:00:00,Luton,Brentford,1729433
-362426,Burnley,Sheff Utd,1729439,1,Arijanet Muric,362426.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-402874,Burnley,Sheff Utd,1729439, 2,Lorenz Assignon,402874.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-107462,Burnley,Sheff Utd,1729439, 3,Charlie Taylor,107462.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-273292,Burnley,Sheff Utd,1729439, 4,Josh Cullen,273292.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-362826,Burnley,Sheff Utd,1729439, 5,Dara O'Shea,362826.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-414233,Burnley,Sheff Utd,1729439, 6,Maxime Esteve,414233.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-349504,Burnley,Sheff Utd,1729439, 7,Vitinho,349504.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-321020,Burnley,Sheff Utd,1729439, 8,Sander Berge,321020.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-444751,Burnley,Sheff Utd,1729439, 9,Wilson Odobert,444751.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-371447,Burnley,Sheff Utd,1729439, 10,Lyle Foster,371447.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-307202,Burnley,Sheff Utd,1729439, 11,Jacob Bruun Larsen,307202.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-404852,Burnley,Sheff Utd,1729439, 0,James Trafford,404852.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-41868,Burnley,Sheff Utd,1729439, 0,Johann Gudmundsson,41868.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-138929,Burnley,Sheff Utd,1729439, 0,Josh Brownhill,138929.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-33891,Burnley,Sheff Utd,1729439, 0,Jay Rodriguez,33891.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-400244,Burnley,Sheff Utd,1729439, 0,Benson Manuel,400244.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-399619,Burnley,Sheff Utd,1729439, 0,Hjalmar Ekdal,399619.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-410522,Burnley,Sheff Utd,1729439, 0,David Datro Fofana,410522.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-424624,Burnley,Sheff Utd,1729439, 0,Zeki Amdouni,424624.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-383581,Burnley,Sheff Utd,1729439, 0,Mike Tresor,383581.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-377309,Sheff Utd,Burnley,1729439,1,Ivo Grbic,377309.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-354291,Sheff Utd,Burnley,1729439, 2,Jayden Bogle,354291.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-140667,Sheff Utd,Burnley,1729439, 3,Ben Osborn,140667.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-434190,Sheff Utd,Burnley,1729439, 4,Oliver Arblaster,434190.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-326642,Sheff Utd,Burnley,1729439, 5,Anel Ahmedhodzic,326642.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-298687,Sheff Utd,Burnley,1729439, 6,Auston Trusty,298687.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-425576,Sheff Utd,Burnley,1729439, 7,James McAtee,425576.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-373964,Sheff Utd,Burnley,1729439, 8,Vinicius Souza,373964.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-138695,Sheff Utd,Burnley,1729439, 9,Oliver McBurnie,138695.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-332143,Sheff Utd,Burnley,1729439, 10,Gustavo Hamer,332143.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-332839,Sheff Utd,Burnley,1729439, 11,Ben Brereton,332839.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-382363,Sheff Utd,Burnley,1729439, 0,Cameron Archer,382363.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-90324,Sheff Utd,Burnley,1729439, 0,Oliver Norwood,90324.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-134482,Sheff Utd,Burnley,1729439, 0,Wes Foderingham,134482.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-425353,Sheff Utd,Burnley,1729439, 0,Anis Ben Slimane,425353.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-386971,Sheff Utd,Burnley,1729439, 0,Yasser Larouci,386971.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-499658,Sheff Utd,Burnley,1729439, 0,,,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-297544,Sheff Utd,Burnley,1729439, 0,Mason Holgate,297544.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-416209,Sheff Utd,Burnley,1729439, 0,William Osula,416209.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-456511,Sheff Utd,Burnley,1729439, 0,Andre Brooks,456511.0,2024-04-20 15:00:00,Sheffield United,Burnley,1729439
-76202,Bournemouth,Aston Villa,1729419,1,Neto,76202.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-69877,Bournemouth,Aston Villa,1729419, 2,Adam Smith,69877.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-332419,Bournemouth,Aston Villa,1729419, 3,Lloyd Kelly,332419.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-128882,Bournemouth,Aston Villa,1729419, 4,Ryan Christie,128882.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-399826,Bournemouth,Aston Villa,1729419, 5,Illia Zabarnyi,399826.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-328330,Bournemouth,Aston Villa,1729419, 6,Marcos Senesi,328330.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-422183,Bournemouth,Aston Villa,1729419, 7,Dango Ouattara,422183.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-136456,Bournemouth,Aston Villa,1729419, 8,Lewis Cook,136456.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-136459,Bournemouth,Aston Villa,1729419, 9,Dominic Solanke,136459.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-331579,Bournemouth,Aston Villa,1729419, 10,Justin Kluivert,331579.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-424273,Bournemouth,Aston Villa,1729419, 11,Milos Kerkez,424273.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-515753,Bournemouth,Aston Villa,1729419, 0,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-410998,Bournemouth,Aston Villa,1729419, 0,Alex Scott,410998.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-362837,Bournemouth,Aston Villa,1729419, 0,James Hill,362837.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-357073,Bournemouth,Aston Villa,1729419, 0,Antoine Semenyo,357073.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-134695,Bournemouth,Aston Villa,1729419, 0,Enes Unal,134695.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-145277,Bournemouth,Aston Villa,1729419, 0,Philip Billing,145277.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-362103,Bournemouth,Aston Villa,1729419, 0,Max Aarons,362103.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-362806,Bournemouth,Aston Villa,1729419, 0,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-471270,Bournemouth,Aston Villa,1729419, 0,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-102248,Aston Villa,Bournemouth,1729419,1,Emiliano Martinez,102248.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-322043,Aston Villa,Bournemouth,1729419, 2,Matty Cash,322043.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-89925,Aston Villa,Bournemouth,1729419, 3,Lucas Digne,89925.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-136345,Aston Villa,Bournemouth,1729419, 4,Youri Tielemans,136345.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-301440,Aston Villa,Bournemouth,1729419, 5,Ezri Konsa,301440.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-344259,Aston Villa,Bournemouth,1729419, 6,Pau Torres,344259.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-327682,Aston Villa,Bournemouth,1729419, 7,Leon Bailey,327682.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-318449,Aston Villa,Bournemouth,1729419, 8,John McGinn,318449.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-148503,Aston Villa,Bournemouth,1729419, 9,Ollie Watkins,148503.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-353397,Aston Villa,Bournemouth,1729419, 10,Moussa Diaby,353397.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-362824,Aston Villa,Bournemouth,1729419, 11,Morgan Rogers,362824.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-134984,Aston Villa,Bournemouth,1729419, 0,Diego Carlos,134984.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-124316,Aston Villa,Bournemouth,1729419, 0,Calum Chambers,124316.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-236511,Aston Villa,Bournemouth,1729419, 0,Clement Lenglet,236511.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-433517,Aston Villa,Bournemouth,1729419, 0,Jhon Duran,433517.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-41554,Aston Villa,Bournemouth,1729419, 0,Robin Olsen,41554.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-411201,Aston Villa,Bournemouth,1729419, 0,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-416208,Aston Villa,Bournemouth,1729419, 0,Tim Iroegbunam,416208.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-515428,Aston Villa,Bournemouth,1729419, 0,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-428531,Aston Villa,Bournemouth,1729419, 0,Omari Kellyman,428531.0,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419
-304008,Crystal Palace,West Ham,1729424,1,Dean Henderson,304008.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-400496,Crystal Palace,West Ham,1729424, 2,Daniel Munoz,400496.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-389579,Crystal Palace,West Ham,1729424, 3,Tyrick Mitchell,389579.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-395401,Crystal Palace,West Ham,1729424, 4,Chris Richards,395401.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-231135,Crystal Palace,West Ham,1729424, 5,Joachim Andersen,231135.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-69375,Crystal Palace,West Ham,1729424, 6,Nathaniel Clyne,69375.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-430774,Crystal Palace,West Ham,1729424, 7,Adam Wharton,430774.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-108638,Crystal Palace,West Ham,1729424, 8,Will Hughes,108638.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-328096,Crystal Palace,West Ham,1729424, 9,Jean-Philippe Mateta,328096.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-371281,Crystal Palace,West Ham,1729424, 10,Michael Olise,371281.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-332403,Crystal Palace,West Ham,1729424, 11,Eberechi Eze,332403.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-43105,Crystal Palace,West Ham,1729424, 0,Joel Ward,43105.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-288795,Crystal Palace,West Ham,1729424, 0,,,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-33930,Crystal Palace,West Ham,1729424, 0,James Tomkins,33930.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-67491,Crystal Palace,West Ham,1729424, 0,Jordan Ayew,67491.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-91822,Crystal Palace,West Ham,1729424, 0,Jeffrey Schlupp,91822.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-317504,Crystal Palace,West Ham,1729424, 0,Odsonne Edouard,317504.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-409440,Crystal Palace,West Ham,1729424, 0,Naouirou Ahamada,409440.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-229492,Crystal Palace,West Ham,1729424, 0,Remi Matthews,229492.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-141246,Crystal Palace,West Ham,1729424, 0,Jairo Riedewald,141246.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-20973,West Ham,Crystal Palace,1729424,1,Lukasz Fabianski,20973.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-111372,West Ham,Crystal Palace,1729424, 2,Vladimir Coufal,111372.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-101955,West Ham,Crystal Palace,1729424, 3,Emerson,101955.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-322696,West Ham,Crystal Palace,1729424, 4,Edson Alvarez,322696.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-106086,West Ham,Crystal Palace,1729424, 5,Kurt Zouma,106086.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-23547,West Ham,Crystal Palace,1729424, 6,Angelo Ogbonna,23547.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-400166,West Ham,Crystal Palace,1729424, 7,Mohammed Kudus,400166.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-143595,West Ham,Crystal Palace,1729424, 8,Tomas Soucek,143595.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-69517,West Ham,Crystal Palace,1729424, 9,Michail Antonio,69517.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-105172,West Ham,Crystal Palace,1729424, 10,James Ward-Prowse,105172.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-319756,West Ham,Crystal Palace,1729424, 11,Lucas Paqueta,319756.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-349484,West Ham,Crystal Palace,1729424, 0,Ben Johnson,349484.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-68049,West Ham,Crystal Palace,1729424, 0,Aaron Cresswell,68049.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-270446,West Ham,Crystal Palace,1729424, 0,Kalvin Phillips,270446.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-125004,West Ham,Crystal Palace,1729424, 0,Maxwel Cornet,125004.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-91762,West Ham,Crystal Palace,1729424, 0,Danny Ings,91762.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-92516,West Ham,Crystal Palace,1729424, 0,Alphonse Areola,92516.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-463053,West Ham,Crystal Palace,1729424, 0,,,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-454820,West Ham,Crystal Palace,1729424, 0,Divin Mubama,454820.0,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-463054,West Ham,Crystal Palace,1729424, 0,,,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424
-78386,Nottingham Forest,Everton,1729427,1,Matz Sels,78386.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-386969,Nottingham Forest,Everton,1729427, 2,Neco Williams,386969.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-315543,Nottingham Forest,Everton,1729427, 3,Ola Aina,315543.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-399250,Nottingham Forest,Everton,1729427, 4,Danilo,399250.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-296319,Nottingham Forest,Everton,1729427, 5,Moussa Niakhate,296319.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-445424,Nottingham Forest,Everton,1729427, 6,Murillo,445424.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-389087,Nottingham Forest,Everton,1729427, 7,Giovanni Reyna,389087.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-334653,Nottingham Forest,Everton,1729427, 8,Nicolas Dominguez,334653.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-73380,Nottingham Forest,Everton,1729427, 9,Chris Wood,73380.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-332867,Nottingham Forest,Everton,1729427, 10,Morgan Gibbs-White,332867.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-350088,Nottingham Forest,Everton,1729427, 11,Callum Hudson-Odoi,350088.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-319712,Nottingham Forest,Everton,1729427, 0,Matt Turner,319712.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-328075,Nottingham Forest,Everton,1729427, 0,Ibrahim Sangare,328075.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-298659,Nottingham Forest,Everton,1729427, 0,Harry Toffolo,298659.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-413211,Nottingham Forest,Everton,1729427, 0,Anthony Elanga,413211.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-342830,Nottingham Forest,Everton,1729427, 0,Ryan Yates,342830.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-124688,Nottingham Forest,Everton,1729427, 0,Divock Origi,124688.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-316883,Nottingham Forest,Everton,1729427, 0,Gonzalo Montiel,316883.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-399490,Nottingham Forest,Everton,1729427, 0,Andrew Omobamidele,399490.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-434076,Nottingham Forest,Everton,1729427, 0,Rodrigo Ribeiro,434076.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-110189,Everton,Nottingham Forest,1729427,1,Jordan Pickford,110189.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-8166,Everton,Nottingham Forest,1729427, 2,Ashley Young,8166.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-345516,Everton,Nottingham Forest,1729427, 3,Vitalii Mykolenko,345516.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-80464,Everton,Nottingham Forest,1729427, 4,Idrissa Gueye,80464.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-131464,Everton,Nottingham Forest,1729427, 5,James Tarkowski,131464.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-381045,Everton,Nottingham Forest,1729427, 6,Jarrad Branthwaite,381045.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-317896,Everton,Nottingham Forest,1729427, 7,Jack Harrison,317896.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-116317,Everton,Nottingham Forest,1729427, 8,Abdoulaye Doucoure,116317.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-141469,Everton,Nottingham Forest,1729427, 9,Dominic Calvert-Lewin,141469.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-118123,Everton,Nottingham Forest,1729427, 10,Andre Gomes,118123.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-357427,Everton,Nottingham Forest,1729427, 11,Dwight McNeil,357427.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-107941,Everton,Nottingham Forest,1729427, 0,Michael Keane,107941.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-400815,Everton,Nottingham Forest,1729427, 0,Amadou Onana,400815.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-323625,Everton,Nottingham Forest,1729427, 0,Arnaut Danjuma,323625.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-362852,Everton,Nottingham Forest,1729427, 0,,,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-380546,Everton,Nottingham Forest,1729427, 0,Beto,380546.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-287504,Everton,Nottingham Forest,1729427, 0,Ben Godfrey,287504.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-447229,Everton,Nottingham Forest,1729427, 0,Youssef Chermiti,447229.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-367781,Everton,Nottingham Forest,1729427, 0,James Garner,367781.0,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-432082,Everton,Nottingham Forest,1729427, 0,,,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427
-92173,Fulham,Liverpool,1729430,1,Bernd Leno,92173.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-141169,Fulham,Liverpool,1729430, 2,Timothy Castagne,141169.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-306581,Fulham,Liverpool,1729430, 3,Antonee Robinson,306581.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-297395,Fulham,Liverpool,1729430, 4,Sasa Lukic,297395.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-136464,Fulham,Liverpool,1729430, 5,Tosin Adarabioyo,136464.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-396976,Fulham,Liverpool,1729430, 6,Calvin Bassey,396976.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-136824,Fulham,Liverpool,1729430, 7,Alex Iwobi,136824.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-322774,Fulham,Liverpool,1729430, 8,Joao Palhinha,322774.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-403649,Fulham,Liverpool,1729430, 9,Rodrigo Muniz,403649.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-243254,Fulham,Liverpool,1729430, 10,Andreas Pereira,243254.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-134332,Fulham,Liverpool,1729430, 11,Bobby De Cordova-Reid,134332.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-256125,Fulham,Liverpool,1729430, 0,,,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-145996,Fulham,Liverpool,1729430, 0,Kenny Tete,145996.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-135724,Fulham,Liverpool,1729430, 0,Harrison Reed,135724.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-108186,Fulham,Liverpool,1729430, 0,Raul Jimenez,108186.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-333044,Fulham,Liverpool,1729430, 0,Harry Wilson,333044.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-393407,Fulham,Liverpool,1729430, 0,Armando Broja,393407.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-79583,Fulham,Liverpool,1729430, 0,Tom Cairney,79583.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-140088,Fulham,Liverpool,1729430, 0,Adama Traore,140088.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-85006,Fulham,Liverpool,1729430, 0,Tim Ream,85006.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-114147,Liverpool,Fulham,1729430,1,Alisson Becker,114147.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-318871,Liverpool,Fulham,1729430, 2,Trent Alexander-Arnold,318871.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-115726,Liverpool,Fulham,1729430, 3,Andy Robertson,115726.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-86829,Liverpool,Fulham,1729430, 4,Wataru Endo,86829.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-430019,Liverpool,Fulham,1729430, 5,Jarell Quansah,430019.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-95408,Liverpool,Fulham,1729430, 6,Virgil van Dijk,95408.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-363982,Liverpool,Fulham,1729430, 7,Harvey Elliott,363982.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-363884,Liverpool,Fulham,1729430, 8,Ryan Gravenberch,363884.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-235755,Liverpool,Fulham,1729430, 9,Diogo Jota,235755.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-377168,Liverpool,Fulham,1729430, 10,Luis Diaz,377168.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-352825,Liverpool,Fulham,1729430, 11,Cody Gakpo,352825.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-136451,Liverpool,Fulham,1729430, 0,Joe Gomez,136451.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-345957,Liverpool,Fulham,1729430, 0,Ibrahima Konate,345957.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-369875,Liverpool,Fulham,1729430, 0,Dominik Szoboszlai,369875.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-400828,Liverpool,Fulham,1729430, 0,Darwin Nunez,400828.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-345319,Liverpool,Fulham,1729430, 0,Alexis Mac Allister,345319.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-108226,Liverpool,Fulham,1729430, 0,Mohamed Salah,108226.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-355354,Liverpool,Fulham,1729430, 0,Curtis Jones,355354.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-301455,Liverpool,Fulham,1729430, 0,Kostas Tsimikas,301455.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-322176,Liverpool,Fulham,1729430, 0,Caoimhin Kelleher,322176.0,2024-04-21 16:30:00,Fulham,Liverpool,1729430
-276366,Arsenal,Chelsea,1729409,1,David Raya,276366.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-322036,Arsenal,Chelsea,1729409, 2,Ben White,322036.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-377283,Arsenal,Chelsea,1729409, 3,Takehiro Tomiyasu,377283.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-238940,Arsenal,Chelsea,1729409, 4,Thomas Partey,238940.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-361822,Arsenal,Chelsea,1729409, 5,William Saliba,361822.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-334087,Arsenal,Chelsea,1729409, 6,Gabriel Magalhaes,334087.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-247454,Arsenal,Chelsea,1729409, 7,Martin Odegaard,247454.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-332325,Arsenal,Chelsea,1729409, 8,Declan Rice,332325.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-326413,Arsenal,Chelsea,1729409, 9,Kai Havertz,326413.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-367185,Arsenal,Chelsea,1729409, 10,Bukayo Saka,367185.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-113994,Arsenal,Chelsea,1729409, 11,Leandro Trossard,113994.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-316858,Arsenal,Chelsea,1729409, 0,Aaron Ramsdale,316858.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-279379,Arsenal,Chelsea,1729409, 0,Gabriel Jesus,279379.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-363686,Arsenal,Chelsea,1729409, 0,Emile Smith Rowe,363686.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-380706,Arsenal,Chelsea,1729409, 0,Gabriel Martinelli,380706.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-345845,Arsenal,Chelsea,1729409, 0,Eddie Nketiah,345845.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-424462,Arsenal,Chelsea,1729409, 0,Jakub Kiwior,424462.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-106968,Arsenal,Chelsea,1729409, 0,Jorginho,106968.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-394924,Arsenal,Chelsea,1729409, 0,Fabio Vieira,394924.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-273257,Arsenal,Chelsea,1729409, 0,Oleksandr Zinchenko,273257.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-406564,Chelsea,Arsenal,1729409,1,Djordje Petrovic,406564.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-467969,Chelsea,Arsenal,1729409, 2,Alfie Gilchrist,467969.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-363496,Chelsea,Arsenal,1729409, 3,Marc Cucurella,363496.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-410175,Chelsea,Arsenal,1729409, 4,Moises Caicedo,410175.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-300426,Chelsea,Arsenal,1729409, 5,Axel Disasi,300426.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-365406,Chelsea,Arsenal,1729409, 6,Benoit Badiashile,365406.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-389935,Chelsea,Arsenal,1729409, 7,Noni Madueke,389935.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-369430,Chelsea,Arsenal,1729409, 8,Enzo Fernandez,369430.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-426050,Chelsea,Arsenal,1729409, 9,Nicolas Jackson,426050.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-375621,Chelsea,Arsenal,1729409, 10,Conor Gallagher,375621.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-409376,Chelsea,Arsenal,1729409, 11,Mykhailo Mudryk,409376.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-28550,Chelsea,Arsenal,1729409, 0,Thiago Silva,28550.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-97692,Chelsea,Arsenal,1729409, 0,Raheem Sterling,97692.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-135768,Chelsea,Arsenal,1729409, 0,,,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-353292,Chelsea,Arsenal,1729409, 0,Trevoh Chalobah,353292.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-410639,Chelsea,Arsenal,1729409, 0,Carney Chukwuemeka,410639.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-433219,Chelsea,Arsenal,1729409, 0,Cesare Casadei,433219.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-478451,Chelsea,Arsenal,1729409, 0,Deivid Washington,478451.0,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-517600,Chelsea,Arsenal,1729409, 0,,,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-523598,Chelsea,Arsenal,1729409, 0,,,2024-04-23 20:00:00,Arsenal,Chelsea,1729409
-304008,Crystal Palace,Newcastle,1729418,1,Dean Henderson,304008.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-400496,Crystal Palace,Newcastle,1729418, 2,Daniel Munoz,400496.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-389579,Crystal Palace,Newcastle,1729418, 3,Tyrick Mitchell,389579.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-395401,Crystal Palace,Newcastle,1729418, 4,Chris Richards,395401.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-231135,Crystal Palace,Newcastle,1729418, 5,Joachim Andersen,231135.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-69375,Crystal Palace,Newcastle,1729418, 6,Nathaniel Clyne,69375.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-430774,Crystal Palace,Newcastle,1729418, 7,Adam Wharton,430774.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-108638,Crystal Palace,Newcastle,1729418, 8,Will Hughes,108638.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-328096,Crystal Palace,Newcastle,1729418, 9,Jean-Philippe Mateta,328096.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-67491,Crystal Palace,Newcastle,1729418, 10,Jordan Ayew,67491.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-332403,Crystal Palace,Newcastle,1729418, 11,Eberechi Eze,332403.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-43105,Crystal Palace,Newcastle,1729418, 0,Joel Ward,43105.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-33930,Crystal Palace,Newcastle,1729418, 0,James Tomkins,33930.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-371281,Crystal Palace,Newcastle,1729418, 0,Michael Olise,371281.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-91822,Crystal Palace,Newcastle,1729418, 0,Jeffrey Schlupp,91822.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-317504,Crystal Palace,Newcastle,1729418, 0,Odsonne Edouard,317504.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-409440,Crystal Palace,Newcastle,1729418, 0,Naouirou Ahamada,409440.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-229492,Crystal Palace,Newcastle,1729418, 0,Remi Matthews,229492.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-141246,Crystal Palace,Newcastle,1729418, 0,Jairo Riedewald,141246.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-464285,Crystal Palace,Newcastle,1729418, 0,David Ozoh,464285.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-46092,Newcastle,Crystal Palace,1729418,1,Martin Dubravka,46092.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-141486,Newcastle,Crystal Palace,1729418, 2,Jacob Murphy,141486.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-402596,Newcastle,Crystal Palace,1729418, 3,Elliot Anderson,402596.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-82277,Newcastle,Crystal Palace,1729418, 4,Dan Burn,82277.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-82726,Newcastle,Crystal Palace,1729418, 5,Fabian Schar,82726.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-100599,Newcastle,Crystal Palace,1729418, 6,Emil Krafth,100599.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-342811,Newcastle,Crystal Palace,1729418, 7,Sean Longstaff,342811.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-338780,Newcastle,Crystal Palace,1729418, 8,Bruno Guimaraes,338780.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-299254,Newcastle,Crystal Palace,1729418, 9,Alexander Isak,299254.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-349669,Newcastle,Crystal Palace,1729418, 10,Anthony Gordon,349669.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-331382,Newcastle,Crystal Palace,1729418, 11,Harvey Barnes,331382.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-112009,Newcastle,Crystal Palace,1729418, 0,Paul Dummett,112009.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-134115,Newcastle,Crystal Palace,1729418, 0,Callum Wilson,134115.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-68648,Newcastle,Crystal Palace,1729418, 0,Matt Ritchie,68648.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-107176,Newcastle,Crystal Palace,1729418, 0,Loris Karius,107176.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-430294,Newcastle,Crystal Palace,1729418, 0,Lewis Hall,430294.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-415174,Newcastle,Crystal Palace,1729418, 0,Tino Livramento,415174.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-425059,Newcastle,Crystal Palace,1729418, 0,Joe White,425059.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-492690,Newcastle,Crystal Palace,1729418, 0,Alex Murphy,492690.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-492692,Newcastle,Crystal Palace,1729418, 0,Ben Parkinson,492692.0,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418
-110189,Everton,Liverpool,1729421,1,Jordan Pickford,110189.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-287504,Everton,Liverpool,1729421, 2,Ben Godfrey,287504.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-345516,Everton,Liverpool,1729421, 3,Vitalii Mykolenko,345516.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-367781,Everton,Liverpool,1729421, 4,James Garner,367781.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-131464,Everton,Liverpool,1729421, 5,James Tarkowski,131464.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-381045,Everton,Liverpool,1729421, 6,Jarrad Branthwaite,381045.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-317896,Everton,Liverpool,1729421, 7,Jack Harrison,317896.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-80464,Everton,Liverpool,1729421, 8,Idrissa Gueye,80464.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-141469,Everton,Liverpool,1729421, 9,Dominic Calvert-Lewin,141469.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-116317,Everton,Liverpool,1729421, 10,Abdoulaye Doucoure,116317.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-357427,Everton,Liverpool,1729421, 11,Dwight McNeil,357427.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-107941,Everton,Liverpool,1729421, 0,Michael Keane,107941.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-400815,Everton,Liverpool,1729421, 0,Amadou Onana,400815.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-323625,Everton,Liverpool,1729421, 0,Arnaut Danjuma,323625.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-362852,Everton,Liverpool,1729421, 0,,,2024-04-24 20:00:00,Everton,Liverpool,1729421
-8166,Everton,Liverpool,1729421, 0,Ashley Young,8166.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-118123,Everton,Liverpool,1729421, 0,Andre Gomes,118123.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-447229,Everton,Liverpool,1729421, 0,Youssef Chermiti,447229.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-432082,Everton,Liverpool,1729421, 0,,,2024-04-24 20:00:00,Everton,Liverpool,1729421
-450748,Everton,Liverpool,1729421, 0,,,2024-04-24 20:00:00,Everton,Liverpool,1729421
-114147,Liverpool,Everton,1729421,1,Alisson Becker,114147.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-318871,Liverpool,Everton,1729421, 2,Trent Alexander-Arnold,318871.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-115726,Liverpool,Everton,1729421, 3,Andy Robertson,115726.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-345319,Liverpool,Everton,1729421, 4,Alexis Mac Allister,345319.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-345957,Liverpool,Everton,1729421, 5,Ibrahima Konate,345957.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-95408,Liverpool,Everton,1729421, 6,Virgil van Dijk,95408.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-369875,Liverpool,Everton,1729421, 7,Dominik Szoboszlai,369875.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-355354,Liverpool,Everton,1729421, 8,Curtis Jones,355354.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-400828,Liverpool,Everton,1729421, 9,Darwin Nunez,400828.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-108226,Liverpool,Everton,1729421, 10,Mohamed Salah,108226.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-377168,Liverpool,Everton,1729421, 11,Luis Diaz,377168.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-136451,Liverpool,Everton,1729421, 0,Joe Gomez,136451.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-86829,Liverpool,Everton,1729421, 0,Wataru Endo,86829.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-363982,Liverpool,Everton,1729421, 0,Harvey Elliott,363982.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-301455,Liverpool,Everton,1729421, 0,Kostas Tsimikas,301455.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-363884,Liverpool,Everton,1729421, 0,Ryan Gravenberch,363884.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-450021,Liverpool,Everton,1729421, 0,Bobby Clark,450021.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-322176,Liverpool,Everton,1729421, 0,Caoimhin Kelleher,322176.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-517340,Liverpool,Everton,1729421, 0,Jayden Danns,517340.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-430019,Liverpool,Everton,1729421, 0,Jarell Quansah,430019.0,2024-04-24 20:00:00,Everton,Liverpool,1729421
-260843,Man Utd,Sheff Utd,1729429,1,Andre Onana,260843.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-331924,Man Utd,Sheff Utd,1729429, 2,Aaron Wan-Bissaka,331924.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-353418,Man Utd,Sheff Utd,1729429, 3,Diogo Dalot,353418.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-69344,Man Utd,Sheff Utd,1729429, 4,Christian Eriksen,69344.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-88526,Man Utd,Sheff Utd,1729429, 5,Casemiro,88526.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-99487,Man Utd,Sheff Utd,1729429, 6,Harry Maguire,99487.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-364315,Man Utd,Sheff Utd,1729429, 7,Antony,364315.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-460260,Man Utd,Sheff Utd,1729429, 8,Kobbie Mainoo,460260.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-439584,Man Utd,Sheff Utd,1729429, 9,Rasmus Hojlund,439584.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-123761,Man Utd,Sheff Utd,1729429, 10,Bruno Fernandes,123761.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-437022,Man Utd,Sheff Utd,1729429, 11,Alejandro Garnacho,437022.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-361707,Man Utd,Sheff Utd,1729429, 0,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-248144,Man Utd,Sheff Utd,1729429, 0,Sofyan Amrabat,248144.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-386634,Man Utd,Sheff Utd,1729429, 0,Amad Diallo,386634.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-336915,Man Utd,Sheff Utd,1729429, 0,Scott McTominay,336915.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-491385,Man Utd,Sheff Utd,1729429, 0,Omari Forson,491385.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-470680,Man Utd,Sheff Utd,1729429, 0,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-517767,Man Utd,Sheff Utd,1729429, 0,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-524188,Man Utd,Sheff Utd,1729429, 0,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-523346,Man Utd,Sheff Utd,1729429, 0,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-134482,Sheff Utd,Man Utd,1729429,1,Wes Foderingham,134482.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-354291,Sheff Utd,Man Utd,1729429, 2,Jayden Bogle,354291.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-140667,Sheff Utd,Man Utd,1729429, 3,Ben Osborn,140667.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-298687,Sheff Utd,Man Utd,1729429, 4,Auston Trusty,298687.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-326642,Sheff Utd,Man Utd,1729429, 5,Anel Ahmedhodzic,326642.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-297544,Sheff Utd,Man Utd,1729429, 6,Mason Holgate,297544.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-332143,Sheff Utd,Man Utd,1729429, 7,Gustavo Hamer,332143.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-456511,Sheff Utd,Man Utd,1729429, 8,Andre Brooks,456511.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-332839,Sheff Utd,Man Utd,1729429, 9,Ben Brereton,332839.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-382363,Sheff Utd,Man Utd,1729429, 10,Cameron Archer,382363.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-434190,Sheff Utd,Man Utd,1729429, 11,Oliver Arblaster,434190.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-377309,Sheff Utd,Man Utd,1729429, 0,Ivo Grbic,377309.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-90324,Sheff Utd,Man Utd,1729429, 0,Oliver Norwood,90324.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-373964,Sheff Utd,Man Utd,1729429, 0,Vinicius Souza,373964.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-425353,Sheff Utd,Man Utd,1729429, 0,Anis Ben Slimane,425353.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-386971,Sheff Utd,Man Utd,1729429, 0,Yasser Larouci,386971.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-425576,Sheff Utd,Man Utd,1729429, 0,James McAtee,425576.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-499658,Sheff Utd,Man Utd,1729429, 0,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-416209,Sheff Utd,Man Utd,1729429, 0,William Osula,416209.0,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-525560,Sheff Utd,Man Utd,1729429, 0,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429
-122714,Wolves,Bournemouth,1729435,1,Jose Sa,122714.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-296363,Wolves,Bournemouth,1729435, 2,Nelson Semedo,296363.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-431283,Wolves,Bournemouth,1729435, 3,Toti,431283.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-123481,Wolves,Bournemouth,1729435, 4,Mario Lemina,123481.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-444241,Wolves,Bournemouth,1729435, 5,Santiago Bueno,444241.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-368310,Wolves,Bournemouth,1729435, 6,Maximilian Kilman,368310.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-94868,Wolves,Bournemouth,1729435, 7,Pablo Sarabia,94868.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-403693,Wolves,Bournemouth,1729435, 8,Joao Gomes,403693.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-262854,Wolves,Bournemouth,1729435, 9,Hwang Hee-Chan,262854.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-386856,Wolves,Bournemouth,1729435, 10,Tommy Doyle,386856.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-355401,Wolves,Bournemouth,1729435, 11,Rayan Ait-Nouri,355401.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-518914,Wolves,Bournemouth,1729435, 0,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-94042,Wolves,Bournemouth,1729435, 0,Matt Doherty,94042.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-386612,Wolves,Bournemouth,1729435, 0,Boubacar Traore,386612.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-362758,Wolves,Bournemouth,1729435, 0,Matheus Cunha,362758.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-409730,Wolves,Bournemouth,1729435, 0,Hugo Bueno,409730.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-134543,Wolves,Bournemouth,1729435, 0,Dan Bentley,134543.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-517909,Wolves,Bournemouth,1729435, 0,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-437381,Wolves,Bournemouth,1729435, 0,Tawanda Chirewa,437381.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-463235,Wolves,Bournemouth,1729435, 0,Nathan Fraser,463235.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-362806,Bournemouth,Wolves,1729435,1,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-69877,Bournemouth,Wolves,1729435, 2,Adam Smith,69877.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-424273,Bournemouth,Wolves,1729435, 3,Milos Kerkez,424273.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-128882,Bournemouth,Wolves,1729435, 4,Ryan Christie,128882.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-399826,Bournemouth,Wolves,1729435, 5,Illia Zabarnyi,399826.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-328330,Bournemouth,Wolves,1729435, 6,Marcos Senesi,328330.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-357073,Bournemouth,Wolves,1729435, 7,Antoine Semenyo,357073.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-136456,Bournemouth,Wolves,1729435, 8,Lewis Cook,136456.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-136459,Bournemouth,Wolves,1729435, 9,Dominic Solanke,136459.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-410998,Bournemouth,Wolves,1729435, 10,Alex Scott,410998.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-331579,Bournemouth,Wolves,1729435, 11,Justin Kluivert,331579.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-76202,Bournemouth,Wolves,1729435, 0,Neto,76202.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-332419,Bournemouth,Wolves,1729435, 0,Lloyd Kelly,332419.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-422183,Bournemouth,Wolves,1729435, 0,Dango Ouattara,422183.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-362837,Bournemouth,Wolves,1729435, 0,James Hill,362837.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-134695,Bournemouth,Wolves,1729435, 0,Enes Unal,134695.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-145277,Bournemouth,Wolves,1729435, 0,Philip Billing,145277.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-362103,Bournemouth,Wolves,1729435, 0,Max Aarons,362103.0,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-454746,Bournemouth,Wolves,1729435, 0,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
-471270,Bournemouth,Wolves,1729435, 0,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435
+PlayerID,Team,Opponent,GameID,TeamPlayerFormation,player,player_id,team,date,home_team,away_team,game_id,opponent
+406564,Chelsea,Man City,1810666,1,Djordje Petrovic,406564.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+403850,Chelsea,Man City,1810666, 2,Malo Gusto,403850.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+363496,Chelsea,Man City,1810666, 3,Marc Cucurella,363496.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+369430,Chelsea,Man City,1810666, 4,Enzo Fernandez,369430.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+353292,Chelsea,Man City,1810666, 5,Trevoh Chalobah,353292.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+28550,Chelsea,Man City,1810666, 6,Thiago Silva,28550.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+389935,Chelsea,Man City,1810666, 7,Noni Madueke,389935.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+410175,Chelsea,Man City,1810666, 8,Moises Caicedo,410175.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+426050,Chelsea,Man City,1810666, 9,Nicolas Jackson,426050.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+395692,Chelsea,Man City,1810666, 10,Cole Palmer,395692.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+375621,Chelsea,Man City,1810666, 11,Conor Gallagher,375621.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+300426,Chelsea,Man City,1810666, 0,Axel Disasi,300426.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+365406,Chelsea,Man City,1810666, 0,Benoit Badiashile,365406.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+97692,Chelsea,Man City,1810666, 0,Raheem Sterling,97692.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+409376,Chelsea,Man City,1810666, 0,Mykhailo Mudryk,409376.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+135768,Chelsea,Man City,1810666, 0,,,,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+410639,Chelsea,Man City,1810666, 0,Carney Chukwuemeka,410639.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+299272,Chelsea,Man City,1810666, 0,Ben Chilwell,299272.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+478451,Chelsea,Man City,1810666, 0,Deivid Washington,478451.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+467969,Chelsea,Man City,1810666, 0,Alfie Gilchrist,467969.0,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+133569,Man City,Chelsea,1810666,1,Stefan Ortega,133569.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+303139,Man City,Chelsea,1810666, 2,Rodri,303139.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+297390,Man City,Chelsea,1810666, 3,Manuel Akanji,297390.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+122945,Man City,Chelsea,1810666, 4,Nathan Ake,122945.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+101374,Man City,Chelsea,1810666, 5,John Stones,101374.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+69778,Man City,Chelsea,1810666, 6,Kyle Walker,69778.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+331254,Man City,Chelsea,1810666, 7,Phil Foden,331254.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+73084,Man City,Chelsea,1810666, 8,Kevin De Bruyne,73084.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+365409,Man City,Chelsea,1810666, 9,Julian Alvarez,365409.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+136741,Man City,Chelsea,1810666, 10,Bernardo Silva,136741.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+113069,Man City,Chelsea,1810666, 11,Jack Grealish,113069.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+313171,Man City,Chelsea,1810666, 0,Ruben Dias,313171.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+93894,Man City,Chelsea,1810666, 0,Mateo Kovacic,93894.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+388098,Man City,Chelsea,1810666, 0,Jeremy Doku,388098.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+355110,Man City,Chelsea,1810666, 0,Sergio Gomez,355110.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+402664,Man City,Chelsea,1810666, 0,Josko Gvardiol,402664.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+394933,Man City,Chelsea,1810666, 0,Matheus Nunes,394933.0,Wolves,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Manchester City
+121774,Man City,Chelsea,1810666, 0,Ederson,121774.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+430709,Man City,Chelsea,1810666, 0,Oscar Bobb,430709.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+444791,Man City,Chelsea,1810666, 0,Rico Lewis,444791.0,Manchester City,2024-04-20 17:15:00,Manchester City,Chelsea,1810666,Chelsea
+362426,Burnley,Brighton,1729397,1,Arijanet Muric,362426.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+402874,Burnley,Brighton,1729397, 2,Lorenz Assignon,402874.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+349504,Burnley,Brighton,1729397, 3,Vitinho,349504.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+273292,Burnley,Brighton,1729397, 4,Josh Cullen,273292.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+399619,Burnley,Brighton,1729397, 5,Hjalmar Ekdal,399619.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+414233,Burnley,Brighton,1729397, 6,Maxime Esteve,414233.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+371447,Burnley,Brighton,1729397, 7,Lyle Foster,371447.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+321020,Burnley,Brighton,1729397, 8,Sander Berge,321020.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+410522,Burnley,Brighton,1729397, 9,David Datro Fofana,410522.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+444751,Burnley,Brighton,1729397, 10,Wilson Odobert,444751.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+307202,Burnley,Brighton,1729397, 11,Jacob Bruun Larsen,307202.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+404852,Burnley,Brighton,1729397, 0,James Trafford,404852.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+107462,Burnley,Brighton,1729397, 0,Charlie Taylor,107462.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+41868,Burnley,Brighton,1729397, 0,Johann Gudmundsson,41868.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+138929,Burnley,Brighton,1729397, 0,Josh Brownhill,138929.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+33891,Burnley,Brighton,1729397, 0,Jay Rodriguez,33891.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+400244,Burnley,Brighton,1729397, 0,Benson Manuel,400244.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+424624,Burnley,Brighton,1729397, 0,Zeki Amdouni,424624.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+383581,Burnley,Brighton,1729397, 0,Mike Tresor,383581.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+365831,Burnley,Brighton,1729397, 0,Han-Noah Massengo,365831.0,Burnley,2024-04-13 15:00:00,Burnley,Brighton,1729397,Brighton
+400138,Brighton,Burnley,1729397,1,Bart Verbruggen,400138.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+110290,Brighton,Burnley,1729397, 2,Joel Veltman,110290.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+298694,Brighton,Burnley,1729397, 3,Pervis Estupinan,298694.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+436048,Brighton,Burnley,1729397, 4,Carlos Baleba,436048.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+365402,Brighton,Burnley,1729397, 5,Jan Paul van Hecke,365402.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+86441,Brighton,Burnley,1729397, 6,Lewis Dunk,86441.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+443004,Brighton,Burnley,1729397, 7,Simon Adingra,443004.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+71824,Brighton,Burnley,1729397, 8,Pascal Gross,71824.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+39308,Brighton,Burnley,1729397, 9,Danny Welbeck,39308.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+399378,Brighton,Burnley,1729397, 10,Jakub Moder,399378.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+373525,Brighton,Burnley,1729397, 11,Joao Pedro,373525.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+382241,Brighton,Burnley,1729397, 0,Igor Julio,382241.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+21683,Brighton,Burnley,1729397, 0,Adam Lallana,21683.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+419341,Brighton,Burnley,1729397, 0,Valentin Barco,419341.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+33532,Brighton,Burnley,1729397, 0,Jason Steele,33532.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+382234,Brighton,Burnley,1729397, 0,Ansu Fati,382234.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+432384,Brighton,Burnley,1729397, 0,Facundo Buonanotte,432384.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+423721,Brighton,Burnley,1729397, 0,,,,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+454792,Brighton,Burnley,1729397, 0,,,,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+509424,Brighton,Burnley,1729397, 0,Mark O'Mahony,509424.0,Brighton,2024-04-13 15:00:00,Burnley,Brighton,1729397,Burnley
+46092,Newcastle,Tottenham,1729410,1,Martin Dubravka,46092.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+141486,Newcastle,Tottenham,1729410, 2,Jacob Murphy,141486.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+82277,Newcastle,Tottenham,1729410, 3,Dan Burn,82277.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+338780,Newcastle,Tottenham,1729410, 4,Bruno Guimaraes,338780.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+100599,Newcastle,Tottenham,1729410, 5,Emil Krafth,100599.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+82726,Newcastle,Tottenham,1729410, 6,Fabian Schar,82726.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+342811,Newcastle,Tottenham,1729410, 7,Sean Longstaff,342811.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+402596,Newcastle,Tottenham,1729410, 8,Elliot Anderson,402596.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+299254,Newcastle,Tottenham,1729410, 9,Alexander Isak,299254.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+349669,Newcastle,Tottenham,1729410, 10,Anthony Gordon,349669.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+331382,Newcastle,Tottenham,1729410, 11,Harvey Barnes,331382.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+112009,Newcastle,Tottenham,1729410, 0,Paul Dummett,112009.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+68648,Newcastle,Tottenham,1729410, 0,Matt Ritchie,68648.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+107176,Newcastle,Tottenham,1729410, 0,Loris Karius,107176.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+430294,Newcastle,Tottenham,1729410, 0,Lewis Hall,430294.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+415174,Newcastle,Tottenham,1729410, 0,Tino Livramento,415174.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+134640,Newcastle,Tottenham,1729410, 0,,,,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+425059,Newcastle,Tottenham,1729410, 0,Joe White,425059.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+492690,Newcastle,Tottenham,1729410, 0,Alex Murphy,492690.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+492692,Newcastle,Tottenham,1729410, 0,Ben Parkinson,492692.0,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Tottenham
+147863,Tottenham,Newcastle,1729410,1,Guglielmo Vicario,147863.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+362352,Tottenham,Newcastle,1729410, 2,Pedro Porro,362352.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+401044,Tottenham,Newcastle,1729410, 3,Destiny Udogie,401044.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+303657,Tottenham,Newcastle,1729410, 4,Rodrigo Bentancur,303657.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+323663,Tottenham,Newcastle,1729410, 5,Cristian Romero,323663.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+425229,Tottenham,Newcastle,1729410, 6,Micky van de Ven,425229.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+379688,Tottenham,Newcastle,1729410, 7,Brennan Johnson,379688.0,Nottingham Forest,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+303096,Tottenham,Newcastle,1729410, 8,Yves Bissouma,303096.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+91909,Tottenham,Newcastle,1729410, 9,Son Heung-Min,91909.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+137015,Tottenham,Newcastle,1729410, 10,James Maddison,137015.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+130903,Tottenham,Newcastle,1729410, 11,Timo Werner,130903.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+101859,Tottenham,Newcastle,1729410, 0,Pierre-Emile Hojbjerg,101859.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+400097,Tottenham,Newcastle,1729410, 0,Radu Dragusin,400097.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+368519,Tottenham,Newcastle,1729410, 0,Bryan Gil,368519.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+328512,Tottenham,Newcastle,1729410, 0,Emerson Royal,328512.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+303908,Tottenham,Newcastle,1729410, 0,Giovani Lo Celso,303908.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+355855,Tottenham,Newcastle,1729410, 0,Dejan Kulusevski,355855.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+403859,Tottenham,Newcastle,1729410, 0,Pape Sarr,403859.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+103837,Tottenham,Newcastle,1729410, 0,Ben Davies,103837.0,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+386134,Tottenham,Newcastle,1729410, 0,,,,2024-04-13 12:30:00,Newcastle,Tottenham,1729410,Newcastle
+115131,Brentford,Luton,1729433,1,Mark Flekken,115131.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+321085,Brentford,Luton,1729433, 2,Kristoffer Ajer,321085.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+362275,Brentford,Luton,1729433, 3,Sergio Reguilon,362275.0,Manchester United,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+298689,Brentford,Luton,1729433, 4,Vitaly Janelt,298689.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+372724,Brentford,Luton,1729433, 5,Nathan Collins,372724.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+342499,Brentford,Luton,1729433, 6,Ethan Pinnock,342499.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+401168,Brentford,Luton,1729433, 7,Mikkel Damsgaard,401168.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+339674,Brentford,Luton,1729433, 8,Mathias Jensen,339674.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+296240,Brentford,Luton,1729433, 9,Yoane Wissa,296240.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+353377,Brentford,Luton,1729433, 10,Bryan Mbeumo,353377.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+368512,Brentford,Luton,1729433, 11,Keane Lewis-Potter,368512.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+101856,Brentford,Luton,1729433, 0,Christian Norgaard,101856.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+119822,Brentford,Luton,1729433, 0,Neal Maupay,119822.0,Everton,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+407260,Brentford,Luton,1729433, 0,Kevin Schade,407260.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+29026,Brentford,Luton,1729433, 0,Zanka,29026.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+320575,Brentford,Luton,1729433, 0,Saman Ghoddos,320575.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+404109,Brentford,Luton,1729433, 0,Frank Onyeka,404109.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+121480,Brentford,Luton,1729433, 0,Thomas Strakosha,121480.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+329554,Brentford,Luton,1729433, 0,Mads Roerslev,329554.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+444304,Brentford,Luton,1729433, 0,Yehor Yarmoliuk,444304.0,Brentford,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+64342,Luton,Brentford,1729433,1,Thomas Kaminski,64342.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+399955,Luton,Brentford,1729433, 2,Issa Kabore,399955.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+362246,Luton,Brentford,1729433, 3,Alfie Doughty,362246.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+366080,Luton,Brentford,1729433, 4,Gabriel Osho,366080.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+388671,Luton,Brentford,1729433, 5,Teden Mengi,388671.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+141510,Luton,Brentford,1729433, 6,Reece Burke,141510.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+349102,Luton,Brentford,1729433, 7,Albert Sambi Lokonga,349102.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+92547,Luton,Brentford,1729433, 8,Ross Barkley,92547.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+263188,Luton,Brentford,1729433, 9,Carlton Morris,263188.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+100594,Luton,Brentford,1729433, 10,Jordan Clark,100594.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+365244,Luton,Brentford,1729433, 11,Tahith Chong,365244.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+94017,Luton,Brentford,1729433, 0,,,,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+139864,Luton,Brentford,1729433, 0,Luke Berry,139864.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+138641,Luton,Brentford,1729433, 0,Cauley Woodrow,138641.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+135717,Luton,Brentford,1729433, 0,Pelly Ruddock Mpanzu,135717.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+22319,Luton,Brentford,1729433, 0,,,,2024-04-20 15:00:00,Luton,Brentford,1729433,Luton
+411101,Luton,Brentford,1729433, 0,Daiki Hashioka,411101.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+71522,Luton,Brentford,1729433, 0,Andros Townsend,71522.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+141431,Luton,Brentford,1729433, 0,Fred Onyedinma,141431.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+473957,Luton,Brentford,1729433, 0,Joe Johnson,473957.0,Luton,2024-04-20 15:00:00,Luton,Brentford,1729433,Brentford
+362426,Burnley,Sheff Utd,1729439,1,Arijanet Muric,362426.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+402874,Burnley,Sheff Utd,1729439, 2,Lorenz Assignon,402874.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+107462,Burnley,Sheff Utd,1729439, 3,Charlie Taylor,107462.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+273292,Burnley,Sheff Utd,1729439, 4,Josh Cullen,273292.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+362826,Burnley,Sheff Utd,1729439, 5,Dara O'Shea,362826.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+414233,Burnley,Sheff Utd,1729439, 6,Maxime Esteve,414233.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+349504,Burnley,Sheff Utd,1729439, 7,Vitinho,349504.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+321020,Burnley,Sheff Utd,1729439, 8,Sander Berge,321020.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+444751,Burnley,Sheff Utd,1729439, 9,Wilson Odobert,444751.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+371447,Burnley,Sheff Utd,1729439, 10,Lyle Foster,371447.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+307202,Burnley,Sheff Utd,1729439, 11,Jacob Bruun Larsen,307202.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+404852,Burnley,Sheff Utd,1729439, 0,James Trafford,404852.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+41868,Burnley,Sheff Utd,1729439, 0,Johann Gudmundsson,41868.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+138929,Burnley,Sheff Utd,1729439, 0,Josh Brownhill,138929.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+33891,Burnley,Sheff Utd,1729439, 0,Jay Rodriguez,33891.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+400244,Burnley,Sheff Utd,1729439, 0,Benson Manuel,400244.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+399619,Burnley,Sheff Utd,1729439, 0,Hjalmar Ekdal,399619.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+410522,Burnley,Sheff Utd,1729439, 0,David Datro Fofana,410522.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+424624,Burnley,Sheff Utd,1729439, 0,Zeki Amdouni,424624.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+383581,Burnley,Sheff Utd,1729439, 0,Mike Tresor,383581.0,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+377309,Sheff Utd,Burnley,1729439,1,Ivo Grbic,377309.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+354291,Sheff Utd,Burnley,1729439, 2,Jayden Bogle,354291.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+140667,Sheff Utd,Burnley,1729439, 3,Ben Osborn,140667.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+434190,Sheff Utd,Burnley,1729439, 4,Oliver Arblaster,434190.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+326642,Sheff Utd,Burnley,1729439, 5,Anel Ahmedhodzic,326642.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+298687,Sheff Utd,Burnley,1729439, 6,Auston Trusty,298687.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+425576,Sheff Utd,Burnley,1729439, 7,James McAtee,425576.0,Manchester City,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+373964,Sheff Utd,Burnley,1729439, 8,Vinicius Souza,373964.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+138695,Sheff Utd,Burnley,1729439, 9,Oliver McBurnie,138695.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+332143,Sheff Utd,Burnley,1729439, 10,Gustavo Hamer,332143.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+332839,Sheff Utd,Burnley,1729439, 11,Ben Brereton,332839.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+382363,Sheff Utd,Burnley,1729439, 0,Cameron Archer,382363.0,Aston Villa,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+90324,Sheff Utd,Burnley,1729439, 0,Oliver Norwood,90324.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+134482,Sheff Utd,Burnley,1729439, 0,Wes Foderingham,134482.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+425353,Sheff Utd,Burnley,1729439, 0,Anis Ben Slimane,425353.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+386971,Sheff Utd,Burnley,1729439, 0,Yasser Larouci,386971.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+499658,Sheff Utd,Burnley,1729439, 0,,,,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Sheffield United
+297544,Sheff Utd,Burnley,1729439, 0,Mason Holgate,297544.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+416209,Sheff Utd,Burnley,1729439, 0,William Osula,416209.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+456511,Sheff Utd,Burnley,1729439, 0,Andre Brooks,456511.0,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,1729439,Burnley
+76202,Bournemouth,Aston Villa,1729419,1,Neto,76202.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+69877,Bournemouth,Aston Villa,1729419, 2,Adam Smith,69877.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+332419,Bournemouth,Aston Villa,1729419, 3,Lloyd Kelly,332419.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+128882,Bournemouth,Aston Villa,1729419, 4,Ryan Christie,128882.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+399826,Bournemouth,Aston Villa,1729419, 5,Illia Zabarnyi,399826.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+328330,Bournemouth,Aston Villa,1729419, 6,Marcos Senesi,328330.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+422183,Bournemouth,Aston Villa,1729419, 7,Dango Ouattara,422183.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+136456,Bournemouth,Aston Villa,1729419, 8,Lewis Cook,136456.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+136459,Bournemouth,Aston Villa,1729419, 9,Dominic Solanke,136459.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+331579,Bournemouth,Aston Villa,1729419, 10,Justin Kluivert,331579.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+424273,Bournemouth,Aston Villa,1729419, 11,Milos Kerkez,424273.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+515753,Bournemouth,Aston Villa,1729419, 0,,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+410998,Bournemouth,Aston Villa,1729419, 0,Alex Scott,410998.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+362837,Bournemouth,Aston Villa,1729419, 0,James Hill,362837.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+357073,Bournemouth,Aston Villa,1729419, 0,Antoine Semenyo,357073.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+134695,Bournemouth,Aston Villa,1729419, 0,Enes Unal,134695.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+145277,Bournemouth,Aston Villa,1729419, 0,Philip Billing,145277.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+362103,Bournemouth,Aston Villa,1729419, 0,Max Aarons,362103.0,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+362806,Bournemouth,Aston Villa,1729419, 0,,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+471270,Bournemouth,Aston Villa,1729419, 0,,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+102248,Aston Villa,Bournemouth,1729419,1,Emiliano Martinez,102248.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+322043,Aston Villa,Bournemouth,1729419, 2,Matty Cash,322043.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+89925,Aston Villa,Bournemouth,1729419, 3,Lucas Digne,89925.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+136345,Aston Villa,Bournemouth,1729419, 4,Youri Tielemans,136345.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+301440,Aston Villa,Bournemouth,1729419, 5,Ezri Konsa,301440.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+344259,Aston Villa,Bournemouth,1729419, 6,Pau Torres,344259.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+327682,Aston Villa,Bournemouth,1729419, 7,Leon Bailey,327682.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+318449,Aston Villa,Bournemouth,1729419, 8,John McGinn,318449.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+148503,Aston Villa,Bournemouth,1729419, 9,Ollie Watkins,148503.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+353397,Aston Villa,Bournemouth,1729419, 10,Moussa Diaby,353397.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+362824,Aston Villa,Bournemouth,1729419, 11,Morgan Rogers,362824.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+134984,Aston Villa,Bournemouth,1729419, 0,Diego Carlos,134984.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+124316,Aston Villa,Bournemouth,1729419, 0,Calum Chambers,124316.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+236511,Aston Villa,Bournemouth,1729419, 0,Clement Lenglet,236511.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+433517,Aston Villa,Bournemouth,1729419, 0,Jhon Duran,433517.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+41554,Aston Villa,Bournemouth,1729419, 0,Robin Olsen,41554.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+411201,Aston Villa,Bournemouth,1729419, 0,,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+416208,Aston Villa,Bournemouth,1729419, 0,Tim Iroegbunam,416208.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+515428,Aston Villa,Bournemouth,1729419, 0,,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Aston Villa
+428531,Aston Villa,Bournemouth,1729419, 0,Omari Kellyman,428531.0,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,1729419,Bournemouth
+304008,Crystal Palace,West Ham,1729424,1,Dean Henderson,304008.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+400496,Crystal Palace,West Ham,1729424, 2,Daniel Munoz,400496.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+389579,Crystal Palace,West Ham,1729424, 3,Tyrick Mitchell,389579.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+395401,Crystal Palace,West Ham,1729424, 4,Chris Richards,395401.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+231135,Crystal Palace,West Ham,1729424, 5,Joachim Andersen,231135.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+69375,Crystal Palace,West Ham,1729424, 6,Nathaniel Clyne,69375.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+430774,Crystal Palace,West Ham,1729424, 7,Adam Wharton,430774.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+108638,Crystal Palace,West Ham,1729424, 8,Will Hughes,108638.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+328096,Crystal Palace,West Ham,1729424, 9,Jean-Philippe Mateta,328096.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+371281,Crystal Palace,West Ham,1729424, 10,Michael Olise,371281.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+332403,Crystal Palace,West Ham,1729424, 11,Eberechi Eze,332403.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+43105,Crystal Palace,West Ham,1729424, 0,Joel Ward,43105.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+288795,Crystal Palace,West Ham,1729424, 0,,,,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+33930,Crystal Palace,West Ham,1729424, 0,James Tomkins,33930.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+67491,Crystal Palace,West Ham,1729424, 0,Jordan Ayew,67491.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+91822,Crystal Palace,West Ham,1729424, 0,Jeffrey Schlupp,91822.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+317504,Crystal Palace,West Ham,1729424, 0,Odsonne Edouard,317504.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+409440,Crystal Palace,West Ham,1729424, 0,Naouirou Ahamada,409440.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+229492,Crystal Palace,West Ham,1729424, 0,Remi Matthews,229492.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+141246,Crystal Palace,West Ham,1729424, 0,Jairo Riedewald,141246.0,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,West Ham
+20973,West Ham,Crystal Palace,1729424,1,Lukasz Fabianski,20973.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+111372,West Ham,Crystal Palace,1729424, 2,Vladimir Coufal,111372.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+101955,West Ham,Crystal Palace,1729424, 3,Emerson,101955.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+322696,West Ham,Crystal Palace,1729424, 4,Edson Alvarez,322696.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+106086,West Ham,Crystal Palace,1729424, 5,Kurt Zouma,106086.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+23547,West Ham,Crystal Palace,1729424, 6,Angelo Ogbonna,23547.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+400166,West Ham,Crystal Palace,1729424, 7,Mohammed Kudus,400166.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+143595,West Ham,Crystal Palace,1729424, 8,Tomas Soucek,143595.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+69517,West Ham,Crystal Palace,1729424, 9,Michail Antonio,69517.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+105172,West Ham,Crystal Palace,1729424, 10,James Ward-Prowse,105172.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+319756,West Ham,Crystal Palace,1729424, 11,Lucas Paqueta,319756.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+349484,West Ham,Crystal Palace,1729424, 0,Ben Johnson,349484.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+68049,West Ham,Crystal Palace,1729424, 0,Aaron Cresswell,68049.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+270446,West Ham,Crystal Palace,1729424, 0,Kalvin Phillips,270446.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+125004,West Ham,Crystal Palace,1729424, 0,Maxwel Cornet,125004.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+91762,West Ham,Crystal Palace,1729424, 0,Danny Ings,91762.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+92516,West Ham,Crystal Palace,1729424, 0,Alphonse Areola,92516.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+463053,West Ham,Crystal Palace,1729424, 0,,,,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+454820,West Ham,Crystal Palace,1729424, 0,Divin Mubama,454820.0,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+463054,West Ham,Crystal Palace,1729424, 0,,,,2024-04-21 15:00:00,Crystal Palace,West Ham,1729424,Crystal Palace
+78386,Nottingham Forest,Everton,1729427,1,Matz Sels,78386.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+386969,Nottingham Forest,Everton,1729427, 2,Neco Williams,386969.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+315543,Nottingham Forest,Everton,1729427, 3,Ola Aina,315543.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+399250,Nottingham Forest,Everton,1729427, 4,Danilo,399250.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+296319,Nottingham Forest,Everton,1729427, 5,Moussa Niakhate,296319.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+445424,Nottingham Forest,Everton,1729427, 6,Murillo,445424.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+389087,Nottingham Forest,Everton,1729427, 7,Giovanni Reyna,389087.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+334653,Nottingham Forest,Everton,1729427, 8,Nicolas Dominguez,334653.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+73380,Nottingham Forest,Everton,1729427, 9,Chris Wood,73380.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+332867,Nottingham Forest,Everton,1729427, 10,Morgan Gibbs-White,332867.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+350088,Nottingham Forest,Everton,1729427, 11,Callum Hudson-Odoi,350088.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+319712,Nottingham Forest,Everton,1729427, 0,Matt Turner,319712.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+328075,Nottingham Forest,Everton,1729427, 0,Ibrahim Sangare,328075.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+298659,Nottingham Forest,Everton,1729427, 0,Harry Toffolo,298659.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+413211,Nottingham Forest,Everton,1729427, 0,Anthony Elanga,413211.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+342830,Nottingham Forest,Everton,1729427, 0,Ryan Yates,342830.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+124688,Nottingham Forest,Everton,1729427, 0,Divock Origi,124688.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+316883,Nottingham Forest,Everton,1729427, 0,Gonzalo Montiel,316883.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+399490,Nottingham Forest,Everton,1729427, 0,Andrew Omobamidele,399490.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+434076,Nottingham Forest,Everton,1729427, 0,Rodrigo Ribeiro,434076.0,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+110189,Everton,Nottingham Forest,1729427,1,Jordan Pickford,110189.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+8166,Everton,Nottingham Forest,1729427, 2,Ashley Young,8166.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+345516,Everton,Nottingham Forest,1729427, 3,Vitalii Mykolenko,345516.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+80464,Everton,Nottingham Forest,1729427, 4,Idrissa Gueye,80464.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+131464,Everton,Nottingham Forest,1729427, 5,James Tarkowski,131464.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+381045,Everton,Nottingham Forest,1729427, 6,Jarrad Branthwaite,381045.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+317896,Everton,Nottingham Forest,1729427, 7,Jack Harrison,317896.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+116317,Everton,Nottingham Forest,1729427, 8,Abdoulaye Doucoure,116317.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+141469,Everton,Nottingham Forest,1729427, 9,Dominic Calvert-Lewin,141469.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+118123,Everton,Nottingham Forest,1729427, 10,Andre Gomes,118123.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+357427,Everton,Nottingham Forest,1729427, 11,Dwight McNeil,357427.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+107941,Everton,Nottingham Forest,1729427, 0,Michael Keane,107941.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+400815,Everton,Nottingham Forest,1729427, 0,Amadou Onana,400815.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+323625,Everton,Nottingham Forest,1729427, 0,Arnaut Danjuma,323625.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+362852,Everton,Nottingham Forest,1729427, 0,,,,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+380546,Everton,Nottingham Forest,1729427, 0,Beto,380546.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+287504,Everton,Nottingham Forest,1729427, 0,Ben Godfrey,287504.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+447229,Everton,Nottingham Forest,1729427, 0,Youssef Chermiti,447229.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+367781,Everton,Nottingham Forest,1729427, 0,James Garner,367781.0,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Nottingham Forest
+432082,Everton,Nottingham Forest,1729427, 0,,,,2024-04-21 13:30:00,Everton,Nottingham Forest,1729427,Everton
+92173,Fulham,Liverpool,1729430,1,Bernd Leno,92173.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+141169,Fulham,Liverpool,1729430, 2,Timothy Castagne,141169.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+306581,Fulham,Liverpool,1729430, 3,Antonee Robinson,306581.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+297395,Fulham,Liverpool,1729430, 4,Sasa Lukic,297395.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+136464,Fulham,Liverpool,1729430, 5,Tosin Adarabioyo,136464.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+396976,Fulham,Liverpool,1729430, 6,Calvin Bassey,396976.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+136824,Fulham,Liverpool,1729430, 7,Alex Iwobi,136824.0,Everton,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+322774,Fulham,Liverpool,1729430, 8,Joao Palhinha,322774.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+403649,Fulham,Liverpool,1729430, 9,Rodrigo Muniz,403649.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+243254,Fulham,Liverpool,1729430, 10,Andreas Pereira,243254.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+134332,Fulham,Liverpool,1729430, 11,Bobby De Cordova-Reid,134332.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+256125,Fulham,Liverpool,1729430, 0,,,,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+145996,Fulham,Liverpool,1729430, 0,Kenny Tete,145996.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+135724,Fulham,Liverpool,1729430, 0,Harrison Reed,135724.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+108186,Fulham,Liverpool,1729430, 0,Raul Jimenez,108186.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+333044,Fulham,Liverpool,1729430, 0,Harry Wilson,333044.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+393407,Fulham,Liverpool,1729430, 0,Armando Broja,393407.0,Chelsea,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+79583,Fulham,Liverpool,1729430, 0,Tom Cairney,79583.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+140088,Fulham,Liverpool,1729430, 0,Adama Traore,140088.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+85006,Fulham,Liverpool,1729430, 0,Tim Ream,85006.0,Fulham,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Liverpool
+114147,Liverpool,Fulham,1729430,1,Alisson Becker,114147.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+318871,Liverpool,Fulham,1729430, 2,Trent Alexander-Arnold,318871.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+115726,Liverpool,Fulham,1729430, 3,Andy Robertson,115726.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+86829,Liverpool,Fulham,1729430, 4,Wataru Endo,86829.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+430019,Liverpool,Fulham,1729430, 5,Jarell Quansah,430019.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+95408,Liverpool,Fulham,1729430, 6,Virgil van Dijk,95408.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+363982,Liverpool,Fulham,1729430, 7,Harvey Elliott,363982.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+363884,Liverpool,Fulham,1729430, 8,Ryan Gravenberch,363884.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+235755,Liverpool,Fulham,1729430, 9,Diogo Jota,235755.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+377168,Liverpool,Fulham,1729430, 10,Luis Diaz,377168.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+352825,Liverpool,Fulham,1729430, 11,Cody Gakpo,352825.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+136451,Liverpool,Fulham,1729430, 0,Joe Gomez,136451.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+345957,Liverpool,Fulham,1729430, 0,Ibrahima Konate,345957.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+369875,Liverpool,Fulham,1729430, 0,Dominik Szoboszlai,369875.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+400828,Liverpool,Fulham,1729430, 0,Darwin Nunez,400828.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+345319,Liverpool,Fulham,1729430, 0,Alexis Mac Allister,345319.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+108226,Liverpool,Fulham,1729430, 0,Mohamed Salah,108226.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+355354,Liverpool,Fulham,1729430, 0,Curtis Jones,355354.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+301455,Liverpool,Fulham,1729430, 0,Kostas Tsimikas,301455.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+322176,Liverpool,Fulham,1729430, 0,Caoimhin Kelleher,322176.0,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,1729430,Fulham
+276366,Arsenal,Chelsea,1729409,1,David Raya,276366.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+322036,Arsenal,Chelsea,1729409, 2,Ben White,322036.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+377283,Arsenal,Chelsea,1729409, 3,Takehiro Tomiyasu,377283.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+238940,Arsenal,Chelsea,1729409, 4,Thomas Partey,238940.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+361822,Arsenal,Chelsea,1729409, 5,William Saliba,361822.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+334087,Arsenal,Chelsea,1729409, 6,Gabriel Magalhaes,334087.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+247454,Arsenal,Chelsea,1729409, 7,Martin Odegaard,247454.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+332325,Arsenal,Chelsea,1729409, 8,Declan Rice,332325.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+326413,Arsenal,Chelsea,1729409, 9,Kai Havertz,326413.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+367185,Arsenal,Chelsea,1729409, 10,Bukayo Saka,367185.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+113994,Arsenal,Chelsea,1729409, 11,Leandro Trossard,113994.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+316858,Arsenal,Chelsea,1729409, 0,Aaron Ramsdale,316858.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+279379,Arsenal,Chelsea,1729409, 0,Gabriel Jesus,279379.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+363686,Arsenal,Chelsea,1729409, 0,Emile Smith Rowe,363686.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+380706,Arsenal,Chelsea,1729409, 0,Gabriel Martinelli,380706.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+345845,Arsenal,Chelsea,1729409, 0,Eddie Nketiah,345845.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+424462,Arsenal,Chelsea,1729409, 0,Jakub Kiwior,424462.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+106968,Arsenal,Chelsea,1729409, 0,Jorginho,106968.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+394924,Arsenal,Chelsea,1729409, 0,Fabio Vieira,394924.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+273257,Arsenal,Chelsea,1729409, 0,Oleksandr Zinchenko,273257.0,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Chelsea
+406564,Chelsea,Arsenal,1729409,1,Djordje Petrovic,406564.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+467969,Chelsea,Arsenal,1729409, 2,Alfie Gilchrist,467969.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+363496,Chelsea,Arsenal,1729409, 3,Marc Cucurella,363496.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+410175,Chelsea,Arsenal,1729409, 4,Moises Caicedo,410175.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+300426,Chelsea,Arsenal,1729409, 5,Axel Disasi,300426.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+365406,Chelsea,Arsenal,1729409, 6,Benoit Badiashile,365406.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+389935,Chelsea,Arsenal,1729409, 7,Noni Madueke,389935.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+369430,Chelsea,Arsenal,1729409, 8,Enzo Fernandez,369430.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+426050,Chelsea,Arsenal,1729409, 9,Nicolas Jackson,426050.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+375621,Chelsea,Arsenal,1729409, 10,Conor Gallagher,375621.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+409376,Chelsea,Arsenal,1729409, 11,Mykhailo Mudryk,409376.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+28550,Chelsea,Arsenal,1729409, 0,Thiago Silva,28550.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+97692,Chelsea,Arsenal,1729409, 0,Raheem Sterling,97692.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+135768,Chelsea,Arsenal,1729409, 0,,,,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+353292,Chelsea,Arsenal,1729409, 0,Trevoh Chalobah,353292.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+410639,Chelsea,Arsenal,1729409, 0,Carney Chukwuemeka,410639.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+433219,Chelsea,Arsenal,1729409, 0,Cesare Casadei,433219.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+478451,Chelsea,Arsenal,1729409, 0,Deivid Washington,478451.0,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+517600,Chelsea,Arsenal,1729409, 0,,,,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+523598,Chelsea,Arsenal,1729409, 0,,,,2024-04-23 20:00:00,Arsenal,Chelsea,1729409,Arsenal
+304008,Crystal Palace,Newcastle,1729418,1,Dean Henderson,304008.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+400496,Crystal Palace,Newcastle,1729418, 2,Daniel Munoz,400496.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+389579,Crystal Palace,Newcastle,1729418, 3,Tyrick Mitchell,389579.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+395401,Crystal Palace,Newcastle,1729418, 4,Chris Richards,395401.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+231135,Crystal Palace,Newcastle,1729418, 5,Joachim Andersen,231135.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+69375,Crystal Palace,Newcastle,1729418, 6,Nathaniel Clyne,69375.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+430774,Crystal Palace,Newcastle,1729418, 7,Adam Wharton,430774.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+108638,Crystal Palace,Newcastle,1729418, 8,Will Hughes,108638.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+328096,Crystal Palace,Newcastle,1729418, 9,Jean-Philippe Mateta,328096.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+67491,Crystal Palace,Newcastle,1729418, 10,Jordan Ayew,67491.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+332403,Crystal Palace,Newcastle,1729418, 11,Eberechi Eze,332403.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+43105,Crystal Palace,Newcastle,1729418, 0,Joel Ward,43105.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+33930,Crystal Palace,Newcastle,1729418, 0,James Tomkins,33930.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+371281,Crystal Palace,Newcastle,1729418, 0,Michael Olise,371281.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+91822,Crystal Palace,Newcastle,1729418, 0,Jeffrey Schlupp,91822.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+317504,Crystal Palace,Newcastle,1729418, 0,Odsonne Edouard,317504.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+409440,Crystal Palace,Newcastle,1729418, 0,Naouirou Ahamada,409440.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+229492,Crystal Palace,Newcastle,1729418, 0,Remi Matthews,229492.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+141246,Crystal Palace,Newcastle,1729418, 0,Jairo Riedewald,141246.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+464285,Crystal Palace,Newcastle,1729418, 0,David Ozoh,464285.0,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Newcastle
+46092,Newcastle,Crystal Palace,1729418,1,Martin Dubravka,46092.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+141486,Newcastle,Crystal Palace,1729418, 2,Jacob Murphy,141486.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+402596,Newcastle,Crystal Palace,1729418, 3,Elliot Anderson,402596.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+82277,Newcastle,Crystal Palace,1729418, 4,Dan Burn,82277.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+82726,Newcastle,Crystal Palace,1729418, 5,Fabian Schar,82726.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+100599,Newcastle,Crystal Palace,1729418, 6,Emil Krafth,100599.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+342811,Newcastle,Crystal Palace,1729418, 7,Sean Longstaff,342811.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+338780,Newcastle,Crystal Palace,1729418, 8,Bruno Guimaraes,338780.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+299254,Newcastle,Crystal Palace,1729418, 9,Alexander Isak,299254.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+349669,Newcastle,Crystal Palace,1729418, 10,Anthony Gordon,349669.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+331382,Newcastle,Crystal Palace,1729418, 11,Harvey Barnes,331382.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+112009,Newcastle,Crystal Palace,1729418, 0,Paul Dummett,112009.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+134115,Newcastle,Crystal Palace,1729418, 0,Callum Wilson,134115.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+68648,Newcastle,Crystal Palace,1729418, 0,Matt Ritchie,68648.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+107176,Newcastle,Crystal Palace,1729418, 0,Loris Karius,107176.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+430294,Newcastle,Crystal Palace,1729418, 0,Lewis Hall,430294.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+415174,Newcastle,Crystal Palace,1729418, 0,Tino Livramento,415174.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+425059,Newcastle,Crystal Palace,1729418, 0,Joe White,425059.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+492690,Newcastle,Crystal Palace,1729418, 0,Alex Murphy,492690.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+492692,Newcastle,Crystal Palace,1729418, 0,Ben Parkinson,492692.0,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,1729418,Crystal Palace
+110189,Everton,Liverpool,1729421,1,Jordan Pickford,110189.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+287504,Everton,Liverpool,1729421, 2,Ben Godfrey,287504.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+345516,Everton,Liverpool,1729421, 3,Vitalii Mykolenko,345516.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+367781,Everton,Liverpool,1729421, 4,James Garner,367781.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+131464,Everton,Liverpool,1729421, 5,James Tarkowski,131464.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+381045,Everton,Liverpool,1729421, 6,Jarrad Branthwaite,381045.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+317896,Everton,Liverpool,1729421, 7,Jack Harrison,317896.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+80464,Everton,Liverpool,1729421, 8,Idrissa Gueye,80464.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+141469,Everton,Liverpool,1729421, 9,Dominic Calvert-Lewin,141469.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+116317,Everton,Liverpool,1729421, 10,Abdoulaye Doucoure,116317.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+357427,Everton,Liverpool,1729421, 11,Dwight McNeil,357427.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+107941,Everton,Liverpool,1729421, 0,Michael Keane,107941.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+400815,Everton,Liverpool,1729421, 0,Amadou Onana,400815.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+323625,Everton,Liverpool,1729421, 0,Arnaut Danjuma,323625.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+362852,Everton,Liverpool,1729421, 0,,,,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+8166,Everton,Liverpool,1729421, 0,Ashley Young,8166.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+118123,Everton,Liverpool,1729421, 0,Andre Gomes,118123.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+447229,Everton,Liverpool,1729421, 0,Youssef Chermiti,447229.0,Everton,2024-04-24 20:00:00,Everton,Liverpool,1729421,Liverpool
+432082,Everton,Liverpool,1729421, 0,,,,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+450748,Everton,Liverpool,1729421, 0,,,,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+114147,Liverpool,Everton,1729421,1,Alisson Becker,114147.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+318871,Liverpool,Everton,1729421, 2,Trent Alexander-Arnold,318871.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+115726,Liverpool,Everton,1729421, 3,Andy Robertson,115726.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+345319,Liverpool,Everton,1729421, 4,Alexis Mac Allister,345319.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+345957,Liverpool,Everton,1729421, 5,Ibrahima Konate,345957.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+95408,Liverpool,Everton,1729421, 6,Virgil van Dijk,95408.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+369875,Liverpool,Everton,1729421, 7,Dominik Szoboszlai,369875.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+355354,Liverpool,Everton,1729421, 8,Curtis Jones,355354.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+400828,Liverpool,Everton,1729421, 9,Darwin Nunez,400828.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+108226,Liverpool,Everton,1729421, 10,Mohamed Salah,108226.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+377168,Liverpool,Everton,1729421, 11,Luis Diaz,377168.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+136451,Liverpool,Everton,1729421, 0,Joe Gomez,136451.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+86829,Liverpool,Everton,1729421, 0,Wataru Endo,86829.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+363982,Liverpool,Everton,1729421, 0,Harvey Elliott,363982.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+301455,Liverpool,Everton,1729421, 0,Kostas Tsimikas,301455.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+363884,Liverpool,Everton,1729421, 0,Ryan Gravenberch,363884.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+450021,Liverpool,Everton,1729421, 0,Bobby Clark,450021.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+322176,Liverpool,Everton,1729421, 0,Caoimhin Kelleher,322176.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+517340,Liverpool,Everton,1729421, 0,Jayden Danns,517340.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+430019,Liverpool,Everton,1729421, 0,Jarell Quansah,430019.0,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,1729421,Everton
+260843,Man Utd,Sheff Utd,1729429,1,Andre Onana,260843.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+331924,Man Utd,Sheff Utd,1729429, 2,Aaron Wan-Bissaka,331924.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+353418,Man Utd,Sheff Utd,1729429, 3,Diogo Dalot,353418.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+69344,Man Utd,Sheff Utd,1729429, 4,Christian Eriksen,69344.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+88526,Man Utd,Sheff Utd,1729429, 5,Casemiro,88526.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+99487,Man Utd,Sheff Utd,1729429, 6,Harry Maguire,99487.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+364315,Man Utd,Sheff Utd,1729429, 7,Antony,364315.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+460260,Man Utd,Sheff Utd,1729429, 8,Kobbie Mainoo,460260.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+439584,Man Utd,Sheff Utd,1729429, 9,Rasmus Hojlund,439584.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+123761,Man Utd,Sheff Utd,1729429, 10,Bruno Fernandes,123761.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+437022,Man Utd,Sheff Utd,1729429, 11,Alejandro Garnacho,437022.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+361707,Man Utd,Sheff Utd,1729429, 0,,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+248144,Man Utd,Sheff Utd,1729429, 0,Sofyan Amrabat,248144.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+386634,Man Utd,Sheff Utd,1729429, 0,Amad Diallo,386634.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+336915,Man Utd,Sheff Utd,1729429, 0,Scott McTominay,336915.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+491385,Man Utd,Sheff Utd,1729429, 0,Omari Forson,491385.0,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Sheffield United
+470680,Man Utd,Sheff Utd,1729429, 0,,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+517767,Man Utd,Sheff Utd,1729429, 0,,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+524188,Man Utd,Sheff Utd,1729429, 0,,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+523346,Man Utd,Sheff Utd,1729429, 0,,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+134482,Sheff Utd,Man Utd,1729429,1,Wes Foderingham,134482.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+354291,Sheff Utd,Man Utd,1729429, 2,Jayden Bogle,354291.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+140667,Sheff Utd,Man Utd,1729429, 3,Ben Osborn,140667.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+298687,Sheff Utd,Man Utd,1729429, 4,Auston Trusty,298687.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+326642,Sheff Utd,Man Utd,1729429, 5,Anel Ahmedhodzic,326642.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+297544,Sheff Utd,Man Utd,1729429, 6,Mason Holgate,297544.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+332143,Sheff Utd,Man Utd,1729429, 7,Gustavo Hamer,332143.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+456511,Sheff Utd,Man Utd,1729429, 8,Andre Brooks,456511.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+332839,Sheff Utd,Man Utd,1729429, 9,Ben Brereton,332839.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+382363,Sheff Utd,Man Utd,1729429, 10,Cameron Archer,382363.0,Aston Villa,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+434190,Sheff Utd,Man Utd,1729429, 11,Oliver Arblaster,434190.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+377309,Sheff Utd,Man Utd,1729429, 0,Ivo Grbic,377309.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+90324,Sheff Utd,Man Utd,1729429, 0,Oliver Norwood,90324.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+373964,Sheff Utd,Man Utd,1729429, 0,Vinicius Souza,373964.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+425353,Sheff Utd,Man Utd,1729429, 0,Anis Ben Slimane,425353.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+386971,Sheff Utd,Man Utd,1729429, 0,Yasser Larouci,386971.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+425576,Sheff Utd,Man Utd,1729429, 0,James McAtee,425576.0,Manchester City,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+499658,Sheff Utd,Man Utd,1729429, 0,,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+416209,Sheff Utd,Man Utd,1729429, 0,William Osula,416209.0,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+525560,Sheff Utd,Man Utd,1729429, 0,,,,2024-04-24 20:00:00,Manchester United,Sheffield United,1729429,Manchester United
+122714,Wolves,Bournemouth,1729435,1,Jose Sa,122714.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+296363,Wolves,Bournemouth,1729435, 2,Nelson Semedo,296363.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+431283,Wolves,Bournemouth,1729435, 3,Toti,431283.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+123481,Wolves,Bournemouth,1729435, 4,Mario Lemina,123481.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+444241,Wolves,Bournemouth,1729435, 5,Santiago Bueno,444241.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+368310,Wolves,Bournemouth,1729435, 6,Maximilian Kilman,368310.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+94868,Wolves,Bournemouth,1729435, 7,Pablo Sarabia,94868.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+403693,Wolves,Bournemouth,1729435, 8,Joao Gomes,403693.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+262854,Wolves,Bournemouth,1729435, 9,Hwang Hee-Chan,262854.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+386856,Wolves,Bournemouth,1729435, 10,Tommy Doyle,386856.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+355401,Wolves,Bournemouth,1729435, 11,Rayan Ait-Nouri,355401.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+518914,Wolves,Bournemouth,1729435, 0,,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+94042,Wolves,Bournemouth,1729435, 0,Matt Doherty,94042.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+386612,Wolves,Bournemouth,1729435, 0,Boubacar Traore,386612.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+362758,Wolves,Bournemouth,1729435, 0,Matheus Cunha,362758.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+409730,Wolves,Bournemouth,1729435, 0,Hugo Bueno,409730.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+134543,Wolves,Bournemouth,1729435, 0,Dan Bentley,134543.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+517909,Wolves,Bournemouth,1729435, 0,,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+437381,Wolves,Bournemouth,1729435, 0,Tawanda Chirewa,437381.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+463235,Wolves,Bournemouth,1729435, 0,Nathan Fraser,463235.0,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Bournemouth
+362806,Bournemouth,Wolves,1729435,1,,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+69877,Bournemouth,Wolves,1729435, 2,Adam Smith,69877.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+424273,Bournemouth,Wolves,1729435, 3,Milos Kerkez,424273.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+128882,Bournemouth,Wolves,1729435, 4,Ryan Christie,128882.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+399826,Bournemouth,Wolves,1729435, 5,Illia Zabarnyi,399826.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+328330,Bournemouth,Wolves,1729435, 6,Marcos Senesi,328330.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+357073,Bournemouth,Wolves,1729435, 7,Antoine Semenyo,357073.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+136456,Bournemouth,Wolves,1729435, 8,Lewis Cook,136456.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+136459,Bournemouth,Wolves,1729435, 9,Dominic Solanke,136459.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+410998,Bournemouth,Wolves,1729435, 10,Alex Scott,410998.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+331579,Bournemouth,Wolves,1729435, 11,Justin Kluivert,331579.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+76202,Bournemouth,Wolves,1729435, 0,Neto,76202.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+332419,Bournemouth,Wolves,1729435, 0,Lloyd Kelly,332419.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+422183,Bournemouth,Wolves,1729435, 0,Dango Ouattara,422183.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+362837,Bournemouth,Wolves,1729435, 0,James Hill,362837.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+134695,Bournemouth,Wolves,1729435, 0,Enes Unal,134695.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+145277,Bournemouth,Wolves,1729435, 0,Philip Billing,145277.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+362103,Bournemouth,Wolves,1729435, 0,Max Aarons,362103.0,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+454746,Bournemouth,Wolves,1729435, 0,,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves
+471270,Bournemouth,Wolves,1729435, 0,,,,2024-04-24 19:45:00,Wolves,Bournemouth,1729435,Wolves

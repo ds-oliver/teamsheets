@@ -1,178 +1,178 @@
-game_id,player_id,reason,status,player,date,home_team,away_team
-1810666,300426,injured doubtful,Doubtful,Axel Disasi,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,300945,injured,Out,Christopher Nkunku,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,369430,injured doubtful,Doubtful,Enzo Fernandez,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,404616,injured,Out,Lesley Ugochukwu,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,421351,injured,Out,Levi Colwill,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,97692,unfit,Doubtful,Raheem Sterling,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,361330,injured,Out,Reece James,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,362151,unfit,Doubtful,Robert Sanchez,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,425319,injured,Out,Romeo Lavia,2024-04-20 17:15:00,Manchester City,Chelsea
-1810666,373946,injured,Out,,2024-04-20 17:15:00,Manchester City,Chelsea
-1729397,109922,injured doubtful,Doubtful,Adam Webster,2024-04-13 15:00:00,Burnley,Brighton
-1729397,381255,injured,Out,Billy Gilmour,2024-04-13 15:00:00,Burnley,Brighton
-1729397,423720,injured doubtful,Doubtful,Evan Ferguson,2024-04-13 15:00:00,Burnley,Brighton
-1729397,469629,injured,Out,Jack Hinshelwood,2024-04-13 15:00:00,Burnley,Brighton
-1729397,4511,injured,Out,James Milner,2024-04-13 15:00:00,Burnley,Brighton
-1729397,425142,injured,Out,Kaoru Mitoma,2024-04-13 15:00:00,Burnley,Brighton
-1729397,122926,injured,Out,Solly March,2024-04-13 15:00:00,Burnley,Brighton
-1729397,423732,injured,Out,Aaron Ramsey,2024-04-13 15:00:00,Burnley,Brighton
-1729397,419917,injured doubtful,Doubtful,Ameen Al Dakhil,2024-04-13 15:00:00,Burnley,Brighton
-1729397,362826,suspended,Out,Dara O'Shea,2024-04-13 15:00:00,Burnley,Brighton
-1729397,365831,injured,Out,Han-Noah Massengo,2024-04-13 15:00:00,Burnley,Brighton
-1729397,353412,injured doubtful,Doubtful,Jordan Beyer,2024-04-13 15:00:00,Burnley,Brighton
-1729397,438959,injured,Out,Luca Koleosho,2024-04-13 15:00:00,Burnley,Brighton
-1729397,86425,injured,Out,Nathan Redmond,2024-04-13 15:00:00,Burnley,Brighton
-1729410,134115,injured,Out,Callum Wilson,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,105171,injured,Out,Jamaal Lascelles,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,342563,injured doubtful,Doubtful,Joe Willock,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,201755,injured,Out,Joelinton,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,83078,injured,Out,Kieran Trippier,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,474264,injured,Out,Lewis Miley,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,136776,injured,Out,Matt Targett,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,303924,injured,Out,Miguel Almiron,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,105720,injured,Out,Nick Pope,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,343501,other,Out,Sandro Tonali,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,379732,injured,Out,Sven Botman,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,415174,injured,Out,Tino Livramento,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,29796,injured,Out,,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,345022,injured,Out,Manor Solomon,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,317804,injured,Out,Richarlison,2024-04-13 12:30:00,Newcastle,Tottenham
-1729410,322611,injured,Out,,2024-04-13 12:30:00,Newcastle,Tottenham
-1729433,402367,injured,Out,Aaron Hickey,2024-04-20 15:00:00,Luton,Brentford
-1729433,94935,injured,Out,Ben Mee,2024-04-20 15:00:00,Luton,Brentford
-1729433,101856,injured doubtful,Doubtful,Christian Norgaard,2024-04-20 15:00:00,Luton,Brentford
-1729433,318744,injured,Out,Josh Dasilva,2024-04-20 15:00:00,Luton,Brentford
-1729433,321085,injured doubtful,Doubtful,Kristoffer Ajer,2024-04-20 15:00:00,Luton,Brentford
-1729433,229562,injured,Out,Rico Henry,2024-04-20 15:00:00,Luton,Brentford
-1729433,349102,injured doubtful,Doubtful,Albert Sambi Lokonga,2024-04-20 15:00:00,Luton,Brentford
-1729433,141209,injured,Out,Amari'i Bell,2024-04-20 15:00:00,Luton,Brentford
-1729433,352908,injured,Out,Chiedozie Ogbene,2024-04-20 15:00:00,Luton,Brentford
-1729433,108630,injured,Out,,2024-04-20 15:00:00,Luton,Brentford
-1729433,362145,injured,Out,Elijah Adebayo,2024-04-20 15:00:00,Luton,Brentford
-1729433,366080,injured,Out,Gabriel Osho,2024-04-20 15:00:00,Luton,Brentford
-1729433,329328,injured,Out,Jacob Brown,2024-04-20 15:00:00,Luton,Brentford
-1729433,379632,injured,Out,Mads Andersen,2024-04-20 15:00:00,Luton,Brentford
-1729433,243249,injured,Out,Marvelous Nakamba,2024-04-20 15:00:00,Luton,Brentford
-1729433,388671,injured doubtful,Doubtful,Teden Mengi,2024-04-20 15:00:00,Luton,Brentford
-1729433,134360,injured,Out,Tom Lockyer,2024-04-20 15:00:00,Luton,Brentford
-1729439,423732,injured,Out,Aaron Ramsey,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,419917,injured,Out,Ameen Al Dakhil,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,365831,injured,Out,Han-Noah Massengo,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,353412,injured,Out,Jordan Beyer,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,438959,injured,Out,Luca Koleosho,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,86425,injured,Out,Nathan Redmond,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,35607,injured,Out,Chris Basham,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,415163,injured,Out,,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,134244,injured,Out,George Baldock,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,86594,injured doubtful,Doubtful,Jack Robinson,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,354291,injured doubtful,Doubtful,Jayden Bogle,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,108632,injured,Out,John Egan,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,136452,injured,Out,Max Lowe,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,336285,injured,Out,Rhian Brewster,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,361752,injured,Out,Rhys Norrington-Davies,2024-04-20 15:00:00,Sheffield United,Burnley
-1729439,316077,injured,Out,Tom Davies,2024-04-20 15:00:00,Sheffield United,Burnley
-1729419,331790,injured,Out,Boubacar Kamara,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,236511,injured doubtful,Doubtful,Clement Lenglet,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,337883,suspended,Out,Douglas Luiz,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,260592,injured,Out,,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,369813,injured,Out,Jacob Ramsey,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,332398,injured,Out,Nicolo Zaniolo,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,123167,injured,Out,Tyrone Mings,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,135374,injured,Out,Alex Moreno,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,357073,injured doubtful,Doubtful,Antoine Semenyo,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,342842,unfit,Doubtful,Chris Mepham,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,361879,injured,Out,Luis Sinisterra,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,344314,injured,Out,Marcus Tavernier,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,83554,injured,Out,,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729419,315275,injured doubtful,Doubtful,Tyler Adams,2024-04-21 15:00:00,Aston Villa,Bournemouth
-1729424,374993,injured,Out,Cheick Doucoure,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,395401,injured,Out,Chris Richards,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,413291,injured,Out,Jesurun Rak-Sakyi,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,374631,injured,Out,Marc Guehi,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,428635,injured,Out,Matheus Franca,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,288795,injured,Out,,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,105603,injured,Out,Sam Johnstone,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,92516,injured,Out,Alphonse Areola,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,491564,injured,Out,George Earthy,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,270446,injured doubtful,Doubtful,Kalvin Phillips,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,351127,injured doubtful,Doubtful,Konstantinos Mavropanos,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729424,362434,injured doubtful,Doubtful,Nayef Aguerd,2024-04-21 15:00:00,Crystal Palace,West Ham
-1729427,131519,injured,Out,,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,141469,injured doubtful,Doubtful,Dominic Calvert-Lewin,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,80464,injured doubtful,Doubtful,Idrissa Gueye,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,381045,injured doubtful,Doubtful,Jarrad Branthwaite,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,425711,injured,Out,Lewis Dobbin,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,396975,injured,Out,Nathan Patterson,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,31826,injured,Out,Seamus Coleman,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,413211,injured doubtful,Doubtful,Anthony Elanga,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,281049,injured,Out,Taiwo Awoniyi,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729427,97587,injured,Out,Willy-Arnaud Boly,2024-04-21 13:30:00,Everton,Nottingham Forest
-1729430,424945,injured,Out,Conor Bradley,2024-04-21 16:30:00,Fulham,Liverpool
-1729430,74341,injured,Out,Joel Matip,2024-04-21 16:30:00,Fulham,Liverpool
-1729430,74939,injured,Out,Thiago Alcantara,2024-04-21 16:30:00,Fulham,Liverpool
-1729409,388650,injured,Out,Jurrien Timber,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,299272,injured doubtful,Doubtful,Ben Chilwell,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,300945,injured,Out,Christopher Nkunku,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,395692,injured doubtful,Doubtful,Cole Palmer,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,404616,injured,Out,Lesley Ugochukwu,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,421351,injured,Out,Levi Colwill,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,403850,injured doubtful,Doubtful,Malo Gusto,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,361330,injured,Out,Reece James,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,425319,injured,Out,Romeo Lavia,2024-04-23 20:00:00,Arsenal,Chelsea
-1729409,373946,injured,Out,,2024-04-23 20:00:00,Arsenal,Chelsea
-1729418,374993,injured,Out,Cheick Doucoure,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,133464,injured,Out,Jefferson Lerma,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,374631,injured,Out,Marc Guehi,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,428635,injured,Out,Matheus Franca,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,105603,injured,Out,Sam Johnstone,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,134115,injured,Out,Callum Wilson,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,105171,injured,Out,Jamaal Lascelles,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,342563,injured,Out,Joe Willock,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,201755,injured,Out,Joelinton,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,83078,injured,Out,Kieran Trippier,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,474264,injured,Out,Lewis Miley,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,136776,injured,Out,Matt Targett,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,303924,injured,Out,Miguel Almiron,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,105720,injured,Out,Nick Pope,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,343501,other,Out,Sandro Tonali,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729418,379732,injured,Out,Sven Botman,2024-04-24 20:00:00,Crystal Palace,Newcastle
-1729421,380546,injured,Out,Beto,2024-04-24 20:00:00,Everton,Liverpool
-1729421,131519,injured,Out,,2024-04-24 20:00:00,Everton,Liverpool
-1729421,425711,injured,Out,Lewis Dobbin,2024-04-24 20:00:00,Everton,Liverpool
-1729421,396975,injured,Out,Nathan Patterson,2024-04-24 20:00:00,Everton,Liverpool
-1729421,31826,injured,Out,Seamus Coleman,2024-04-24 20:00:00,Everton,Liverpool
-1729421,424945,injured,Out,Conor Bradley,2024-04-24 20:00:00,Everton,Liverpool
-1729421,235755,injured,Out,Diogo Jota,2024-04-24 20:00:00,Everton,Liverpool
-1729421,74341,injured,Out,Joel Matip,2024-04-24 20:00:00,Everton,Liverpool
-1729421,74939,injured,Out,Thiago Alcantara,2024-04-24 20:00:00,Everton,Liverpool
-1729429,122366,injured,Out,Anthony Martial,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,22079,injured doubtful,Doubtful,Jonny Evans,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,340105,injured,Out,Lisandro Martinez,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,118244,injured,Out,Luke Shaw,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,343346,injured,Out,Mason Mount,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,93206,injured doubtful,Doubtful,Raphael Varane,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,345303,injured,Out,,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,100008,injured,Out,Victor Lindelof,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,494120,injured,Out,Willy Kambwala,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,35607,injured,Out,Chris Basham,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,415163,injured,Out,,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,134244,injured,Out,George Baldock,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,86594,injured doubtful,Doubtful,Jack Robinson,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,108632,injured,Out,John Egan,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,136452,injured,Out,Max Lowe,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,336285,injured,Out,Rhian Brewster,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,361752,injured,Out,Rhys Norrington-Davies,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729429,316077,injured,Out,Tom Davies,2024-04-24 20:00:00,Manchester United,Sheffield United
-1729435,342842,injured,Out,Chris Mepham,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,361879,injured,Out,Luis Sinisterra,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,344314,injured,Out,Marcus Tavernier,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,83554,injured,Out,,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,315275,injured doubtful,Doubtful,Tyler Adams,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,73063,injured,Out,Craig Dawson,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,320242,injured,Out,Jean-Ricner Bellegarde,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,518340,injured,Out,Leon Chiwome,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,362758,injured,Out,Matheus Cunha,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,492693,injured doubtful,Doubtful,,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,296363,injured doubtful,Doubtful,Nelson Semedo,2024-04-24 19:45:00,Wolves,Bournemouth
-1729435,337916,injured,Out,Pedro Neto,2024-04-24 19:45:00,Wolves,Bournemouth
+game_id,player_id,reason,status,player,team,date,home_team,away_team,opponent
+1810666,300426,injured doubtful,Doubtful,Axel Disasi,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,300945,injured,Out,Christopher Nkunku,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,369430,injured doubtful,Doubtful,Enzo Fernandez,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,404616,injured,Out,Lesley Ugochukwu,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,421351,injured,Out,Levi Colwill,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,97692,unfit,Doubtful,Raheem Sterling,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,361330,injured,Out,Reece James,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,362151,unfit,Doubtful,Robert Sanchez,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,425319,injured,Out,Romeo Lavia,Chelsea,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1810666,373946,injured,Out,,,2024-04-20 17:15:00,Manchester City,Chelsea,Manchester City
+1729397,109922,injured doubtful,Doubtful,Adam Webster,Brighton,2024-04-13 15:00:00,Burnley,Brighton,Burnley
+1729397,381255,injured,Out,Billy Gilmour,Brighton,2024-04-13 15:00:00,Burnley,Brighton,Burnley
+1729397,423720,injured doubtful,Doubtful,Evan Ferguson,Brighton,2024-04-13 15:00:00,Burnley,Brighton,Burnley
+1729397,469629,injured,Out,Jack Hinshelwood,Brighton,2024-04-13 15:00:00,Burnley,Brighton,Burnley
+1729397,4511,injured,Out,James Milner,Brighton,2024-04-13 15:00:00,Burnley,Brighton,Burnley
+1729397,425142,injured,Out,Kaoru Mitoma,Brighton,2024-04-13 15:00:00,Burnley,Brighton,Burnley
+1729397,122926,injured,Out,Solly March,Brighton,2024-04-13 15:00:00,Burnley,Brighton,Burnley
+1729397,423732,injured,Out,Aaron Ramsey,Burnley,2024-04-13 15:00:00,Burnley,Brighton,Brighton
+1729397,419917,injured doubtful,Doubtful,Ameen Al Dakhil,Burnley,2024-04-13 15:00:00,Burnley,Brighton,Brighton
+1729397,362826,suspended,Out,Dara O'Shea,Burnley,2024-04-13 15:00:00,Burnley,Brighton,Brighton
+1729397,365831,injured,Out,Han-Noah Massengo,Burnley,2024-04-13 15:00:00,Burnley,Brighton,Brighton
+1729397,353412,injured doubtful,Doubtful,Jordan Beyer,Burnley,2024-04-13 15:00:00,Burnley,Brighton,Brighton
+1729397,438959,injured,Out,Luca Koleosho,Burnley,2024-04-13 15:00:00,Burnley,Brighton,Brighton
+1729397,86425,injured,Out,Nathan Redmond,Burnley,2024-04-13 15:00:00,Burnley,Brighton,Brighton
+1729410,134115,injured,Out,Callum Wilson,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,105171,injured,Out,Jamaal Lascelles,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,342563,injured doubtful,Doubtful,Joe Willock,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,201755,injured,Out,Joelinton,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,83078,injured,Out,Kieran Trippier,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,474264,injured,Out,Lewis Miley,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,136776,injured,Out,Matt Targett,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,303924,injured,Out,Miguel Almiron,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,105720,injured,Out,Nick Pope,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,343501,other,Out,Sandro Tonali,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,379732,injured,Out,Sven Botman,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,415174,injured,Out,Tino Livramento,Newcastle,2024-04-13 12:30:00,Newcastle,Tottenham,Tottenham
+1729410,29796,injured,Out,,,2024-04-13 12:30:00,Newcastle,Tottenham,Newcastle
+1729410,345022,injured,Out,Manor Solomon,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,Newcastle
+1729410,317804,injured,Out,Richarlison,Tottenham,2024-04-13 12:30:00,Newcastle,Tottenham,Newcastle
+1729410,322611,injured,Out,,,2024-04-13 12:30:00,Newcastle,Tottenham,Newcastle
+1729433,402367,injured,Out,Aaron Hickey,Brentford,2024-04-20 15:00:00,Luton,Brentford,Luton
+1729433,94935,injured,Out,Ben Mee,Brentford,2024-04-20 15:00:00,Luton,Brentford,Luton
+1729433,101856,injured doubtful,Doubtful,Christian Norgaard,Brentford,2024-04-20 15:00:00,Luton,Brentford,Luton
+1729433,318744,injured,Out,Josh Dasilva,Brentford,2024-04-20 15:00:00,Luton,Brentford,Luton
+1729433,321085,injured doubtful,Doubtful,Kristoffer Ajer,Brentford,2024-04-20 15:00:00,Luton,Brentford,Luton
+1729433,229562,injured,Out,Rico Henry,Brentford,2024-04-20 15:00:00,Luton,Brentford,Luton
+1729433,349102,injured doubtful,Doubtful,Albert Sambi Lokonga,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,141209,injured,Out,Amari'i Bell,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,352908,injured,Out,Chiedozie Ogbene,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,108630,injured,Out,,,2024-04-20 15:00:00,Luton,Brentford,Luton
+1729433,362145,injured,Out,Elijah Adebayo,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,366080,injured,Out,Gabriel Osho,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,329328,injured,Out,Jacob Brown,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,379632,injured,Out,Mads Andersen,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,243249,injured,Out,Marvelous Nakamba,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,388671,injured doubtful,Doubtful,Teden Mengi,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729433,134360,injured,Out,Tom Lockyer,Luton,2024-04-20 15:00:00,Luton,Brentford,Brentford
+1729439,423732,injured,Out,Aaron Ramsey,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,Sheffield United
+1729439,419917,injured,Out,Ameen Al Dakhil,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,Sheffield United
+1729439,365831,injured,Out,Han-Noah Massengo,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,Sheffield United
+1729439,353412,injured,Out,Jordan Beyer,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,Sheffield United
+1729439,438959,injured,Out,Luca Koleosho,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,Sheffield United
+1729439,86425,injured,Out,Nathan Redmond,Burnley,2024-04-20 15:00:00,Sheffield United,Burnley,Sheffield United
+1729439,35607,injured,Out,Chris Basham,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,415163,injured,Out,,,2024-04-20 15:00:00,Sheffield United,Burnley,Sheffield United
+1729439,134244,injured,Out,George Baldock,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,86594,injured doubtful,Doubtful,Jack Robinson,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,354291,injured doubtful,Doubtful,Jayden Bogle,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,108632,injured,Out,John Egan,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,136452,injured,Out,Max Lowe,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,336285,injured,Out,Rhian Brewster,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,361752,injured,Out,Rhys Norrington-Davies,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729439,316077,injured,Out,Tom Davies,Sheffield United,2024-04-20 15:00:00,Sheffield United,Burnley,Burnley
+1729419,331790,injured,Out,Boubacar Kamara,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,Bournemouth
+1729419,236511,injured doubtful,Doubtful,Clement Lenglet,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,Bournemouth
+1729419,337883,suspended,Out,Douglas Luiz,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,Bournemouth
+1729419,260592,injured,Out,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,Aston Villa
+1729419,369813,injured,Out,Jacob Ramsey,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,Bournemouth
+1729419,332398,injured,Out,Nicolo Zaniolo,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,Bournemouth
+1729419,123167,injured,Out,Tyrone Mings,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,Bournemouth
+1729419,135374,injured,Out,Alex Moreno,Aston Villa,2024-04-21 15:00:00,Aston Villa,Bournemouth,Bournemouth
+1729419,357073,injured doubtful,Doubtful,Antoine Semenyo,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,Aston Villa
+1729419,342842,unfit,Doubtful,Chris Mepham,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,Aston Villa
+1729419,361879,injured,Out,Luis Sinisterra,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,Aston Villa
+1729419,344314,injured,Out,Marcus Tavernier,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,Aston Villa
+1729419,83554,injured,Out,,,2024-04-21 15:00:00,Aston Villa,Bournemouth,Aston Villa
+1729419,315275,injured doubtful,Doubtful,Tyler Adams,Bournemouth,2024-04-21 15:00:00,Aston Villa,Bournemouth,Aston Villa
+1729424,374993,injured,Out,Cheick Doucoure,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,West Ham
+1729424,395401,injured,Out,Chris Richards,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,West Ham
+1729424,413291,injured,Out,Jesurun Rak-Sakyi,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,West Ham
+1729424,374631,injured,Out,Marc Guehi,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,West Ham
+1729424,428635,injured,Out,Matheus Franca,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,West Ham
+1729424,288795,injured,Out,,,2024-04-21 15:00:00,Crystal Palace,West Ham,Crystal Palace
+1729424,105603,injured,Out,Sam Johnstone,Crystal Palace,2024-04-21 15:00:00,Crystal Palace,West Ham,West Ham
+1729424,92516,injured,Out,Alphonse Areola,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,Crystal Palace
+1729424,491564,injured,Out,George Earthy,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,Crystal Palace
+1729424,270446,injured doubtful,Doubtful,Kalvin Phillips,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,Crystal Palace
+1729424,351127,injured doubtful,Doubtful,Konstantinos Mavropanos,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,Crystal Palace
+1729424,362434,injured doubtful,Doubtful,Nayef Aguerd,West Ham,2024-04-21 15:00:00,Crystal Palace,West Ham,Crystal Palace
+1729427,131519,injured,Out,,,2024-04-21 13:30:00,Everton,Nottingham Forest,Everton
+1729427,141469,injured doubtful,Doubtful,Dominic Calvert-Lewin,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,Nottingham Forest
+1729427,80464,injured doubtful,Doubtful,Idrissa Gueye,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,Nottingham Forest
+1729427,381045,injured doubtful,Doubtful,Jarrad Branthwaite,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,Nottingham Forest
+1729427,425711,injured,Out,Lewis Dobbin,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,Nottingham Forest
+1729427,396975,injured,Out,Nathan Patterson,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,Nottingham Forest
+1729427,31826,injured,Out,Seamus Coleman,Everton,2024-04-21 13:30:00,Everton,Nottingham Forest,Nottingham Forest
+1729427,413211,injured doubtful,Doubtful,Anthony Elanga,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,Everton
+1729427,281049,injured,Out,Taiwo Awoniyi,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,Everton
+1729427,97587,injured,Out,Willy-Arnaud Boly,Nottingham Forest,2024-04-21 13:30:00,Everton,Nottingham Forest,Everton
+1729430,424945,injured,Out,Conor Bradley,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,Fulham
+1729430,74341,injured,Out,Joel Matip,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,Fulham
+1729430,74939,injured,Out,Thiago Alcantara,Liverpool,2024-04-21 16:30:00,Fulham,Liverpool,Fulham
+1729409,388650,injured,Out,Jurrien Timber,Arsenal,2024-04-23 20:00:00,Arsenal,Chelsea,Chelsea
+1729409,299272,injured doubtful,Doubtful,Ben Chilwell,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,300945,injured,Out,Christopher Nkunku,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,395692,injured doubtful,Doubtful,Cole Palmer,Manchester City,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,404616,injured,Out,Lesley Ugochukwu,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,421351,injured,Out,Levi Colwill,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,403850,injured doubtful,Doubtful,Malo Gusto,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,361330,injured,Out,Reece James,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,425319,injured,Out,Romeo Lavia,Chelsea,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729409,373946,injured,Out,,,2024-04-23 20:00:00,Arsenal,Chelsea,Arsenal
+1729418,374993,injured,Out,Cheick Doucoure,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,Newcastle
+1729418,133464,injured,Out,Jefferson Lerma,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,Newcastle
+1729418,374631,injured,Out,Marc Guehi,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,Newcastle
+1729418,428635,injured,Out,Matheus Franca,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,Newcastle
+1729418,105603,injured,Out,Sam Johnstone,Crystal Palace,2024-04-24 20:00:00,Crystal Palace,Newcastle,Newcastle
+1729418,134115,injured,Out,Callum Wilson,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,105171,injured,Out,Jamaal Lascelles,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,342563,injured,Out,Joe Willock,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,201755,injured,Out,Joelinton,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,83078,injured,Out,Kieran Trippier,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,474264,injured,Out,Lewis Miley,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,136776,injured,Out,Matt Targett,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,303924,injured,Out,Miguel Almiron,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,105720,injured,Out,Nick Pope,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,343501,other,Out,Sandro Tonali,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729418,379732,injured,Out,Sven Botman,Newcastle,2024-04-24 20:00:00,Crystal Palace,Newcastle,Crystal Palace
+1729421,380546,injured,Out,Beto,Everton,2024-04-24 20:00:00,Everton,Liverpool,Liverpool
+1729421,131519,injured,Out,,,2024-04-24 20:00:00,Everton,Liverpool,Everton
+1729421,425711,injured,Out,Lewis Dobbin,Everton,2024-04-24 20:00:00,Everton,Liverpool,Liverpool
+1729421,396975,injured,Out,Nathan Patterson,Everton,2024-04-24 20:00:00,Everton,Liverpool,Liverpool
+1729421,31826,injured,Out,Seamus Coleman,Everton,2024-04-24 20:00:00,Everton,Liverpool,Liverpool
+1729421,424945,injured,Out,Conor Bradley,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,Everton
+1729421,235755,injured,Out,Diogo Jota,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,Everton
+1729421,74341,injured,Out,Joel Matip,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,Everton
+1729421,74939,injured,Out,Thiago Alcantara,Liverpool,2024-04-24 20:00:00,Everton,Liverpool,Everton
+1729429,122366,injured,Out,Anthony Martial,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,22079,injured doubtful,Doubtful,Jonny Evans,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,340105,injured,Out,Lisandro Martinez,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,118244,injured,Out,Luke Shaw,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,343346,injured,Out,Mason Mount,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,93206,injured doubtful,Doubtful,Raphael Varane,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,345303,injured,Out,,,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,100008,injured,Out,Victor Lindelof,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,494120,injured,Out,Willy Kambwala,Manchester United,2024-04-24 20:00:00,Manchester United,Sheffield United,Sheffield United
+1729429,35607,injured,Out,Chris Basham,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,415163,injured,Out,,,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,134244,injured,Out,George Baldock,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,86594,injured doubtful,Doubtful,Jack Robinson,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,108632,injured,Out,John Egan,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,136452,injured,Out,Max Lowe,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,336285,injured,Out,Rhian Brewster,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,361752,injured,Out,Rhys Norrington-Davies,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729429,316077,injured,Out,Tom Davies,Sheffield United,2024-04-24 20:00:00,Manchester United,Sheffield United,Manchester United
+1729435,342842,injured,Out,Chris Mepham,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,Wolves
+1729435,361879,injured,Out,Luis Sinisterra,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,Wolves
+1729435,344314,injured,Out,Marcus Tavernier,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,Wolves
+1729435,83554,injured,Out,,,2024-04-24 19:45:00,Wolves,Bournemouth,Wolves
+1729435,315275,injured doubtful,Doubtful,Tyler Adams,Bournemouth,2024-04-24 19:45:00,Wolves,Bournemouth,Wolves
+1729435,73063,injured,Out,Craig Dawson,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,Bournemouth
+1729435,320242,injured,Out,Jean-Ricner Bellegarde,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,Bournemouth
+1729435,518340,injured,Out,Leon Chiwome,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,Bournemouth
+1729435,362758,injured,Out,Matheus Cunha,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,Bournemouth
+1729435,492693,injured doubtful,Doubtful,,,2024-04-24 19:45:00,Wolves,Bournemouth,Wolves
+1729435,296363,injured doubtful,Doubtful,Nelson Semedo,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,Bournemouth
+1729435,337916,injured,Out,Pedro Neto,Wolves,2024-04-24 19:45:00,Wolves,Bournemouth,Bournemouth
