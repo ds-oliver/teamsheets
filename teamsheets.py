@@ -831,7 +831,10 @@ def main():
                 col1, col2 = st.columns(2)
 
                 with col1:
-                    st.write(f"Players :green[correlated] with {selected_players_str} starts:")
+                    st.subheader(
+                        f"Players :green[correlated] with {selected_players_str} starts:",
+                        help="🚨 Any :red[excluded] players will not be included in the analysis.",
+                    )
                     st.dataframe(most_common_players.reset_index(drop=True))
 
                 # get anticorrelation players with col2
@@ -845,9 +848,9 @@ def main():
                     # st.write(text)
                     # turn selected players into a string separated by commas if there are more than one
                     if selected_players:
-                        st.write(
+                        st.subheader(
                             f"Players :red[anticorrelated] with {selected_players_str} starts:\n\n",
-                            "🚨 Any :red[excluded] players will not be included in the analysis.",
+                            help="🚨 Any :red[excluded] players will not be included in the analysis.",
                         )
                         st.dataframe(anti_corr_players.reset_index(drop=True))
                     # else:
