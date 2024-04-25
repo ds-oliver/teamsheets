@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
 TEAMSHEETS_CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240422190856_v2.csv"
-INJURY_REPORTS_CSV_FILEPATH = "scraped_missing_players/lineups_with_injuries_20240423_v2.csv"
+INJURY_REPORTS_CSV_FILEPATH = "scraped_missing_players/ws_missing_players_20240424_v2.csv"
 
 def twitter_badge():
     badge(type="twitter", name="draftalchemy")
@@ -607,7 +607,8 @@ def main():
     fbref_lineups = load_data(TEAMSHEETS_CSV_FILEPATH)
     injury_report = load_data(INJURY_REPORTS_CSV_FILEPATH)
 
-    fbref_lineups.columns.tolist()
+    print(f"fbref_lineups:\n{fbref_lineups.columns.tolist()}")
+    print(f"injury_report:\n{injury_report.columns.tolist()}")
 
     # get all teams where the league is ENG-Premier League
     premier_league_teams = fbref_lineups[fbref_lineups["league"] == "ENG-Premier League"]["team"].unique()
