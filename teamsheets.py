@@ -763,7 +763,7 @@ def main():
                 # st.write(f"Team profile for {selected_team}:")
                 # st.dataframe(team_profile)
                 st.divider()
-                st.write(f"Team injury report for {selected_team}:")
+                st.subheader(f"Team injury report for {selected_team}:", help="This is processed data scraped from WhoScored.com's missing players report from the last game played by the selected team.")
                 # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
                 # filter for the selected team
                 injury_report = injury_report[injury_report["team"] == selected_team]
