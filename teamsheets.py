@@ -765,7 +765,7 @@ def main():
                 st.write(f"Team injury report for {selected_team}:")
                 # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
                 # filter for the selected team
-                injury_report = injury_report[injury_report["Team"] == selected_team]
+                injury_report = injury_report[injury_report["team"] == selected_team]
                 # Sort the dataframe by date
                 team_injury_report = injury_report.sort_values(by='date')
 
@@ -773,7 +773,7 @@ def main():
                 last_game = team_injury_report.iloc[-1]
 
                 # Get the opponent and date of the last game
-                last_opp = last_game['Opponent']
+                last_opp = last_game['opponent']
                 last_game_date = last_game['date']
 
                 # Create the string for the last game
