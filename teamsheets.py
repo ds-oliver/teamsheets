@@ -286,13 +286,8 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     # Calculate percentage for each position
     position_counts_df["Percentage"] = ((position_counts_df["Count"] / total_count) * 100).map("{:.0f}%".format)
 
-    # Sort the DataFrame by count in descending order
-    position_counts_df = position_counts_df.sort_values(
-        by="Count", ascending=False
-    ).reset_index(drop=True)
-
-    # Add most recent data for each position
-    position_counts_df['Most Recent'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['new_position'] == x].iloc[-1]['date'])
+    # Add opponents list for each position
+    position_counts_df['Opponents'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['new_position'] == x]['opponent'].unique().tolist())
 
     logging.info(f"Position counts DataFrame: \n{position_counts_df}")
 
@@ -313,11 +308,8 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
         "{:.0f}%".format
     )
 
-    # Add opponents as a list in a separate column
-    opponents['Opponents List'] = opponents['opponent'].apply(lambda x: team_data[team_data['opponent'] == x]['opponent'].tolist())
-
-    # log unique opponents values
-    logging.info(f"Unique opponents: {opponents['opponent'].unique()}")
+    # Add positions list for each opponent
+    opponents['Positions'] = opponents['opponent'].apply(lambda x: team_data[team_data['opponent'] == x]['new_position'].unique().tolist())
 
     logging.info(f"Opponents DataFrame: \n{opponents}")
 
@@ -331,7 +323,6 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     logging.info(f"Opponents when {player_name} is not a starter: {non_starter_opponents}")
 
     return position_counts_df, opponents, non_starter_opponents
-
 
 def get_most_common_players(
     team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
