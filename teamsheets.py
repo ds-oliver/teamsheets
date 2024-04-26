@@ -261,7 +261,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     position_counts_dict = {}
 
     # Position columns to consider
-    position_columns = ["position_1", "position_2", "position_3", "position_4"]
+    position_columns = ["new_position"]
 
     # Iterate through each row and each position column to count positions
     for _, row in team_data.iterrows():
@@ -291,6 +291,9 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
         by="Count", ascending=False
     ).reset_index(drop=True)
 
+    # Add most recent data for each position
+    position_counts_df['Most Recent'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['new_position'] == x].iloc[-1]['date'])
+
     logging.info(f"Position counts DataFrame: \n{position_counts_df}")
 
     # Opponents faced analysis
@@ -310,6 +313,9 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
         "{:.0f}%".format
     )
 
+    # Add opponents as a list in a separate column
+    opponents['Opponents List'] = opponents['opponent'].apply(lambda x: team_data[team_data['opponent'] == x]['opponent'].tolist())
+
     # log unique opponents values
     logging.info(f"Unique opponents: {opponents['opponent'].unique()}")
 
@@ -325,6 +331,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     logging.info(f"Opponents when {player_name} is not a starter: {non_starter_opponents}")
 
     return position_counts_df, opponents, non_starter_opponents
+
 
 def get_most_common_players(
     team_name, selected_players, excluded_players, dataframe, set_piece_takers=False
@@ -929,10 +936,10 @@ def main():
 
                     # create 'started' and 'reserve' columns, started = True if the TeamPlayerFormation is not 0, reserve = True if the TeamPlayerFormation is 0
                     team_injury_report["started"] = team_injury_report[
-                        "TeamPlayerFormation"
+                        "formation_position_value"
                     ].apply(lambda x: True if x != 0 else False)
                     team_injury_report["reserve"] = team_injury_report[
-                        "TeamPlayerFormation"
+                        "formation_position_value"
                     ].apply(lambda x: True if x == 0 else False)
                     # filter dataframe for players who are injured which will not be nan in reason, status, reset index
                     injured_players = team_injury_report[
@@ -940,7 +947,7 @@ def main():
                         & (team_injury_report["status"].notnull())
                     ].reset_index(drop=True)
                     st.write(f"Players who were injured for {selected_team}:")
-                    st.dataframe(injured_players[["player", "reason", "status", "started", "reserve"]])
+                    st.dataframe(injured_players[["player", "reason", "status", "started", "reserve", "gtd_status"]])
 
                 # # Conduct analysis
                 # most_common_players, _, text = get_most_common_players(
