@@ -507,7 +507,7 @@ def get_most_common_players(
 
     text += f"\n{selected_text}\n{excluded_text}"
 
-    return most_common_starters, num_games, text
+    return most_common_starters, num_games, text, valid_games_data
 
 # create function to get anticorrelation between players, which should output a similar DataFrame to the one above
 def get_anticorrelation_players(team_name, selected_players, excluded_players, dataframe):
@@ -605,7 +605,6 @@ def get_most_recent_game_starters(fbref_lineups, team_name):
     ]
 
     return most_recent_game_starters, most_recent_game_substitutes
-
 
 
 # define a function to aggregate set piece takers
@@ -837,15 +836,13 @@ def main():
             # Conduct general team specific analysis
 
         else:
-            # filter for selected players
-            filtered_data = filtered_data[filtered_data["player"].isin(selected_players)]
-            
+
             tab1, tab2, tab3 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile", "Injury Reports"])
             with tab1:
                 st.title(f"Player Analysis for {selected_team}")
 
                 # Conduct analysis
-                most_common_players, _, text = get_most_common_players(
+                most_common_players, _, text, ff_data = get_most_common_players(
                     selected_team,
                     selected_players,
                     players_to_exclude,
@@ -867,7 +864,7 @@ def main():
                         selected_team,
                         selected_players,
                         players_to_exclude,
-                        filtered_data,
+                        ff_data,
                     )
                     # st.write(text)
                     # turn selected players into a string separated by commas if there are more than one
@@ -882,7 +879,7 @@ def main():
                 # Detailed player analysis for each selected player
                 for player in selected_players:
                     positions, opponents, anti_opponents = get_player_positions_v2(
-                        filtered_data, player, selected_team
+                        ff_data, player, selected_team
                     )
                     st.write(f"Positions played by {player} under the above circumstances:")
                     st.dataframe(positions)
@@ -893,9 +890,7 @@ def main():
 
             with tab2:
                 st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
-                positions_data = get_positions_of_each_game(
-                    filtered_data, selected_team
-                )
+                positions_data = get_positions_of_each_game(ff_data, selected_team)
                 st.write(f"Positional setup by {selected_team}:")
                 st.info(
                     f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
