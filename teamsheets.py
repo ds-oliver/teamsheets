@@ -825,186 +825,188 @@ def main():
     except KeyError as e:
         logging.error(f"KeyError: {e}")
         st.write(injury_report.columns.tolist())
-        st.warning("Please select player(s) for for player-specific analysis.")
 
-    # Analyze button logic
-    if st.button(f"Analyze"):
+    try:
+        # Analyze button logic
+        if st.button(f"Analyze"):
 
-        # Ensuring there's a selection to analyze
-        if not selected_players and not players_to_exclude:
-            st.warning("Please select player(s) for for player-specific analysis.")
-            # Conduct general team specific analysis
+            # Ensuring there's a selection to analyze
+            if not selected_players and not players_to_exclude:
+                st.warning("Please select player(s) for for player-specific analysis.")
+                # Conduct general team specific analysis
 
-        else:
+            else:
 
-            tab1, tab2, tab3 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile", "Injury Reports"])
-            with tab1:
-                st.title(f"Player Analysis for {selected_team}")
+                tab1, tab2, tab3 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile", "Injury Reports"])
+                with tab1:
+                    st.title(f"Player Analysis for {selected_team}")
 
-                # Conduct analysis
-                most_common_players, _, text, ff_data = get_most_common_players(
-                    selected_team,
-                    selected_players,
-                    players_to_exclude,
-                    filtered_data,
-                    set_piece_takers=set_piece_takers,
-                )
-                st.write(text)
-                col1, col2 = st.columns(2)
-
-                with col1:
-                    st.write(
-                        f"Players :green[correlated] with {selected_players_str} starts:",
-                    )
-                    st.dataframe(most_common_players.reset_index(drop=True))
-
-                # get anticorrelation players with col2
-                with col2:
-                    anti_corr_players, _, text = get_anticorrelation_players(
+                    # Conduct analysis
+                    most_common_players, _, text, ff_data = get_most_common_players(
                         selected_team,
                         selected_players,
                         players_to_exclude,
-                        ff_data,
+                        filtered_data,
+                        set_piece_takers=set_piece_takers,
                     )
-                    # st.write(text)
-                    # turn selected players into a string separated by commas if there are more than one
-                    if selected_players:
+                    st.write(text)
+                    col1, col2 = st.columns(2)
+
+                    with col1:
                         st.write(
-                            f"Players :red[anticorrelated] with {selected_players_str} starts:",
+                            f"Players :green[correlated] with {selected_players_str} starts:",
                         )
-                        if anti_corr_players.empty:
-                            st.write("Not enough common starts to determine anticorrelation.")
-                        else:
-                            st.dataframe(anti_corr_players.reset_index(drop=True))
-                    # else:
-                    #     st.warning("Please select player(s) for analysis.")
+                        st.dataframe(most_common_players.reset_index(drop=True))
 
-                # Detailed player analysis for each selected player
-                for player in selected_players:
-                    positions, opponents, anti_opponents = get_player_positions_v2(
-                        ff_data, player, selected_team
+                    # get anticorrelation players with col2
+                    with col2:
+                        anti_corr_players, _, text = get_anticorrelation_players(
+                            selected_team,
+                            selected_players,
+                            players_to_exclude,
+                            ff_data,
+                        )
+                        # st.write(text)
+                        # turn selected players into a string separated by commas if there are more than one
+                        if selected_players:
+                            st.write(
+                                f"Players :red[anticorrelated] with {selected_players_str} starts:",
+                            )
+                            if anti_corr_players.empty:
+                                st.write("Not enough common starts to determine anticorrelation.")
+                            else:
+                                st.dataframe(anti_corr_players.reset_index(drop=True))
+                        # else:
+                        #     st.warning("Please select player(s) for analysis.")
+
+                    # Detailed player analysis for each selected player
+                    for player in selected_players:
+                        positions, opponents, anti_opponents = get_player_positions_v2(
+                            ff_data, player, selected_team
+                        )
+                        st.write(f"Positions played by {player} under the above circumstances:")
+                        st.dataframe(positions)
+                        st.write(f"Opponents faced by {player} under the above circumstances:")
+                        st.dataframe(opponents)
+                        st.write(f"Opponents faced when {player} is not a starter:")
+                        st.write(anti_opponents)
+
+                with tab2:
+                    st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
+                    positions_data = get_positions_of_each_game(ff_data, selected_team)
+                    st.write(f"Positional setup by {selected_team}:")
+                    st.info(
+                        f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
                     )
-                    st.write(f"Positions played by {player} under the above circumstances:")
-                    st.dataframe(positions)
-                    st.write(f"Opponents faced by {player} under the above circumstances:")
-                    st.dataframe(opponents)
-                    st.write(f"Opponents faced when {player} is not a starter:")
-                    st.write(anti_opponents)
+                    st.dataframe(positions_data, use_container_width=True)
+                    # team_profile = get_team_profile(selected_team, filtered_data)
+                    # # reset the index for the team profile DataFrame
+                    # team_profile.reset_index(drop=True, inplace=True)
+                    # st.write(f"Team profile for {selected_team}:")
+                    # st.dataframe(team_profile)
+                    st.divider()
 
-            with tab2:
-                st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
-                positions_data = get_positions_of_each_game(ff_data, selected_team)
-                st.write(f"Positional setup by {selected_team}:")
-                st.info(
-                    f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
-                )
-                st.dataframe(positions_data, use_container_width=True)
-                # team_profile = get_team_profile(selected_team, filtered_data)
-                # # reset the index for the team profile DataFrame
-                # team_profile.reset_index(drop=True, inplace=True)
-                # st.write(f"Team profile for {selected_team}:")
-                # st.dataframe(team_profile)
-                st.divider()
+                with tab3:
+                    st.write(f"Team injury report for {selected_team}:")
+                    # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
+                    # filter for the selected team
+                    injury_report = injury_report[injury_report["Team"] == selected_team]
+                    # Sort the dataframe by date
+                    team_injury_report = injury_report.sort_values(by="date")
 
-            with tab3:
-                st.write(f"Team injury report for {selected_team}:")
-                # injury report has columns [PlayerID, Team, Opponent, GameID, TeamPlayerFormation, player, date, home_team, away_team, reason, status]
-                # filter for the selected team
-                injury_report = injury_report[injury_report["Team"] == selected_team]
-                # Sort the dataframe by date
-                team_injury_report = injury_report.sort_values(by="date")
+                    # Get the last row (i.e., the last game)
+                    last_game = team_injury_report.iloc[-1]
 
-                # Get the last row (i.e., the last game)
-                last_game = team_injury_report.iloc[-1]
+                    # Get the opponent and date of the last game
+                    last_opp = last_game["Opponent"]
+                    last_game_date = last_game["date"]
 
-                # Get the opponent and date of the last game
-                last_opp = last_game["Opponent"]
-                last_game_date = last_game["date"]
+                    # Create the string for the last game
+                    team_game_str = f"{selected_team} vs {last_opp}"
+                    st.write(
+                        f"Last game played by {selected_team}: {team_game_str} [{last_game_date}]"
+                    )
 
-                # Create the string for the last game
-                team_game_str = f"{selected_team} vs {last_opp}"
-                st.write(
-                    f"Last game played by {selected_team}: {team_game_str} [{last_game_date}]"
-                )
+                    # create 'started' and 'reserve' columns, started = True if the TeamPlayerFormation is not 0, reserve = True if the TeamPlayerFormation is 0
+                    team_injury_report["started"] = team_injury_report[
+                        "TeamPlayerFormation"
+                    ].apply(lambda x: True if x != 0 else False)
+                    team_injury_report["reserve"] = team_injury_report[
+                        "TeamPlayerFormation"
+                    ].apply(lambda x: True if x == 0 else False)
+                    # filter dataframe for players who are injured which will not be nan in reason, status, reset index
+                    injured_players = team_injury_report[
+                        (team_injury_report["reason"].notnull())
+                        & (team_injury_report["status"].notnull())
+                    ].reset_index(drop=True)
+                    st.write(f"Players who were injured for {selected_team}:")
+                    st.dataframe(injured_players[["player", "reason", "status", "started", "reserve"]])
 
-                # create 'started' and 'reserve' columns, started = True if the TeamPlayerFormation is not 0, reserve = True if the TeamPlayerFormation is 0
-                team_injury_report["started"] = team_injury_report[
-                    "TeamPlayerFormation"
-                ].apply(lambda x: True if x != 0 else False)
-                team_injury_report["reserve"] = team_injury_report[
-                    "TeamPlayerFormation"
-                ].apply(lambda x: True if x == 0 else False)
-                # filter dataframe for players who are injured which will not be nan in reason, status, reset index
-                injured_players = team_injury_report[
-                    (team_injury_report["reason"].notnull())
-                    & (team_injury_report["status"].notnull())
-                ].reset_index(drop=True)
-                st.write(f"Players who were injured for {selected_team}:")
-                st.dataframe(injured_players[["player", "reason", "status", "started", "reserve"]])
+                # # Conduct analysis
+                # most_common_players, _, text = get_most_common_players(
+                #     selected_team,
+                #     selected_players,
+                #     players_to_exclude,
+                #     fbref_lineups_copy,
+                #     set_piece_takers=set_piece_takers,
+                # )
+                # st.write(text)
+                # st.dataframe(most_common_players)
 
-            # # Conduct analysis
-            # most_common_players, _, text = get_most_common_players(
-            #     selected_team,
-            #     selected_players,
-            #     players_to_exclude,
-            #     fbref_lineups_copy,
-            #     set_piece_takers=set_piece_takers,
-            # )
-            # st.write(text)
-            # st.dataframe(most_common_players)
-
-            # # Detailed player analysis for each selected player
-            # for player in selected_players:
-            #     positions, opponents = get_player_positions_v2(
-            #         fbref_lineups_copy, player, selected_team
-            #     )
-            #     st.write(f"Positions played by {player} under the above circumstances:")
-            #     st.dataframe(positions)
-            #     st.write(f"Opponents faced by {player} under the above circumstances:")
-            #     st.dataframe(opponents)
-    # else:
-    #     st.warning("Please select player(s) for analysis.")
-    #     st.markdown(
-    #         """
-    #         <style>
-    #         .reportview-container .markdown-text-container {
-    #             font-family: monospace;
-    #         }
-    #         .sidebar .sidebar-content {
-    #             background-image: linear-gradient(#2e7bcf,#2e7bcf);
-    #             color: white;
-    #         }
-    #         .Widget>label {
-    #             color: white;
-    #             font-family: monospace;
-    #         }
-    #         [data-testid="stButton"] > div > div {
-    #             background-color: #4CAF50;
-    #             color: white;
-    #         }
-    #         </style>
-    #         """,
-    #         unsafe_allow_html=True,
-    #     )
-    #     if st.button(
-    #         f":rainbow[Initiate Apriori algorithm to run Team Profile analysis for]: :white[{selected_team}]",
-    #         use_container_width=True,
-    #         type="secondary",
-    #     ):
-    #         positions_data = get_positions_of_each_game(filtered_data, selected_team)
-    #         st.title(f"{selected_team}")
-    #         st.write(f"Positional setup by {selected_team}:")
-    #         st.info(
-    #             f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
-    #         )
-    #         st.dataframe(positions_data, use_container_width=True)
-    #         # team_profile = get_team_profile(selected_team, filtered_data)
-    #         # # reset the index for the team profile DataFrame
-    #         # team_profile.reset_index(drop=True, inplace=True)
-    #         # st.write(f"Team profile for {selected_team}:")
-    #         # st.dataframe(team_profile)
-    #         st.divider()
-
+                # # Detailed player analysis for each selected player
+                # for player in selected_players:
+                #     positions, opponents = get_player_positions_v2(
+                #         fbref_lineups_copy, player, selected_team
+                #     )
+                #     st.write(f"Positions played by {player} under the above circumstances:")
+                #     st.dataframe(positions)
+                #     st.write(f"Opponents faced by {player} under the above circumstances:")
+                #     st.dataframe(opponents)
+        # else:
+        #     st.warning("Please select player(s) for analysis.")
+        #     st.markdown(
+        #         """
+        #         <style>
+        #         .reportview-container .markdown-text-container {
+        #             font-family: monospace;
+        #         }
+        #         .sidebar .sidebar-content {
+        #             background-image: linear-gradient(#2e7bcf,#2e7bcf);
+        #             color: white;
+        #         }
+        #         .Widget>label {
+        #             color: white;
+        #             font-family: monospace;
+        #         }
+        #         [data-testid="stButton"] > div > div {
+        #             background-color: #4CAF50;
+        #             color: white;
+        #         }
+        #         </style>
+        #         """,
+        #         unsafe_allow_html=True,
+        #     )
+        #     if st.button(
+        #         f":rainbow[Initiate Apriori algorithm to run Team Profile analysis for]: :white[{selected_team}]",
+        #         use_container_width=True,
+        #         type="secondary",
+        #     ):
+        #         positions_data = get_positions_of_each_game(filtered_data, selected_team)
+        #         st.title(f"{selected_team}")
+        #         st.write(f"Positional setup by {selected_team}:")
+        #         st.info(
+        #             f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
+        #         )
+        #         st.dataframe(positions_data, use_container_width=True)
+        #         # team_profile = get_team_profile(selected_team, filtered_data)
+        #         # # reset the index for the team profile DataFrame
+        #         # team_profile.reset_index(drop=True, inplace=True)
+        #         # st.write(f"Team profile for {selected_team}:")
+        #         # st.dataframe(team_profile)
+        #         st.divider()
+    except KeyError as e:
+        logging.error(f"KeyError: {e}")
+        st.write(filtered_data.columns.tolist())
 
 if __name__ == "__main__":
     main()
