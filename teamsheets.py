@@ -872,7 +872,10 @@ def main():
                         st.write(
                             f"Players :red[anticorrelated] with {selected_players_str} starts:",
                         )
-                        st.dataframe(anti_corr_players.reset_index(drop=True))
+                        if anti_corr_players.empty:
+                            st.write("Not enough common starts to determine anticorrelation.")
+                        else:
+                            st.dataframe(anti_corr_players.reset_index(drop=True))
                     # else:
                     #     st.warning("Please select player(s) for analysis.")
 
