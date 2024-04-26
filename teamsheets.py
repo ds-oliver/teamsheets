@@ -837,6 +837,9 @@ def main():
             # Conduct general team specific analysis
 
         else:
+            # filter for selected players
+            filtered_data = filtered_data[filtered_data["player"].isin(selected_players)]
+            
             tab1, tab2, tab3 = st.tabs(["🏃‍♂️ Players", "🔟 Team Profile", "Injury Reports"])
             with tab1:
                 st.title(f"Player Analysis for {selected_team}")
