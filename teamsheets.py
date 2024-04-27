@@ -261,7 +261,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     position_counts_dict = {}
 
     # Position columns to consider
-    position_columns = ["new_position"]
+    position_columns = ["position"]
 
     # Iterate through each row and each position column to count positions
     for _, row in team_data.iterrows():
@@ -287,7 +287,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     position_counts_df["Percentage"] = ((position_counts_df["Count"] / total_count) * 100).map("{:.0f}%".format)
 
     # Add opponents list for each position
-    position_counts_df['Opponents'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['new_position'] == x]['opponent'].unique().tolist())
+    position_counts_df['Opponents'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['position'] == x]['opponent'].unique().tolist())
 
     logging.info(f"Position counts DataFrame: \n{position_counts_df}")
 
@@ -309,7 +309,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     )
 
     # Add positions list for each opponent
-    opponents['Positions'] = opponents['opponent'].apply(lambda x: team_data[team_data['opponent'] == x]['new_position'].unique().tolist())
+    opponents['Positions'] = opponents['opponent'].apply(lambda x: team_data[team_data['opponent'] == x]['position'].unique().tolist())
 
     logging.info(f"Opponents DataFrame: \n{opponents}")
 
