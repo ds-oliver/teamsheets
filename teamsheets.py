@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 # ignore  FutureWarning
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
-TEAMSHEETS_CSV_FILEPATH = "scraped_teamsheets/teamsheets_and_sets_20240425164027.csv"
+TEAMSHEETS_CSV_FILEPATH = "scraped_teamsheets/teamsheets_data_2024042920.csv"
 INJURY_REPORTS_CSV_FILEPATH = "scraped_missing_players/ws_missing_players_20240424_v2.csv"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -33,7 +33,7 @@ def github_badge():
     badge(type="github", name="ds-oliver")
 
 
-@st.cache_data
+# @st.cache_data
 def load_data(filepath):
     """
     Load the data from the CSV file.
@@ -174,7 +174,7 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     print(f"Player match: {player_match}\n\n")
 
     # get the unique positions
-    positions = filtered_players["position"].unique().tolist()
+    positions = filtered_players["new_position"].unique().tolist()
 
     # get the number of games played
     num_games = filtered_players.shape[0]
@@ -193,7 +193,7 @@ def get_player_positions(fbref_lineups, player_name, team_name):
 
     # Iterate over each position and count the occurrences
     for position in positions:
-        position_data = filtered_players[filtered_players["position"] == position]
+        position_data = filtered_players[filtered_players["new_position"] == position]
         count = position_data.shape[0]
         most_recent_date = position_data["date"].max()
 
@@ -261,7 +261,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     position_counts_dict = {}
 
     # Position columns to consider
-    position_columns = ["position"]
+    position_columns = ["new_position"]
 
     # Iterate through each row and each position column to count positions
     for _, row in team_data.iterrows():
@@ -287,7 +287,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     position_counts_df["Percentage"] = ((position_counts_df["Count"] / total_count) * 100).map("{:.0f}%".format)
 
     # Add opponents list for each position
-    position_counts_df['Opponents'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['position'] == x]['opponent'].unique().tolist())
+    position_counts_df['Opponents'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['new_position'] == x]['opponent'].unique().tolist())
 
     logging.info(f"Position counts DataFrame: \n{position_counts_df}")
 
@@ -309,7 +309,7 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     )
 
     # Add positions list for each opponent
-    opponents['Positions'] = opponents['opponent'].apply(lambda x: team_data[team_data['opponent'] == x]['position'].unique().tolist())
+    opponents['Positions'] = opponents['opponent'].apply(lambda x: team_data[team_data['opponent'] == x]['new_position'].unique().tolist())
 
     logging.info(f"Opponents DataFrame: \n{opponents}")
 
