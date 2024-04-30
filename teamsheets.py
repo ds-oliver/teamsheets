@@ -99,7 +99,27 @@ def get_team_profile(team_name, dataframe):
 
 def get_positions_of_each_game(fbref_lineups, team_name):
     # get teams from the specified team that is_starter is true
-    order = ["LB", "RB", "WB", "CB", "LM", "RM", "DM", "CM", "MF", "AM", "FW"]
+    order = [
+        "GK",
+        "CB",
+        "LB",
+        "RB",
+        "WB",
+        "LWB",
+        "RWB",
+        "DM",
+        "CM",
+        "AMC",
+        "AML",
+        "AMR",
+        "LM",
+        "RM",
+        "LW",
+        "RW",
+        "LF",
+        "RF",
+        "CF",
+    ]
 
     team_starters = fbref_lineups[
         (fbref_lineups["team"] == team_name) & (fbref_lineups["is_starter"] == True)
@@ -229,9 +249,9 @@ def get_player_positions(fbref_lineups, player_name, team_name):
     ).reset_index(drop=True)
 
     # sort the position counts by count in descending order
-    position_counts = position_counts.sort_values(
-        by="Count", ascending=False
-    ).reset_index(drop=True)
+    # position_counts = position_counts.sort_values(
+    #     by="Count", ascending=False
+    # ).reset_index(drop=True)
 
     # get the opponents for each game
     opponents = (
