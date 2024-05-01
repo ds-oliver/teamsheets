@@ -730,7 +730,7 @@ def main():
         fbref_lineups["season_display"].unique().tolist(), reverse=True
     )
     teams = sorted(fbref_lineups["team"].unique().tolist())
-    selected_season = st.selectbox("Select a season:", seasons, index=teams.index(default_season))
+    selected_season = st.selectbox("Select a season:", seasons, index=seasons.index(default_season))
     selected_team = st.selectbox("Select a team:", teams, index=teams.index(default_team))
 
     # Filtering data based on user selection
