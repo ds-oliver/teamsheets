@@ -773,8 +773,17 @@ def main():
         fbref_lineups["season_display"].unique().tolist(), reverse=True
     )
     teams = sorted(fbref_lineups["team"].unique().tolist())
-    selected_season = st.selectbox("Select a season:", seasons, index=seasons.index(default_season))
-    selected_team = st.selectbox("Select a team:", teams, index=teams.index(default_team))
+    selected_season = st.selectbox(
+        "Select a season:",
+        seasons,
+        # index=seasons.index(default_season),
+    )
+
+    selected_team = st.selectbox(
+        "Select a team:",
+        teams,
+        # index=teams.index(default_team)
+    )
 
     # Filtering data based on user selection
     if selected_season != "All Seasons":
@@ -786,7 +795,11 @@ def main():
         filtered_data = fbref_lineups[fbref_lineups["team"] == selected_team]
 
     comps = ["All Comps"] + sorted(filtered_data["league_display"].unique().tolist())
-    selected_comp = st.selectbox("Select a competition:", comps, index=comps.index(default_competition))
+    selected_comp = st.selectbox(
+        "Select a competition:",
+        comps,
+        # index=comps.index(default_competition),
+    )
     if selected_comp != "All Comps":
         filtered_data = filtered_data[filtered_data["league_display"] == selected_comp]
 
@@ -828,7 +841,7 @@ def main():
     selected_players = st.multiselect(
         ":blue[Include] player(s) for analysis:",
         players_for_analysis,
-        default=[default_player],
+        # default=[default_player],
     )
 
     if selected_players:
