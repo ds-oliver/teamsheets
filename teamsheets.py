@@ -646,6 +646,11 @@ def main():
     # Add a badge for the Twitter account
     twitter_badge()
 
+    default_team = "Manchester United"
+    default_player = "Bruno Fernandes"
+    default_season = "2023-2024"
+    default_competition = "Premier League"
+
     # Load CSV file from load_data function
     fbref_lineups = load_data(TEAMSHEETS_CSV_FILEPATH)
     injury_report = load_data(INJURY_REPORTS_CSV_FILEPATH)
@@ -725,8 +730,8 @@ def main():
         fbref_lineups["season_display"].unique().tolist(), reverse=True
     )
     teams = sorted(fbref_lineups["team"].unique().tolist())
-    selected_season = st.selectbox("Select a season:", seasons)
-    selected_team = st.selectbox("Select a team:", teams)
+    selected_season = st.selectbox("Select a season:", seasons, index=6)
+    selected_team = st.selectbox("Select a team:", teams, index=teams.index(default_team))
 
     # Filtering data based on user selection
     if selected_season != "All Seasons":
@@ -738,7 +743,7 @@ def main():
         filtered_data = fbref_lineups[fbref_lineups["team"] == selected_team]
 
     comps = ["All Comps"] + sorted(filtered_data["league_display"].unique().tolist())
-    selected_comp = st.selectbox("Select a competition:", comps)
+    selected_comp = st.selectbox("Select a competition:", comps, index=0)
     if selected_comp != "All Comps":
         filtered_data = filtered_data[filtered_data["league_display"] == selected_comp]
 
@@ -776,7 +781,9 @@ def main():
         player for player in players if player not in players_to_exclude
     ]
     selected_players = st.multiselect(
-        ":blue[Include] player(s) for analysis:", players_for_analysis
+        ":blue[Include] player(s) for analysis:",
+        players_for_analysis,
+        default=[default_player],
     )
 
     if selected_players:
