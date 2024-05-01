@@ -730,7 +730,7 @@ def main():
         fbref_lineups["season_display"].unique().tolist(), reverse=True
     )
     teams = sorted(fbref_lineups["team"].unique().tolist())
-    selected_season = st.selectbox("Select a season:", seasons, index=6)
+    selected_season = st.selectbox("Select a season:", seasons, index=teams.index(default_season)
     selected_team = st.selectbox("Select a team:", teams, index=teams.index(default_team))
 
     # Filtering data based on user selection
@@ -743,7 +743,7 @@ def main():
         filtered_data = fbref_lineups[fbref_lineups["team"] == selected_team]
 
     comps = ["All Comps"] + sorted(filtered_data["league_display"].unique().tolist())
-    selected_comp = st.selectbox("Select a competition:", comps, index=0)
+    selected_comp = st.selectbox("Select a competition:", comps, index=comps.index(default_competition))
     if selected_comp != "All Comps":
         filtered_data = filtered_data[filtered_data["league_display"] == selected_comp]
 
