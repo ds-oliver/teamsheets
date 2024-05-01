@@ -33,7 +33,7 @@ def github_badge():
     badge(type="github", name="ds-oliver")
 
 
-# @st.cache_data
+@st.cache_data
 def load_data(filepath):
     """
     Load the data from the CSV file.
@@ -42,6 +42,24 @@ def load_data(filepath):
     - A DataFrame containing the data.
     """
     return pd.read_csv(filepath)
+
+@st.cache_data
+def preprocess_data(data):
+    # Perform all common transformations here and return the processed data.
+    # Example: Create game_id, filter columns, etc.
+    data["game_id"] = data["season"].astype(str) + ":" + data["game"]
+    
+    # get all teams where the league is ENG-Premier League
+    premier_league_teams = data[data["league"] == "ENG-Premier League"]["team"].unique()
+
+    # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
+    data = data[
+        (data["position"] != "GK")
+        # & (data["is_starter"] == True)
+        & (data["team"].isin(premier_league_teams))
+    ]
+    
+    return data
 
 def get_team_profile(team_name, dataframe):
     """
@@ -657,26 +675,11 @@ def main():
     default_competition = "Premier League"
 
     # Load CSV file from load_data function
-    fbref_lineups = load_data(TEAMSHEETS_CSV_FILEPATH)
+    fbref_lineups = preprocess_data(load_data(TEAMSHEETS_CSV_FILEPATH))
     injury_report = load_data(INJURY_REPORTS_CSV_FILEPATH)
 
-    print(f"fbref_lineups:\n{fbref_lineups.columns.tolist()}")
-    print(f"injury_report:\n{injury_report.columns.tolist()}")
-
-    # get all teams where the league is ENG-Premier League
-    premier_league_teams = fbref_lineups[fbref_lineups["league"] == "ENG-Premier League"]["team"].unique()
-
-    # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
-    fbref_lineups = fbref_lineups[
-        (fbref_lineups["position"] != "GK")
-        # & (fbref_lineups["is_starter"] == True)
-        & (fbref_lineups["team"].isin(premier_league_teams))
-    ]
-
-    # Add a 'game_id' column to uniquely identify each game
-    fbref_lineups["game_id"] = (
-        fbref_lineups["season"].astype(str) + ":" + fbref_lineups["game"]
-    )
+    # print(f"fbref_lineups:\n{fbref_lineups.columns.tolist()}")
+    # print(f"injury_report:\n{injury_report.columns.tolist()}")
 
     # Simplifying the league names and mapping seasons for display
     season_dict = {
