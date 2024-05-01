@@ -43,20 +43,55 @@ def load_data(filepath):
     """
     return pd.read_csv(filepath)
 
-@st.cache_data
+# @st.cache_data
 def preprocess_data(data):
     # Perform all common transformations here and return the processed data.
     # Example: Create game_id, filter columns, etc.
     data["game_id"] = data["season"].astype(str) + ":" + data["game"]
     
     # get all teams where the league is ENG-Premier League
-    premier_league_teams = data[data["league"] == "ENG-Premier League"]["team"].unique()
+    epl_teams = [
+        'Burnley',
+        'Swansea City',
+        'Crystal Palace',
+        'West Bromwich Albion',
+        'Everton',
+        'Tottenham Hotspur',
+        'Hull City',
+        'Leicester City',
+        'Manchester City',
+        'Sunderland',
+        'Middlesbrough',
+        'Stoke City',
+        'Southampton',
+        'Watford',
+        'Arsenal',
+        'Liverpool',
+        'Bournemouth',
+        'Manchester United',
+        'Chelsea',
+        'West Ham United',
+        'Brighton & Hove Albion',
+        'Huddersfield Town',
+        'Newcastle United',
+        'Cardiff City',
+        'Fulham',
+        'Wolverhampton Wanderers',
+        'Leeds United',
+        'Sheffield United',
+        'Aston Villa',
+        'Brentford',
+        'Norwich City',
+        'Nottingham Forest',
+        'Luton Town',
+        'Ipswich'
+    ]
 
     # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
     data = data[
         (data["position"] != "GK")
         # & (data["is_starter"] == True)
-        & (data["team"].isin(premier_league_teams))
+        & (data["team"].isin(epl_teams))
     ]
     
     # Simplifying the league names and mapping seasons for display
