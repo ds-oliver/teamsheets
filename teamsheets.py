@@ -33,7 +33,7 @@ def github_badge():
     badge(type="github", name="ds-oliver")
 
 
-# @st.cache_data
+@st.cache_data
 def load_data(filepath):
     """
     Load the data from the CSV file.
