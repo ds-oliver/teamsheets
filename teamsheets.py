@@ -59,6 +59,20 @@ def preprocess_data(data):
         & (data["team"].isin(premier_league_teams))
     ]
     
+    # Simplifying the league names and mapping seasons for display
+    season_dict = {
+        1617: "2016-2017",
+        1718: "2017-2018",
+        1819: "2018-2019",
+        1920: "2019-2020",
+        2021: "2020-2021",
+        2122: "2021-2022",
+        2223: "2022-2023",
+        2324: "2023-2024",
+    }
+    data["season_display"] = data["season"].map(season_dict)
+    data["league_display"] = data["league"].str.split("-").str[1]
+    
     return data
 
 def get_team_profile(team_name, dataframe):
@@ -680,20 +694,6 @@ def main():
 
     # print(f"fbref_lineups:\n{fbref_lineups.columns.tolist()}")
     # print(f"injury_report:\n{injury_report.columns.tolist()}")
-
-    # Simplifying the league names and mapping seasons for display
-    season_dict = {
-        1617: "2016-2017",
-        1718: "2017-2018",
-        1819: "2018-2019",
-        1920: "2019-2020",
-        2021: "2020-2021",
-        2122: "2021-2022",
-        2223: "2022-2023",
-        2324: "2023-2024",
-    }
-    fbref_lineups["season_display"] = fbref_lineups["season"].map(season_dict)
-    fbref_lineups["league_display"] = fbref_lineups["league"].str.split("-").str[1]
 
     # add expander here to explain the app
     with st.expander("**:red[About this app]**", expanded=True):
