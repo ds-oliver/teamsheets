@@ -309,6 +309,11 @@ def get_player_positions_v2(fbref_lineups, player_name, team_name):
     # Add opponents list for each position
     position_counts_df['Opponents'] = position_counts_df['Position'].apply(lambda x: team_data[team_data['new_position'] == x]['opponent'].unique().tolist())
 
+    # sort the position counts by count in descending order
+    position_counts_df = position_counts_df.sort_values(
+        by="Count", ascending=False
+    ).reset_index(drop=True)
+
     logging.info(f"Position counts DataFrame: \n{position_counts_df}")
 
     # Opponents faced analysis
