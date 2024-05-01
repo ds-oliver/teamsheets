@@ -43,7 +43,7 @@ def load_data(filepath):
     """
     return pd.read_csv(filepath)
 
-# @st.cache_data
+@st.cache_data
 def preprocess_data(data):
     # Perform all common transformations here and return the processed data.
     # Example: Create game_id, filter columns, etc.
