@@ -84,7 +84,8 @@ def preprocess_data(data):
         'Norwich City',
         'Nottingham Forest',
         'Luton Town',
-        'Ipswich'
+        'Ipswich',
+        'Ipswich Town',
     ]
 
     # Exclude goalkeepers and filter for 'ENG-Premier League' and starters only
