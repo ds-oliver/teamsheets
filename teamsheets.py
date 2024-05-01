@@ -883,14 +883,16 @@ def main():
                     col1, col2 = st.columns(2)
 
                     with col1:
-                        if selected_players & players_to_exclude:
-                            st.write(
-                                f"Players :green[correlated] with {selected_players_str} starts & {players_to_exclude_str} non-starts:",
-                            )
                         if selected_players:
-                            st.write(
-                                f"Players :green[correlated] with {selected_players_str} starts:",
-                            )
+                            if players_to_exclude:
+                                st.write(
+                                    f"Players :green[correlated] with {selected_players_str} starts & {players_to_exclude_str} non-starts:",
+                                )
+                            else:
+                                st.write(
+                                    f"Players :green[correlated] with {selected_players_str} starts:",
+                                )
+                            
                             st.dataframe(most_common_players.reset_index(drop=True))
 
                     # get anticorrelation players with col2
@@ -903,22 +905,17 @@ def main():
                         )
                         # st.write(text)
                         # turn selected players into a string separated by commas if there are more than one
-                        if selected_players & players_to_exclude:
-                            st.write(
-                                f"Players :red[anticorrelated] with {selected_players_str} starts & {players_to_exclude_str} non-starts:",
-                            )
-                            if anti_corr_players.empty:
-                                st.write("Not enough common starts to determine anticorrelation.")
-                            else:
-                                st.dataframe(anti_corr_players.reset_index(drop=True))
                         if selected_players:
-                            st.write(
-                                f"Players :red[anticorrelated] with {selected_players_str} starts:",
-                            )
-                            if anti_corr_players.empty:
-                                st.write("Not enough common starts to determine anticorrelation.")
-                            else:
-                                st.dataframe(anti_corr_players.reset_index(drop=True))
+                            if selected_players:
+                                if players_to_exclude:
+                                    st.write(
+                                        f"Players :red[anticorrelated] with {selected_players_str} starts & {players_to_exclude_str} non-starts:",
+                                    )
+                                else:
+                                    st.write(
+                                        f"Players :red[anticorrelated] with {selected_players_str} starts:",
+                                    )
+                            st.dataframe(anti_corr_players.reset_index(drop=True))
                         
                         # else:
                         #     st.warning("Please select player(s) for analysis.")
