@@ -988,18 +988,27 @@ def main():
                         
                         # else:
                         #     st.warning("Please select player(s) for analysis.")
+                    if selected_players:
+                        # Detailed player analysis for each selected player
+                        for player in selected_players:
+                            positions, opponents, anti_opponents = get_player_positions_v2(
+                                ff_data, player, selected_team
+                            )
+                            st.write(f"Positions played by {player} under the above circumstances:")
+                            st.dataframe(positions)
+                            st.write(f"Opponents faced by {player} under the above circumstances:")
+                            st.dataframe(opponents)
+                            st.write(f"Opponents faced when {player} is not a starter:")
+                            st.write(anti_opponents)
+                    else:
+                        for player in players_to_exclude:
+                            _, _, anti_opponents = get_player_positions_v2(
+                                ff_data, player, selected_team
+                            )
 
-                    # Detailed player analysis for each selected player
-                    for player in selected_players:
-                        positions, opponents, anti_opponents = get_player_positions_v2(
-                            ff_data, player, selected_team
-                        )
-                        st.write(f"Positions played by {player} under the above circumstances:")
-                        st.dataframe(positions)
-                        st.write(f"Opponents faced by {player} under the above circumstances:")
-                        st.dataframe(opponents)
-                        st.write(f"Opponents faced when {player} is not a starter:")
-                        st.write(anti_opponents)
+                            st.write(f"Opponents faced when {player} is not a starter:")
+                            st.write(anti_opponents)
+                            
 
                 with tab2:
                     st.title(f"Team Profile Analysis for :rainbow[{selected_team}]")
