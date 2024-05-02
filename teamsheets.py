@@ -946,6 +946,14 @@ def main():
                                 )
                             
                             st.dataframe(most_common_players.reset_index(drop=True))
+                        else:
+                            if players_to_exclude:
+                                st.write(
+                                    f"Players :green[correlated] with {players_to_exclude_str} non-starts:",
+                                )
+                                st.dataframe(most_common_players.reset_index(drop=True))
+                            else:
+                                st.warning("Please select player(s) for analysis.")
 
                     # get anticorrelation players with col2
                     with col2:
@@ -958,16 +966,25 @@ def main():
                         # st.write(text)
                         # turn selected players into a string separated by commas if there are more than one
                         if selected_players:
-                            if selected_players:
-                                if players_to_exclude:
-                                    st.write(
-                                        f"Players :red[anticorrelated] with {selected_players_str} starts & {players_to_exclude_str} non-starts:",
-                                    )
-                                else:
-                                    st.write(
-                                        f"Players :red[anticorrelated] with {selected_players_str} starts:",
-                                    )
+                            if players_to_exclude:
+                                st.write(
+                                    f"Players :red[anticorrelated] with {selected_players_str} starts & {players_to_exclude_str} non-starts:",
+                                )
+                            else:
+                                st.write(
+                                    f"Players :red[anticorrelated] with {selected_players_str} starts:",
+                                )
                             st.dataframe(anti_corr_players.reset_index(drop=True))
+                        else:
+                            if players_to_exclude:
+                                st.write(
+                                    f"Players :red[anticorrelated] with {players_to_exclude_str} non-starts:",
+                                )
+
+                                st.dataframe(anti_corr_players.reset_index(drop=True))
+                            else:
+                                st.warning("Please select player(s) for analysis.")
+                            
                         
                         # else:
                         #     st.warning("Please select player(s) for analysis.")
