@@ -426,7 +426,7 @@ def get_most_common_players(
     if not isinstance(excluded_players, list):
         excluded_players = [excluded_players]
 
-    logging.info(f"Filtering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n")
+    logging.info(f"\nFiltering for {team_name}. Including: {selected_players}. Excluding: {excluded_players}\n\n")
 
     # Drop duplicates based on 'game_id' and 'player' columns
     dataframe = dataframe.drop_duplicates(subset=['game_id', 'player'])
@@ -458,14 +458,6 @@ def get_most_common_players(
 
     # logging statement that gives the total number of unique games with the selected players
     logging.info(f"Total number of unique games with the selected players: {len(valid_games)}")
-
-    # Count how many times each player, not in selected or excluded players, started in these games
-    most_common_starters = (
-        valid_games_data.groupby("player").size().nlargest(10).reset_index(name='Starts Together')
-    )
-    most_common_starters.columns = ["Player", "Starts Together"]
-
-    # Rest of the code remains the same...
 
     if set_piece_takers:
         # Set piece columns to calculate percentages
@@ -531,9 +523,15 @@ def get_most_common_players(
     else:
         # Count how many times each player, not in selected or excluded players, started in these games
         most_common_starters = (
-            valid_games_data["player"].value_counts().head(10).reset_index()
+            valid_games_data.groupby("player").size().nlargest(10).reset_index(name='Starts Together')
         )
         most_common_starters.columns = ["Player", "Starts Together"]
+
+        # # Count how many times each player, not in selected or excluded players, started in these games
+        # most_common_starters = (
+        #     valid_games_data["player"].value_counts().head(10).reset_index()
+        # )
+        # most_common_starters.columns = ["Player", "Starts Together"]
 
     # the players selected for analysis should not be included in the final most_common_starters DataFrame
     most_common_starters = most_common_starters[~most_common_starters["Player"].isin(selected_players)]
