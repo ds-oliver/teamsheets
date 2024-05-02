@@ -961,7 +961,7 @@ def main():
                             selected_team,
                             selected_players,
                             players_to_exclude,
-                            ff_data,
+                            filtered_data,
                         )
                         # st.write(text)
                         # turn selected players into a string separated by commas if there are more than one
@@ -1062,68 +1062,6 @@ def main():
                         st.write(f"Players who were injured for {selected_team}:")
                         st.dataframe(injured_players[["player", "reason", "status", "started", "reserve", "gtd_status"]])
 
-                # # Conduct analysis
-                # most_common_players, _, text = get_most_common_players(
-                #     selected_team,
-                #     selected_players,
-                #     players_to_exclude,
-                #     fbref_lineups_copy,
-                #     set_piece_takers=set_piece_takers,
-                # )
-                # st.write(text)
-                # st.dataframe(most_common_players)
-
-                # # Detailed player analysis for each selected player
-                # for player in selected_players:
-                #     positions, opponents = get_player_positions_v2(
-                #         fbref_lineups_copy, player, selected_team
-                #     )
-                #     st.write(f"Positions played by {player} under the above circumstances:")
-                #     st.dataframe(positions)
-                #     st.write(f"Opponents faced by {player} under the above circumstances:")
-                #     st.dataframe(opponents)
-        # else:
-        #     st.warning("Please select player(s) for analysis.")
-        #     st.markdown(
-        #         """
-        #         <style>
-        #         .reportview-container .markdown-text-container {
-        #             font-family: monospace;
-        #         }
-        #         .sidebar .sidebar-content {
-        #             background-image: linear-gradient(#2e7bcf,#2e7bcf);
-        #             color: white;
-        #         }
-        #         .Widget>label {
-        #             color: white;
-        #             font-family: monospace;
-        #         }
-        #         [data-testid="stButton"] > div > div {
-        #             background-color: #4CAF50;
-        #             color: white;
-        #         }
-        #         </style>
-        #         """,
-        #         unsafe_allow_html=True,
-        #     )
-        #     if st.button(
-        #         f":rainbow[Initiate Apriori algorithm to run Team Profile analysis for]: :white[{selected_team}]",
-        #         use_container_width=True,
-        #         type="secondary",
-        #     ):
-        #         positions_data = get_positions_of_each_game(filtered_data, selected_team)
-        #         st.title(f"{selected_team}")
-        #         st.write(f"Positional setup by {selected_team}:")
-        #         st.info(
-        #             f"'is_oop' is the average number of out-of-position players when {selected_team} uses the lineup. 'is_oop' is set as true if a starter is registered in a position that is not their most common position. 'count' is the number of games with the referenced positional setup."
-        #         )
-        #         st.dataframe(positions_data, use_container_width=True)
-        #         # team_profile = get_team_profile(selected_team, filtered_data)
-        #         # # reset the index for the team profile DataFrame
-        #         # team_profile.reset_index(drop=True, inplace=True)
-        #         # st.write(f"Team profile for {selected_team}:")
-        #         # st.dataframe(team_profile)
-        #         st.divider()
     except KeyError as e:
         logging.error(f"KeyError: {e}")
         st.write(filtered_data.columns.tolist())
