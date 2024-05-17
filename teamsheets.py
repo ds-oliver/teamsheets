@@ -739,11 +739,13 @@ def main():
             This app contains data from the following leagues:
 
             - Premier League
-            - Champions League
-            - Europa League
+            - UEFA Champions League
+            - UEFA Europa League
             - FA Cup
             - EFL Cup
-            - Conference League
+
+            Unforetunately, the data is not available for the following leagues:
+            - UEFA Conference League
 
             This app uses an Apriori algorithm to analyze team lineups and player positions in football matches.
             You can select a season, team, and competition to view detailed player analysis and team profiles.
